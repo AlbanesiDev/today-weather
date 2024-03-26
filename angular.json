@@ -26,86 +26,87 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               {
-                "input": "src/app/lara-dark-amber.scss",
+                "input": "src/styles/themes/lara-dark-amber.scss",
                 "bundleName": "lara-dark-amber",
                 "inject": false
               },
               {
-                "input": "src/app/lara-dark-blue.scss",
+                "input": "src/styles/themes/lara-dark-blue.scss",
                 "bundleName": "lara-dark-blue",
                 "inject": false
               },
               {
-                "input": "src/app/lara-dark-cyan.scss",
+                "input": "src/styles/themes/lara-dark-cyan.scss",
                 "bundleName": "lara-dark-cyan",
                 "inject": false
               },
               {
-                "input": "src/app/lara-dark-green.scss",
+                "input": "src/styles/themes/lara-dark-green.scss",
                 "bundleName": "lara-dark-green",
                 "inject": false
               },
               {
-                "input": "src/app/lara-dark-indigo.scss",
+                "input": "src/styles/themes/lara-dark-indigo.scss",
                 "bundleName": "lara-dark-indigo",
                 "inject": false
               },
               {
-                "input": "src/app/lara-dark-pink.scss",
+                "input": "src/styles/themes/lara-dark-pink.scss",
                 "bundleName": "lara-dark-pink",
                 "inject": false
               },
               {
-                "input": "src/app/lara-dark-purple.scss",
+                "input": "src/styles/themes/lara-dark-purple.scss",
                 "bundleName": "lara-dark-purple",
                 "inject": false
               },
               {
-                "input": "src/app/lara-dark-teal.scss",
+                "input": "src/styles/themes/lara-dark-teal.scss",
                 "bundleName": "lara-dark-teal",
                 "inject": false
               },
 
               {
-                "input": "src/app/lara-light-amber.scss",
+                "input": "src/styles/themes/lara-light-amber.scss",
                 "bundleName": "lara-light-amber",
                 "inject": false
               },
               {
-                "input": "src/app/lara-light-blue.scss",
+                "input": "src/styles/themes/lara-light-blue.scss",
                 "bundleName": "lara-light-blue",
                 "inject": false
               },
               {
-                "input": "src/app/lara-light-cyan.scss",
+                "input": "src/styles/themes/lara-light-cyan.scss",
                 "bundleName": "lara-light-cyan",
                 "inject": false
               },
               {
-                "input": "src/app/lara-light-green.scss",
+                "input": "src/styles/themes/lara-light-green.scss",
                 "bundleName": "lara-light-green",
                 "inject": false
               },
               {
-                "input": "src/app/lara-light-indigo.scss",
+                "input": "src/styles/themes/lara-light-indigo.scss",
                 "bundleName": "lara-light-indigo",
                 "inject": false
               },
               {
-                "input": "src/app/lara-light-pink.scss",
+                "input": "src/styles/themes/lara-light-pink.scss",
                 "bundleName": "lara-light-pink",
                 "inject": false
               },
               {
-                "input": "src/app/lara-light-purple.scss",
+                "input": "src/styles/themes/lara-light-purple.scss",
                 "bundleName": "lara-light-purple",
                 "inject": false
               },
               {
-                "input": "src/app/lara-light-teal.scss",
+                "input": "src/styles/themes/lara-light-teal.scss",
                 "bundleName": "lara-light-teal",
                 "inject": false
               },
+              "node_modules/primeflex/primeflex.min.css",
               "node_modules/primeng/resources/primeng.min.css",
               "src/styles.scss"
             ],
@@ -130,7 +131,13 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
