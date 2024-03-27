@@ -1,0 +1,54 @@
+{
+  "sidebar": {
+    "header_home": "Início",
+    "header_config": "Configuração",
+    "header_notification": "Notificações",
+    "header_units": "Unidades",
+    "header_themes": "Temas",
+    "header_icons": "Pacote de ícones",
+    "header_lang": "Idiomas",
+    "login": "Entrar",
+    "config": "Configuração",
+    "help": "Ajuda"
+  },
+  "searchbar": {
+    "placeholder": "Pesquisar locais...",
+    "not_found": "Nenhum resultado encontrado.",
+    "error": "Parece que houve um erro: "
+  },
+  "login": {
+    "title": "Entrar",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Entrar",
+    "google_btn": "Google",
+    "switch_btn": "Registrar-se",
+    "switch_text": "Ainda não tem uma conta?"
+  },
+  "register": {
+    "title": "Registrar-se",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Criar conta",
+    "google_btn": "Google",
+    "switch_btn": "Entrar",
+    "switch_text": "Já tem uma conta?"
+  },
+  "theme_settings": {
+    "mode": "Modo do tema",
+    "theme": "Cor do tema"
+  },
+  "lang_settings": {
+    "Spanish": "Espanhol",
+    "English": "Inglês",
+    "France": "França",
+    "German": "Alemão",
+    "Italian": "Italiano",
+    "Japanese": "Japonês",
+    "Korean": "Coreano",
+    "Portuguese": "Português",
+    "Russian": "Russo",
+    "Ukrainian": "Ucraniano",
+    "Chinese": "Chinês"
+  }
+}

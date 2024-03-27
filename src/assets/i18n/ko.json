@@ -1,0 +1,54 @@
+{
+  "sidebar": {
+    "header_home": "홈",
+    "header_config": "설정",
+    "header_notification": "알림",
+    "header_units": "단위",
+    "header_themes": "테마",
+    "header_icons": "아이콘 팩",
+    "header_lang": "언어",
+    "login": "로그인",
+    "config": "설정",
+    "help": "도움말"
+  },
+  "searchbar": {
+    "placeholder": "위치 검색...",
+    "not_found": "결과를 찾을 수 없습니다.",
+    "error": "오류가 발생했습니다: "
+  },
+  "login": {
+    "title": "로그인",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "로그인",
+    "google_btn": "Google",
+    "switch_btn": "가입하기",
+    "switch_text": "아직 계정이 없으신가요?"
+  },
+  "register": {
+    "title": "가입하기",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "계정 생성",
+    "google_btn": "Google",
+    "switch_btn": "로그인",
+    "switch_text": "이미 계정이 있으신가요?"
+  },
+  "theme_settings": {
+    "mode": "테마 모드",
+    "theme": "테마 색상"
+  },
+  "lang_settings": {
+    "Spanish": "스페인어",
+    "English": "영어",
+    "France": "프랑스",
+    "German": "독일어",
+    "Italian": "이탈리아어",
+    "Japanese": "일본어",
+    "Korean": "한국어",
+    "Portuguese": "포르투갈어",
+    "Russian": "러시아어",
+    "Ukrainian": "우크라이나어",
+    "Chinese": "중국어"
+  }
+}

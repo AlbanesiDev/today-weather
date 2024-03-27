@@ -1,0 +1,54 @@
+{
+  "sidebar": {
+    "header_home": "Головна",
+    "header_config": "Налаштування",
+    "header_notification": "Сповіщення",
+    "header_units": "Одиниці",
+    "header_themes": "Теми",
+    "header_icons": "Пакет іконок",
+    "header_lang": "Мови",
+    "login": "Увійти",
+    "config": "Налаштування",
+    "help": "Довідка"
+  },
+  "searchbar": {
+    "placeholder": "Пошук місць...",
+    "not_found": "Результати не знайдено.",
+    "error": "Схоже, виникла помилка: "
+  },
+  "login": {
+    "title": "Увійти",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Увійти",
+    "google_btn": "Google",
+    "switch_btn": "Зареєструватися",
+    "switch_text": "Ще немаєте облікового запису?"
+  },
+  "register": {
+    "title": "Зареєструватися",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Створити обліковий запис",
+    "google_btn": "Google",
+    "switch_btn": "Увійти",
+    "switch_text": "У вас вже є обліковий запис?"
+  },
+  "theme_settings": {
+    "mode": "Режим теми",
+    "theme": "Колір теми"
+  },
+  "lang_settings": {
+    "Spanish": "Іспанська",
+    "English": "Англійська",
+    "France": "Французька",
+    "German": "Німецька",
+    "Italian": "Італійська",
+    "Japanese": "Японська",
+    "Korean": "Корейська",
+    "Portuguese": "Португальська",
+    "Russian": "Російська",
+    "Ukrainian": "Українська",
+    "Chinese": "Китайська"
+  }
+}

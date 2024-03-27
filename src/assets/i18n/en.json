@@ -1,0 +1,54 @@
+{
+  "sidebar": {
+    "header_home": "Home",
+    "header_config": "Configuration",
+    "header_notification": "Notifications",
+    "header_units": "Units",
+    "header_themes": "Themes",
+    "header_icons": "Icon Pack",
+    "header_lang": "Languages",
+    "login": "Login",
+    "config": "Configuration",
+    "help": "Help"
+  },
+  "searchbar": {
+    "placeholder": "Search locations...",
+    "not_found": "No results found.",
+    "error": "There seems to be an error: "
+  },
+  "login": {
+    "title": "Log In",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Log In",
+    "google_btn": "Google",
+    "switch_btn": "Sign Up",
+    "switch_text": "Don't have an account yet?"
+  },
+  "register": {
+    "title": "Sign Up",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Create Account",
+    "google_btn": "Google",
+    "switch_btn": "Log In",
+    "switch_text": "Already have an account?"
+  },
+  "theme_settings": {
+    "mode": "Theme mode",
+    "theme": "Theme color"
+  },
+  "lang_settings": {
+    "Spanish": "Spanish",
+    "English": "English",
+    "France": "France",
+    "German": "German",
+    "Italian": "Italian",
+    "Japanese": "Japanese",
+    "Korean": "Korean",
+    "Portuguese": "Portuguese",
+    "Russian": "Russian",
+    "Ukrainian": "Ukrainian",
+    "Chinese": "Chinese"
+  }
+}

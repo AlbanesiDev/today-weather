@@ -1,0 +1,54 @@
+{
+  "sidebar": {
+    "header_home": "Startseite",
+    "header_config": "Konfiguration",
+    "header_notification": "Benachrichtigungen",
+    "header_units": "Einheiten",
+    "header_themes": "Themen",
+    "header_icons": "Symbolpaket",
+    "header_lang": "Sprachen",
+    "login": "Anmelden",
+    "config": "Konfiguration",
+    "help": "Hilfe"
+  },
+  "searchbar": {
+    "placeholder": "Standorte suchen...",
+    "not_found": "Keine Ergebnisse gefunden.",
+    "error": "Es ist ein Fehler aufgetreten: "
+  },
+  "login": {
+    "title": "Anmelden",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Anmelden",
+    "google_btn": "Google",
+    "switch_btn": "Registrieren",
+    "switch_text": "Sie haben noch kein Konto?"
+  },
+  "register": {
+    "title": "Registrieren",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Konto erstellen",
+    "google_btn": "Google",
+    "switch_btn": "Anmelden",
+    "switch_text": "Haben Sie bereits ein Konto?"
+  },
+  "theme_settings": {
+    "mode": "Themenmodus",
+    "theme": "Themenfarbe"
+  },
+  "lang_settings": {
+    "Spanish": "Spanisch",
+    "English": "Englisch",
+    "France": "Frankreich",
+    "German": "Deutsch",
+    "Italian": "Italienisch",
+    "Japanese": "Japanisch",
+    "Korean": "Koreanisch",
+    "Portuguese": "Portugiesisch",
+    "Russian": "Russisch",
+    "Ukrainian": "Ukrainisch",
+    "Chinese": "Chinesisch"
+  }
+}

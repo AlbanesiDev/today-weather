@@ -1,0 +1,54 @@
+{
+  "sidebar": {
+    "header_home": "Accueil",
+    "header_config": "Configuration",
+    "header_notification": "Notifications",
+    "header_units": "Unités",
+    "header_themes": "Thèmes",
+    "header_icons": "Pack d'icônes",
+    "header_lang": "Langues",
+    "login": "Connexion",
+    "config": "Configuration",
+    "help": "Aide"
+  },
+  "searchbar": {
+    "placeholder": "Rechercher des lieux...",
+    "not_found": "Aucun résultat trouvé.",
+    "error": "Il semble qu'il y ait une erreur : "
+  },
+  "login": {
+    "title": "Connexion",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Connexion",
+    "google_btn": "Google",
+    "switch_btn": "S'inscrire",
+    "switch_text": "Vous n'avez pas encore de compte ?"
+  },
+  "register": {
+    "title": "S'inscrire",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Créer un compte",
+    "google_btn": "Google",
+    "switch_btn": "Connexion",
+    "switch_text": "Vous avez déjà un compte ?"
+  },
+  "theme_settings": {
+    "mode": "Mode du thème",
+    "theme": "Couleur du thème"
+  },
+  "lang_settings": {
+    "Spanish": "Espagnol",
+    "English": "Anglais",
+    "France": "France",
+    "German": "Allemand",
+    "Italian": "Italien",
+    "Japanese": "Japonais",
+    "Korean": "Coréen",
+    "Portuguese": "Portugais",
+    "Russian": "Russe",
+    "Ukrainian": "Ukrainien",
+    "Chinese": "Chinois"
+  }
+}
