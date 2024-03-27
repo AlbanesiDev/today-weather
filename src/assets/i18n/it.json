@@ -18,9 +18,16 @@
   },
   "login": {
     "title": "Accedi",
-    "placeholder_email": "",
-    "placeholder_password": "",
+    "placeholder_email": "E-mail",
+    "placeholder_password": "Password",
+    "error_msg_email_required": "Inserisci un'email",
+    "error_msg_email_invalid": "L'email non è valida",
+    "error_msg_password_required": "Inserisci una password",
+    "error_msg_login_credential": "L'email e/o la password non sono valide",
+    "error_msg_login_not_found": "Nessun account trovato con quell'email",
+    "error_msg_login_server": "Si è verificato un errore: ",
     "submit_btn": "Accedi",
+    "forgot_btn": "Password dimenticata?",
     "google_btn": "Google",
     "switch_btn": "Registrati",
     "switch_text": "Non hai ancora un account?"

@@ -18,9 +18,16 @@
   },
   "login": {
     "title": "Войти",
-    "placeholder_email": "",
-    "placeholder_password": "",
+    "placeholder_email": "Электронная почта",
+    "placeholder_password": "Пароль",
+    "error_msg_email_required": "Пожалуйста, введите адрес электронной почты",
+    "error_msg_email_invalid": "Неверный адрес электронной почты",
+    "error_msg_password_required": "Пожалуйста, введите пароль",
+    "error_msg_login_credential": "Неверный адрес электронной почты и/или пароль",
+    "error_msg_login_not_found": "Аккаунт с этим адресом электронной почты не найден",
+    "error_msg_login_server": "Произошла ошибка: ",
     "submit_btn": "Войти",
+    "forgot_btn": "Забыли пароль?",
     "google_btn": "Google",
     "switch_btn": "Зарегистрироваться",
     "switch_text": "У вас еще нет аккаунта?"

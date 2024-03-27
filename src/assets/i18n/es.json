@@ -18,21 +18,28 @@
   },
   "login": {
     "title": "Iniciar Sesión",
-    "placeholder_email": "",
-    "placeholder_password": "",
+    "placeholder_email": "Correo electrónico",
+    "placeholder_password": "Contraseña",
+    "error_msg_email_required": "Por favor introduzca un correo electrónico",
+    "error_msg_email_invalid": "El correo electrónico es inválido",
+    "error_msg_password_required": "Por favor introduzca una contraseña",
+    "error_msg_login_credential": "El correo electrónico y/o la contraseña son inválidas",
+    "error_msg_login_not_found": "No se ha encontrado una cuenta con ese correo electrónico",
+    "error_msg_login_server": "Parece que ha ocurrido un error: ",
     "submit_btn": "Iniciar sesión",
+    "forgot_btn": "¿Olvidaste tu contraseña?",
     "google_btn": "Google",
     "switch_btn": "Registrarse",
-    "switch_text": "Aún no tienes una cuenta?"
+    "switch_text": "¿Aún no tienes una cuenta?"
   },
   "register": {
     "title": "Registrarse",
-    "placeholder_email": "",
-    "placeholder_password": "",
+    "placeholder_email": "Correo electrónico",
+    "placeholder_password": "Contraseña",
     "submit_btn": "Crear cuenta",
     "google_btn": "Google",
     "switch_btn": "Iniciar sesión",
-    "switch_text": "Ya tienes una cuenta?"
+    "switch_text": "¿Ya tienes una cuenta?"
   },
   "theme_settings": {
     "mode": "Modo del tema",

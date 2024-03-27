@@ -18,11 +18,18 @@
   },
   "login": {
     "title": "Entrar",
-    "placeholder_email": "",
-    "placeholder_password": "",
+    "placeholder_email": "E-mail",
+    "placeholder_password": "Senha",
+    "error_msg_email_required": "Por favor, insira um e-mail",
+    "error_msg_email_invalid": "O e-mail é inválido",
+    "error_msg_password_required": "Por favor, insira uma senha",
+    "error_msg_login_credential": "O e-mail e/ou a senha são inválidos",
+    "error_msg_login_not_found": "Nenhuma conta encontrada com esse e-mail",
+    "error_msg_login_server": "Ocorreu um erro: ",
     "submit_btn": "Entrar",
+    "forgot_btn": "Esqueceu sua senha?",
     "google_btn": "Google",
-    "switch_btn": "Registrar-se",
+    "switch_btn": "Inscrever-se",
     "switch_text": "Ainda não tem uma conta?"
   },
   "register": {

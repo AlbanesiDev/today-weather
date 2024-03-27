@@ -18,12 +18,19 @@
   },
   "login": {
     "title": "ログイン",
-    "placeholder_email": "",
-    "placeholder_password": "",
+    "placeholder_email": "メールアドレス",
+    "placeholder_password": "パスワード",
+    "error_msg_email_required": "メールアドレスを入力してください",
+    "error_msg_email_invalid": "メールアドレスが無効です",
+    "error_msg_password_required": "パスワードを入力してください",
+    "error_msg_login_credential": "メールアドレスと/またはパスワードが無効です",
+    "error_msg_login_not_found": "そのメールアドレスのアカウントが見つかりません",
+    "error_msg_login_server": "エラーが発生しました：",
     "submit_btn": "ログイン",
+    "forgot_btn": "パスワードをお忘れですか？",
     "google_btn": "Google",
-    "switch_btn": "新規登録",
-    "switch_text": "まだアカウントをお持ちでないですか？"
+    "switch_btn": "登録",
+    "switch_text": "アカウントをお持ちでないですか？"
   },
   "register": {
     "title": "新規登録",

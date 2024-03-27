@@ -17,10 +17,17 @@
     "error": "There seems to be an error: "
   },
   "login": {
-    "title": "Log In",
-    "placeholder_email": "",
-    "placeholder_password": "",
-    "submit_btn": "Log In",
+    "title": "Sign In",
+    "placeholder_email": "Email",
+    "placeholder_password": "Password",
+    "error_msg_email_required": "Please enter an email",
+    "error_msg_email_invalid": "The email is invalid",
+    "error_msg_password_required": "Please enter a password",
+    "error_msg_login_credential": "The email and/or password are invalid",
+    "error_msg_login_not_found": "No account found with that email",
+    "error_msg_login_server": "An error occurred: ",
+    "submit_btn": "Sign In",
+    "forgot_btn": "Forgot your password?",
     "google_btn": "Google",
     "switch_btn": "Sign Up",
     "switch_text": "Don't have an account yet?"

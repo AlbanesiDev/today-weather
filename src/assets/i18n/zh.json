@@ -18,12 +18,19 @@
   },
   "login": {
     "title": "登录",
-    "placeholder_email": "",
-    "placeholder_password": "",
+    "placeholder_email": "电子邮件",
+    "placeholder_password": "密码",
+    "error_msg_email_required": "请输入电子邮件",
+    "error_msg_email_invalid": "电子邮件无效",
+    "error_msg_password_required": "请输入密码",
+    "error_msg_login_credential": "电子邮件和/或密码无效",
+    "error_msg_login_not_found": "找不到该电子邮件的帐户",
+    "error_msg_login_server": "出现错误：",
     "submit_btn": "登录",
+    "forgot_btn": "忘记密码？",
     "google_btn": "Google",
     "switch_btn": "注册",
-    "switch_text": "还没有帐号？"
+    "switch_text": "还没有账号？"
   },
   "register": {
     "title": "注册",

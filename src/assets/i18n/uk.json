@@ -18,12 +18,19 @@
   },
   "login": {
     "title": "Увійти",
-    "placeholder_email": "",
-    "placeholder_password": "",
+    "placeholder_email": "Електронна пошта",
+    "placeholder_password": "Пароль",
+    "error_msg_email_required": "Будь ласка, введіть електронну пошту",
+    "error_msg_email_invalid": "Недійсна електронна пошта",
+    "error_msg_password_required": "Будь ласка, введіть пароль",
+    "error_msg_login_credential": "Недійсна електронна пошта або пароль",
+    "error_msg_login_not_found": "Обліковий запис з цією електронною поштою не знайдено",
+    "error_msg_login_server": "Виникла помилка: ",
     "submit_btn": "Увійти",
+    "forgot_btn": "Забули пароль?",
     "google_btn": "Google",
     "switch_btn": "Зареєструватися",
-    "switch_text": "Ще немаєте облікового запису?"
+    "switch_text": "Ще не маєте облікового запису?"
   },
   "register": {
     "title": "Зареєструватися",
