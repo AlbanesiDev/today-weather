@@ -1,23 +1,22 @@
-import { Injectable, inject, signal } from '@angular/core';
-import { LocalStorageService } from '../services/local-storage.service';
+import { Injectable, inject, signal } from "@angular/core";
+import { LocalStorageService } from "../services/local-storage.service";
 
 /**
  * A service that manages the theme settings for the application.
  * It utilizes the LocalStorageService to persist user's theme preference.
  */
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class ThemesService {
   // Dependency injection
-  private localStorageService: LocalStorageService =
-    inject(LocalStorageService);
+  private localStorageService: LocalStorageService = inject(LocalStorageService);
   // The key used to store the theme preference in local storage.
-  private themeKey = 'themeUser';
+  private themeKey = "themeUser";
   // The currently active theme.
-  public activeThemeSig = signal<string>('');
+  public activeThemeSig = signal<string>("");
   // The currently active mode theme.
-  public activeModeSig = signal<string>('');
+  public activeModeSig = signal<string>("");
 
   /**
    * Initializes the service by attempting to retrieve the theme from local storage.
@@ -45,11 +44,11 @@ export class ThemesService {
    * Determines the browser's preferred color scheme and sets the theme accordingly.
    */
   private getThemeBrowser(): void {
-    const darkModeMatcher = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeMatcher = window.matchMedia("(prefers-color-scheme: dark)");
     if (darkModeMatcher.matches) {
-      this.setTheme('lara-dark-blue');
+      this.setTheme("lara-dark-blue");
     } else {
-      this.setTheme('lara-light-blue');
+      this.setTheme("lara-light-blue");
     }
   }
 
@@ -58,9 +57,9 @@ export class ThemesService {
    * @param theme The theme to be set.
    */
   public setTheme(theme: string): void {
-    let themeLink = document.getElementById('app-themes') as HTMLLinkElement;
+    let themeLink = document.getElementById("app-themes") as HTMLLinkElement;
     if (themeLink) {
-      themeLink.href = theme + '.css';
+      themeLink.href = theme + ".css";
     }
     this.setActiveTheme(theme);
     this.localStorageService.setItem(this.themeKey, theme);
