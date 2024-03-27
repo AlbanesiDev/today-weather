@@ -1,0 +1,82 @@
+<p-dialog
+  header="{{ 'login.title' | translate }}"
+  [draggable]="false"
+  [resizable]="false"
+  [(visible)]="modalService.openModal"
+>
+  <div class="flex flex-column p-2 max-w-25rem w-screen">
+    <form class="flex flex-column gap-6" [formGroup]="form">
+      <div class="flex flex-column">
+        <span class="p-float-label mt-3">
+          <input
+            pInputText
+            pAutoFocus
+            type="text"
+            class="w-full"
+            name="email"
+            autocomplete="email"
+            formControlName="email"
+            [autofocus]="true"
+            [style]="{ width: '100%' }"
+          />
+          <label for="email">{{ 'login.placeholder_email' | translate }}</label>
+        </span>
+        @if (false) {
+        <span class="ml-2 mt-2 text-red-400 font-medium"
+          >ERROR 00000000000</span
+        >
+        }
+      </div>
+      <div class="flex flex-column">
+        <span class="p-float-label">
+          <p-password
+            type="password"
+            class="w-full"
+            inputId="password"
+            formControlName="password"
+            [feedback]="false"
+            [toggleMask]="true"
+            [attr.autocomplete]="{ autocomplete: 'password' }"
+            [style]="{ width: '100%' }"
+            [inputStyle]="{ width: '100%' }"
+          />
+          <label for="password">{{ 'login.placeholder_password' | translate }}</label>
+        </span>
+        @if (false) {
+        <span class="ml-2 mt-2 text-red-400 font-medium"
+          >ERROR 00000000000</span
+        >
+        } @if (true) {
+        <p-button
+          class="align-self-end mt-2"
+          size="small"
+          label="{{ 'login.forgot_btn' | translate }}"
+          [link]="true"
+        />
+        }
+      </div>
+
+      <div class="flex flex-column gap-3">
+        <p-button
+          label="{{ 'login.submit_btn' | translate }}"
+          styleClass="w-full"
+        />
+        <p-divider layout="horizontal" />
+        <p-button
+          label="{{ 'login.google_btn' | translate }}"
+          styleClass="w-full"
+          icon="pi pi-google"
+          (click)="loginWithGoogle()"
+        />
+        <div class="flex justify-content-center align-items-center">
+          <p class="text-center">{{ "login.switch_text" | translate }}</p>
+          <p-button
+            size="small"
+            label="{{ 'login.switch_btn' | translate }}"
+            [link]="true"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+</p-dialog>
