@@ -45,7 +45,10 @@ export class LangService {
    * @param lang The language code to set as the current language.
    */
   public setLang(lang: string): void {
-    this.translateService.use(lang);
-    this.localStorageService.setItem(this.langKeyStorage, lang);
+    const langStorage = this.localStorageService.getItem(this.langKeyStorage);
+    if(lang !== langStorage){
+      this.translateService.use(lang);
+      this.localStorageService.setItem(this.langKeyStorage, lang);
+    }
   }
 }
