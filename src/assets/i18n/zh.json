@@ -1,0 +1,62 @@
+{
+  "sidebar": {
+    "header_home": "主页",
+    "header_config": "设置",
+    "header_notification": "通知",
+    "header_units": "单位",
+    "header_themes": "主题",
+    "header_icons": "图标包",
+    "header_lang": "语言",
+    "login": "登录",
+    "sign_out": "退出",
+    "config": "设置",
+    "help": "帮助"
+  },
+  "searchbar": {
+    "placeholder": "搜索位置...",
+    "not_found": "未找到结果。",
+    "error": "似乎出了点问题："
+  },
+  "login": {
+    "title": "登录",
+    "placeholder_email": "电子邮件",
+    "placeholder_password": "密码",
+    "error_msg_email_required": "请输入电子邮件",
+    "error_msg_email_invalid": "电子邮件无效",
+    "error_msg_password_required": "请输入密码",
+    "error_msg_login_credential": "电子邮件和/或密码无效",
+    "error_msg_login_not_found": "找不到该电子邮件的帐户",
+    "error_msg_login_server": "出现错误：",
+    "submit_btn": "登录",
+    "forgot_btn": "忘记密码？",
+    "google_btn": "Google",
+    "switch_btn": "注册",
+    "switch_text": "还没有账号？"
+  },
+  "register": {
+    "title": "注册",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "创建帐号",
+    "google_btn": "Google",
+    "switch_btn": "登录",
+    "switch_text": "已经有帐号了？"
+  },
+  "theme_settings": {
+    "mode": "主题模式",
+    "theme": "主题颜色"
+  },
+  "lang_settings": {
+    "Spanish": "西班牙语",
+    "English": "英语",
+    "France": "法国",
+    "German": "德语",
+    "Italian": "意大利语",
+    "Japanese": "日语",
+    "Korean": "韩语",
+    "Portuguese": "葡萄牙语",
+    "Russian": "俄语",
+    "Ukrainian": "乌克兰语",
+    "Chinese": "中文"
+  }
+}

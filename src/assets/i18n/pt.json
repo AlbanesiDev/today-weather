@@ -1,0 +1,62 @@
+{
+  "sidebar": {
+    "header_home": "Início",
+    "header_config": "Configuração",
+    "header_notification": "Notificações",
+    "header_units": "Unidades",
+    "header_themes": "Temas",
+    "header_icons": "Pacote de ícones",
+    "header_lang": "Idiomas",
+    "login": "Entrar",
+    "sign_out": "Sair",
+    "config": "Configuração",
+    "help": "Ajuda"
+  },
+  "searchbar": {
+    "placeholder": "Pesquisar locais...",
+    "not_found": "Nenhum resultado encontrado.",
+    "error": "Parece que houve um erro: "
+  },
+  "login": {
+    "title": "Entrar",
+    "placeholder_email": "E-mail",
+    "placeholder_password": "Senha",
+    "error_msg_email_required": "Por favor, insira um e-mail",
+    "error_msg_email_invalid": "O e-mail é inválido",
+    "error_msg_password_required": "Por favor, insira uma senha",
+    "error_msg_login_credential": "O e-mail e/ou a senha são inválidos",
+    "error_msg_login_not_found": "Nenhuma conta encontrada com esse e-mail",
+    "error_msg_login_server": "Ocorreu um erro: ",
+    "submit_btn": "Entrar",
+    "forgot_btn": "Esqueceu sua senha?",
+    "google_btn": "Google",
+    "switch_btn": "Inscrever-se",
+    "switch_text": "Ainda não tem uma conta?"
+  },
+  "register": {
+    "title": "Registrar-se",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Criar conta",
+    "google_btn": "Google",
+    "switch_btn": "Entrar",
+    "switch_text": "Já tem uma conta?"
+  },
+  "theme_settings": {
+    "mode": "Modo do tema",
+    "theme": "Cor do tema"
+  },
+  "lang_settings": {
+    "Spanish": "Espanhol",
+    "English": "Inglês",
+    "France": "França",
+    "German": "Alemão",
+    "Italian": "Italiano",
+    "Japanese": "Japonês",
+    "Korean": "Coreano",
+    "Portuguese": "Português",
+    "Russian": "Russo",
+    "Ukrainian": "Ucraniano",
+    "Chinese": "Chinês"
+  }
+}

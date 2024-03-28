@@ -1,0 +1,62 @@
+{
+  "sidebar": {
+    "header_home": "Головна",
+    "header_config": "Налаштування",
+    "header_notification": "Сповіщення",
+    "header_units": "Одиниці",
+    "header_themes": "Теми",
+    "header_icons": "Пакет іконок",
+    "header_lang": "Мови",
+    "login": "Увійти",
+    "sign_out": "вийти з системи",
+    "config": "Налаштування",
+    "help": "Довідка"
+  },
+  "searchbar": {
+    "placeholder": "Пошук місць...",
+    "not_found": "Результати не знайдено.",
+    "error": "Схоже, виникла помилка: "
+  },
+  "login": {
+    "title": "Увійти",
+    "placeholder_email": "Електронна пошта",
+    "placeholder_password": "Пароль",
+    "error_msg_email_required": "Будь ласка, введіть електронну пошту",
+    "error_msg_email_invalid": "Недійсна електронна пошта",
+    "error_msg_password_required": "Будь ласка, введіть пароль",
+    "error_msg_login_credential": "Недійсна електронна пошта або пароль",
+    "error_msg_login_not_found": "Обліковий запис з цією електронною поштою не знайдено",
+    "error_msg_login_server": "Виникла помилка: ",
+    "submit_btn": "Увійти",
+    "forgot_btn": "Забули пароль?",
+    "google_btn": "Google",
+    "switch_btn": "Зареєструватися",
+    "switch_text": "Ще не маєте облікового запису?"
+  },
+  "register": {
+    "title": "Зареєструватися",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Створити обліковий запис",
+    "google_btn": "Google",
+    "switch_btn": "Увійти",
+    "switch_text": "У вас вже є обліковий запис?"
+  },
+  "theme_settings": {
+    "mode": "Режим теми",
+    "theme": "Колір теми"
+  },
+  "lang_settings": {
+    "Spanish": "Іспанська",
+    "English": "Англійська",
+    "France": "Французька",
+    "German": "Німецька",
+    "Italian": "Італійська",
+    "Japanese": "Японська",
+    "Korean": "Корейська",
+    "Portuguese": "Португальська",
+    "Russian": "Російська",
+    "Ukrainian": "Українська",
+    "Chinese": "Китайська"
+  }
+}

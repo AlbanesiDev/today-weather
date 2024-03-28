@@ -1,21 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 /**
  * Service for handling browser's local storage.
  * Provides methods to set, get, and remove data in localStorage.
  */
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class LocalStorageService {
   private expirationOptions: { [key: string]: number } = {
-    '30m': 1800000,
-    '1hr': 3600000,
-    '2hs': 7200000,
-    '3hs': 10800000,
-    '6hs': 21600000,
-    '12hs': 43200000,
-    '24hs': 86400000,
+    "30m": 1800000,
+    "1hr": 3600000,
+    "2hs": 7200000,
+    "3hs": 10800000,
+    "6hs": 21600000,
+    "12hs": 43200000,
+    "24hs": 86400000,
   };
 
   /**
@@ -25,18 +25,9 @@ export class LocalStorageService {
    * @param {boolean} expire Optional parameter to set expiration. Defaults to 1 hour if true.
    * @param {string} expirationOption Optional parameter to set a specific expiration time from predefined options.
    */
-  public setItem(
-    key: string,
-    value: any,
-    expire?: boolean,
-    expirationOption?: string
-  ): void {
-    let expiryTime = this.expirationOptions['1hr']; // Default to 1 Hour
-    if (
-      expire &&
-      expirationOption &&
-      this.expirationOptions[expirationOption]
-    ) {
+  public setItem(key: string, value: any, expire?: boolean, expirationOption?: string): void {
+    let expiryTime = this.expirationOptions["1hr"]; // Default to 1 Hour
+    if (expire && expirationOption && this.expirationOptions[expirationOption]) {
       expiryTime = this.expirationOptions[expirationOption];
     }
     const data = {

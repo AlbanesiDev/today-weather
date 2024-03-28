@@ -1,0 +1,62 @@
+{
+  "sidebar": {
+    "header_home": "Home",
+    "header_config": "Configuration",
+    "header_notification": "Notifications",
+    "header_units": "Units",
+    "header_themes": "Themes",
+    "header_icons": "Icon Pack",
+    "header_lang": "Languages",
+    "login": "Login",
+    "sign_out": "Log out",
+    "config": "Configuration",
+    "help": "Help"
+  },
+  "searchbar": {
+    "placeholder": "Search locations...",
+    "not_found": "No results found.",
+    "error": "There seems to be an error: "
+  },
+  "login": {
+    "title": "Sign In",
+    "placeholder_email": "Email",
+    "placeholder_password": "Password",
+    "error_msg_email_required": "Please enter an email",
+    "error_msg_email_invalid": "The email is invalid",
+    "error_msg_password_required": "Please enter a password",
+    "error_msg_login_credential": "The email and/or password are invalid",
+    "error_msg_login_not_found": "No account found with that email",
+    "error_msg_login_server": "An error occurred: ",
+    "submit_btn": "Sign In",
+    "forgot_btn": "Forgot your password?",
+    "google_btn": "Google",
+    "switch_btn": "Sign Up",
+    "switch_text": "Don't have an account yet?"
+  },
+  "register": {
+    "title": "Sign Up",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Create Account",
+    "google_btn": "Google",
+    "switch_btn": "Log In",
+    "switch_text": "Already have an account?"
+  },
+  "theme_settings": {
+    "mode": "Theme mode",
+    "theme": "Theme color"
+  },
+  "lang_settings": {
+    "Spanish": "Spanish",
+    "English": "English",
+    "France": "France",
+    "German": "German",
+    "Italian": "Italian",
+    "Japanese": "Japanese",
+    "Korean": "Korean",
+    "Portuguese": "Portuguese",
+    "Russian": "Russian",
+    "Ukrainian": "Ukrainian",
+    "Chinese": "Chinese"
+  }
+}

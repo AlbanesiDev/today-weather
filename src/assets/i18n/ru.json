@@ -1,0 +1,62 @@
+{
+  "sidebar": {
+    "header_home": "Главная",
+    "header_config": "Настройка",
+    "header_notification": "Уведомления",
+    "header_units": "Единицы",
+    "header_themes": "Темы",
+    "header_icons": "Пакет иконок",
+    "header_lang": "Языки",
+    "login": "Войти",
+    "sign_out": "выйти из системы",
+    "config": "Настройка",
+    "help": "Помощь"
+  },
+  "searchbar": {
+    "placeholder": "Поиск местоположений...",
+    "not_found": "Результаты не найдены.",
+    "error": "Похоже, произошла ошибка: "
+  },
+  "login": {
+    "title": "Войти",
+    "placeholder_email": "Электронная почта",
+    "placeholder_password": "Пароль",
+    "error_msg_email_required": "Пожалуйста, введите адрес электронной почты",
+    "error_msg_email_invalid": "Неверный адрес электронной почты",
+    "error_msg_password_required": "Пожалуйста, введите пароль",
+    "error_msg_login_credential": "Неверный адрес электронной почты и/или пароль",
+    "error_msg_login_not_found": "Аккаунт с этим адресом электронной почты не найден",
+    "error_msg_login_server": "Произошла ошибка: ",
+    "submit_btn": "Войти",
+    "forgot_btn": "Забыли пароль?",
+    "google_btn": "Google",
+    "switch_btn": "Зарегистрироваться",
+    "switch_text": "У вас еще нет аккаунта?"
+  },
+  "register": {
+    "title": "Зарегистрироваться",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Создать аккаунт",
+    "google_btn": "Google",
+    "switch_btn": "Войти",
+    "switch_text": "У вас уже есть аккаунт?"
+  },
+  "theme_settings": {
+    "mode": "Режим темы",
+    "theme": "Цвет темы"
+  },
+  "lang_settings": {
+    "Spanish": "Испанский",
+    "English": "Английский",
+    "France": "Французский",
+    "German": "Немецкий",
+    "Italian": "Итальянский",
+    "Japanese": "Японский",
+    "Korean": "Корейский",
+    "Portuguese": "Португальский",
+    "Russian": "Русский",
+    "Ukrainian": "Украинский",
+    "Chinese": "Китайский"
+  }
+}

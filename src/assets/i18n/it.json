@@ -1,0 +1,62 @@
+{
+  "sidebar": {
+    "header_home": "Home",
+    "header_config": "Configurazione",
+    "header_notification": "Notifiche",
+    "header_units": "Unità",
+    "header_themes": "Temi",
+    "header_icons": "Pacchetto icone",
+    "header_lang": "Lingue",
+    "login": "Accedi",
+    "sign_out": "Disconnettersi",
+    "config": "Configurazione",
+    "help": "Aiuto"
+  },
+  "searchbar": {
+    "placeholder": "Cerca luoghi...",
+    "not_found": "Nessun risultato trovato.",
+    "error": "Sembra esserci un errore: "
+  },
+  "login": {
+    "title": "Accedi",
+    "placeholder_email": "E-mail",
+    "placeholder_password": "Password",
+    "error_msg_email_required": "Inserisci un'email",
+    "error_msg_email_invalid": "L'email non è valida",
+    "error_msg_password_required": "Inserisci una password",
+    "error_msg_login_credential": "L'email e/o la password non sono valide",
+    "error_msg_login_not_found": "Nessun account trovato con quell'email",
+    "error_msg_login_server": "Si è verificato un errore: ",
+    "submit_btn": "Accedi",
+    "forgot_btn": "Password dimenticata?",
+    "google_btn": "Google",
+    "switch_btn": "Registrati",
+    "switch_text": "Non hai ancora un account?"
+  },
+  "register": {
+    "title": "Registrati",
+    "placeholder_email": "",
+    "placeholder_password": "",
+    "submit_btn": "Crea account",
+    "google_btn": "Google",
+    "switch_btn": "Accedi",
+    "switch_text": "Hai già un account?"
+  },
+  "theme_settings": {
+    "mode": "Modalità del tema",
+    "theme": "Colore del tema"
+  },
+  "lang_settings": {
+    "Spanish": "Spagnolo",
+    "English": "Inglese",
+    "France": "Francia",
+    "German": "Tedesco",
+    "Italian": "Italiano",
+    "Japanese": "Giapponese",
+    "Korean": "Coreano",
+    "Portuguese": "Portoghese",
+    "Russian": "Russo",
+    "Ukrainian": "Ucraino",
+    "Chinese": "Cinese"
+  }
+}
