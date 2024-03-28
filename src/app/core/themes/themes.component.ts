@@ -34,10 +34,7 @@ import { TranslateModule } from "@ngx-translate/core";
         <h2>{{ "theme_settings.theme" | translate }}</h2>
         <div class="flex flex-wrap gap-3">
           @for (item of themeList; track $index) {
-            <button
-              [ngStyle]="{ border: item.theme == themeMode ? '2px solid ' + item.hex : '' }"
-              (click)="setThemeClick(item.theme)"
-            >
+            <button [ngStyle]="{ border: item.theme == themesService.activeThemeSig() ? '1px solid ' + item.hex : '' }" (click)="setThemeClick(item.theme)">
               <span [ngStyle]="{ 'background-color': item.hex }"></span>
             </button>
           }
@@ -49,8 +46,8 @@ import { TranslateModule } from "@ngx-translate/core";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ThemesComponent {
-  // Dependency injection
-  private themesService: ThemesService = inject(ThemesService);
+  // Service injection
+  public themesService: ThemesService = inject(ThemesService);
 
   // The current theme mode (dark or light).
   public themeMode: string = this.themesService.activeModeSig();
@@ -115,7 +112,10 @@ export class ThemesComponent {
    * @param themeSelect The selected theme.
    */
   public setThemeClick(themeSelect: string): void {
-    const theme = "lara-" + this.themeMode + "-" + themeSelect;
-    this.themesService.setTheme(theme);
+    const themeActive = this.themesService.activeThemeSig();
+    if(themeSelect != themeActive){
+      const theme = "lara-" + this.themeMode + "-" + themeSelect;
+      this.themesService.setTheme(theme);
+    }
   }
 }
