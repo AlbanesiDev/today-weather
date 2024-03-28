@@ -1,9 +1,9 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
 export const routes: Routes = [
   {
-    path: '',
+    path: "",
     title: "Today's Weather",
-    loadComponent: ()=> import('./public/pages/home/home.component').then((c) => c.HomeComponent),
+    loadComponent: () => import("./public/pages/home/home.component").then((c) => c.HomeComponent),
   },
 ];

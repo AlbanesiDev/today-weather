@@ -6,12 +6,12 @@ import { Injectable, signal } from "@angular/core";
   providedIn: "root",
 })
 export class SidebarService {
-    /**
+  /**
    * A boolean variable to control the visibility of the sidebar.
    */
   public sidebarVisible: boolean = false;
   /**
    * A signal that contains the current route or component being displayed in the sidebar.
    */
-  public currentRouteSig = signal<string>('home');
+  public currentRouteSig = signal<string>("home");
 }

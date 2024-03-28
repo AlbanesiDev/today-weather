@@ -1,14 +1,12 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
-  selector: 'app-units',
+  selector: "app-units",
   standalone: true,
-  imports: [
-    CommonModule,
-  ],
+  imports: [CommonModule],
   template: `<p>units works!</p>`,
-  styleUrl: './units.component.scss',
+  styleUrl: "./units.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class UnitsComponent { }
+export class UnitsComponent {}

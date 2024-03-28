@@ -34,12 +34,12 @@ import { TranslateModule } from "@ngx-translate/core";
         <h2>{{ "theme_settings.theme" | translate }}</h2>
         <div class="flex flex-wrap gap-3">
           @for (item of themeList; track $index) {
-          <button
-            [ngStyle]="{ border: item.theme == themeMode ? '2px solid ' + item.hex : '' }"
-            (click)="setThemeClick(item.theme)"
-          >
-            <span [ngStyle]="{ 'background-color': item.hex }"></span>
-          </button>
+            <button
+              [ngStyle]="{ border: item.theme == themeMode ? '2px solid ' + item.hex : '' }"
+              (click)="setThemeClick(item.theme)"
+            >
+              <span [ngStyle]="{ 'background-color': item.hex }"></span>
+            </button>
           }
         </div>
       </div>

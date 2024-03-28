@@ -96,8 +96,7 @@ export class AuthService {
   public async sendPasswordResetEmail(email: string) {
     const auth = getAuth();
     return sendPasswordResetEmail(auth, email)
-      .then((res) => {
-      })
+      .then((res) => {})
       .catch((error) => {});
   }
 }

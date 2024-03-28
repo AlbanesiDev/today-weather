@@ -19,12 +19,10 @@
             [autofocus]="true"
             [style]="{ width: '100%' }"
           />
-          <label for="email">{{ 'login.placeholder_email' | translate }}</label>
+          <label for="email">{{ "login.placeholder_email" | translate }}</label>
         </span>
         @if (false) {
-        <span class="ml-2 mt-2 text-red-400 font-medium"
-          >ERROR 00000000000</span
-        >
+          <span class="ml-2 mt-2 text-red-400 font-medium">ERROR 00000000000</span>
         }
       </div>
       <div class="flex flex-column">
@@ -40,27 +38,23 @@
             [style]="{ width: '100%' }"
             [inputStyle]="{ width: '100%' }"
           />
-          <label for="password">{{ 'login.placeholder_password' | translate }}</label>
+          <label for="password">{{ "login.placeholder_password" | translate }}</label>
         </span>
         @if (false) {
-        <span class="ml-2 mt-2 text-red-400 font-medium"
-          >ERROR 00000000000</span
-        >
-        } @if (true) {
-        <p-button
-          class="align-self-end mt-2"
-          size="small"
-          label="{{ 'login.forgot_btn' | translate }}"
-          [link]="true"
-        />
+          <span class="ml-2 mt-2 text-red-400 font-medium">ERROR 00000000000</span>
+        }
+        @if (true) {
+          <p-button
+            class="align-self-end mt-2"
+            size="small"
+            label="{{ 'login.forgot_btn' | translate }}"
+            [link]="true"
+          />
         }
       </div>
 
       <div class="flex flex-column gap-3">
-        <p-button
-          label="{{ 'login.submit_btn' | translate }}"
-          styleClass="w-full"
-        />
+        <p-button label="{{ 'login.submit_btn' | translate }}" styleClass="w-full" />
         <p-divider layout="horizontal" />
         <p-button
           label="{{ 'login.google_btn' | translate }}"
@@ -70,11 +64,7 @@
         />
         <div class="flex justify-content-center align-items-center">
           <p class="text-center">{{ "login.switch_text" | translate }}</p>
-          <p-button
-            size="small"
-            label="{{ 'login.switch_btn' | translate }}"
-            [link]="true"
-          />
+          <p-button size="small" label="{{ 'login.switch_btn' | translate }}" [link]="true" />
         </div>
       </div>
     </form>

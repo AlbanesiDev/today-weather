@@ -1,6 +1,6 @@
-import { LocalStorageService } from './../services/local-storage.service';
-import { Injectable, inject } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { LocalStorageService } from "./../services/local-storage.service";
+import { Injectable, inject } from "@angular/core";
+import { TranslateService } from "@ngx-translate/core";
 
 /**
  * A service that manages language settings for the application.
@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
  * and the TranslateService to apply the language across the app.
  */
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class LangService {
   /**
@@ -19,13 +19,12 @@ export class LangService {
   /**
    * Service responsible for interacting with the browser's local storage.
    */
-  private localStorageService: LocalStorageService =
-    inject(LocalStorageService);
+  private localStorageService: LocalStorageService = inject(LocalStorageService);
 
   /**
    * The key used to store the language setting in local storage.
    */
-  private langKeyStorage: string = 'userLangStorage';
+  private langKeyStorage: string = "userLangStorage";
 
   /**
    * Initializes the default language for the application.
@@ -37,7 +36,7 @@ export class LangService {
     if (langStorage !== null) {
       this.translateService.setDefaultLang(langStorage);
     } else {
-      this.translateService.setDefaultLang('en');
+      this.translateService.setDefaultLang("en");
     }
   }
 

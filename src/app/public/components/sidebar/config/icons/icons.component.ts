@@ -1,14 +1,12 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
-  selector: 'app-icons',
+  selector: "app-icons",
   standalone: true,
-  imports: [
-    CommonModule,
-  ],
+  imports: [CommonModule],
   template: `<p>icons works!</p>`,
-  styleUrl: './icons.component.scss',
+  styleUrl: "./icons.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class IconsComponent { }
+export class IconsComponent {}

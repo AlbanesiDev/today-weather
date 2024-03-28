@@ -1,11 +1,11 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable, inject, signal } from '@angular/core';
-import { Storage, getDownloadURL, ref } from '@angular/fire/storage';
-import { listAll } from '@firebase/storage';
-import { firstValueFrom } from 'rxjs';
+import { HttpClient } from "@angular/common/http";
+import { Injectable, inject, signal } from "@angular/core";
+import { Storage, getDownloadURL, ref } from "@angular/fire/storage";
+import { listAll } from "@firebase/storage";
+import { firstValueFrom } from "rxjs";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class WeatherIconsService {
   private http: HttpClient = inject(HttpClient);
@@ -15,12 +15,7 @@ export class WeatherIconsService {
   public icons = signal<any[]>([]);
   images: string[] = [];
 
-  public iconFolder = [
-    'weather-fill',
-    'weather-fill-static',
-    'weather-outline',
-    'weather-outline-static',
-  ];
+  public iconFolder = ["weather-fill", "weather-fill-static", "weather-outline", "weather-outline-static"];
 
   public getIcons(iconsFolder: string) {
     const iconsRef = ref(this.storage, iconsFolder);

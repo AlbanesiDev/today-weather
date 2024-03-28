@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { InputTextModule } from 'primeng/inputtext';
+import { CommonModule } from "@angular/common";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { InputTextModule } from "primeng/inputtext";
 
 @Component({
-  selector: 'app-searchbar',
+  selector: "app-searchbar",
   standalone: true,
   imports: [CommonModule, FormsModule, InputTextModule],
   template: `
@@ -13,10 +13,10 @@ import { InputTextModule } from 'primeng/inputtext';
       <input type="text" pInputText [(ngModel)]="value" />
     </span>
   `,
-  styleUrl: './searchbar.component.scss',
+  styleUrl: "./searchbar.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchbarComponent {
-  value: string = '';
+  value: string = "";
   search: boolean = false;
 }

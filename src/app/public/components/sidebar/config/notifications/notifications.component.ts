@@ -1,14 +1,13 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { SelectButtonModule } from "primeng/selectbutton";
 
 @Component({
-  selector: 'app-notifications',
+  selector: "app-notifications",
   standalone: true,
-  imports: [
-    CommonModule,
-  ],
+  imports: [CommonModule, SelectButtonModule],
   template: `<p>notifications works!</p>`,
-  styleUrl: './notifications.component.scss',
+  styleUrl: "./notifications.component.scss",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NotificationsComponent { }
+export class NotificationsComponent {}
