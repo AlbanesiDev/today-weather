@@ -1,5 +1,5 @@
 import { LocalStorageService } from "./../services/local-storage.service";
-import { Injectable, inject } from "@angular/core";
+import { Injectable, inject, signal } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 
 /**
@@ -27,6 +27,11 @@ export class LangService {
   private langKeyStorage: string = "userLangStorage";
 
   /**
+   * Signal storing the active language.
+   */
+  public currentLangSig = signal<string>("");
+
+  /**
    * Initializes the default language for the application.
    * It checks the local storage for an existing language setting,
    * and uses it if available. Otherwise, it defaults to English ('en').
@@ -35,8 +40,10 @@ export class LangService {
     const langStorage = this.localStorageService.getItem(this.langKeyStorage);
     if (langStorage !== null) {
       this.translateService.setDefaultLang(langStorage);
+      this.currentLangSig.set(langStorage);
     } else {
       this.translateService.setDefaultLang("en");
+      this.currentLangSig.set("en");
     }
   }
 
@@ -46,8 +53,9 @@ export class LangService {
    */
   public setLang(lang: string): void {
     const langStorage = this.localStorageService.getItem(this.langKeyStorage);
-    if(lang !== langStorage){
+    if (lang !== langStorage) {
       this.translateService.use(lang);
+      this.currentLangSig.set(lang);
       this.localStorageService.setItem(this.langKeyStorage, lang);
     }
   }

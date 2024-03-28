@@ -19,6 +19,7 @@ import { LangService } from "../../../../../core/lang/lang.service";
           label="{{ 'lang_settings.' + item.lang | translate }}"
           styleClass="w-full"
           [outlined]="true"
+          [class.active]="item.lang_iso === langService.currentLangSig()"
           (click)="setLangClick(item.lang_iso)"
         >
           <img alt="dropdown icon" width="25" [src]="'https://flagcdn.com/' + item.flag_iso + '.svg'" />
@@ -27,6 +28,13 @@ import { LangService } from "../../../../../core/lang/lang.service";
     </div>
   `,
   styles: `
+    .active {
+      ::ng-deep {
+        .p-button {
+          background-color: var(--primary-100);
+        }
+      }
+    }
     img {
       filter: drop-shadow(0 0 0.15rem rgba(0, 0, 0, 0.25));
     }
@@ -37,7 +45,7 @@ export class LangComponent {
   /**
    * Injects the `LangService` to manage language settings.
    */
-  private langService: LangService = inject(LangService);
+  public langService: LangService = inject(LangService);
   /**
    * An array of language options for the user to select from.
    */
