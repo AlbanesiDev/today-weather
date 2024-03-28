@@ -1,14 +1,17 @@
 import { CommonModule } from "@angular/common";
 import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
+import { TranslateModule } from "@ngx-translate/core";
 import { ButtonModule } from "primeng/button";
 import { LangService } from "../../../../../core/lang/lang.service";
-import { TranslateModule } from "@ngx-translate/core";
-import { Observable, Subject } from "rxjs";
 
+/**
+ * A component to handle language settings and selection.
+ * Utilizes `LangService` for language management and `TranslateModule` for localization.
+ */
 @Component({
   selector: "app-lang",
   standalone: true,
-  imports: [CommonModule, ButtonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, ButtonModule],
   template: `
     <div class="flex flex-column gap-3">
       @for (item of langList; track $index) {
@@ -23,12 +26,22 @@ import { Observable, Subject } from "rxjs";
       }
     </div>
   `,
-  styleUrl: "./lang.component.scss",
+  styles: `
+    img {
+      filter: drop-shadow(0 0 0.15rem rgba(0, 0, 0, 0.25));
+    }
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LangComponent {
+  /**
+   * Injects the `LangService` to manage language settings.
+   */
   private langService: LangService = inject(LangService);
-  public langList: any[] = [
+  /**
+   * An array of language options for the user to select from.
+   */
+  public langList: Array<{ lang: string; lang_iso: string; flag_iso: string }> = [
     {
       lang: "Spanish",
       lang_iso: "es",
@@ -74,7 +87,6 @@ export class LangComponent {
       lang_iso: "ru",
       flag_iso: "ru",
     },
-
     {
       lang: "Ukrainian",
       lang_iso: "uk",
@@ -87,6 +99,10 @@ export class LangComponent {
     },
   ];
 
+  /**
+   * Handles the click event to set the application language.
+   * @param lang The ISO code of the selected language.
+   */
   public setLangClick(lang: string): void {
     this.langService.setLang(lang);
   }
