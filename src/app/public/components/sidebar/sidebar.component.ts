@@ -52,10 +52,6 @@ export class SidebarComponent {
   public modalService: ModalService = inject(ModalService);
   public authService: AuthService = inject(AuthService);
 
-  public currentMenu = "home";
-
-  public showMenu: boolean = true;
-  public configMenu: boolean = true;
   public btnConfig: any[] = [
     {
       icon: "pi pi-bell",
@@ -87,37 +83,7 @@ export class SidebarComponent {
     },
   ];
 
-  public sidebarCurrentRoute = "sidebar";
-
-  public dynamicConfig: string = "";
-
-  public showConfigClick() {
-    this.showMenu = !this.showMenu;
-  }
-
-  public showMenuConfigClick(config: string) {
-    this.dynamicConfig = config;
-    this.currentMenu = config;
-    this.configMenu = !this.configMenu;
-  }
-
   public showModalClick() {
     this.modalService.openModal = true;
   }
-
-  public signOut() {
-    this.authService.signOut();
-  }
-
-  public sidebarCurrent: string = "";
-  public sidebarNavigate(route: string) {
-    this.sidebarCurrent = route;
-  }
-
-  /**
-   * Primera pantalla Sidebar home => 'home'
-   * Segunda pantalla Configuracion => 'config'
-   *
-   *
-   */
 }

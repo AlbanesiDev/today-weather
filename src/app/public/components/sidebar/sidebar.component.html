@@ -3,47 +3,49 @@
     <sidebar-header />
   </ng-template>
   <ng-template pTemplate="body">
-    @if (sidebarService.currentRouteSig() === "home") {
-      <div class="flex flex-column justify-content-between h-full">
-        <div>
-          <app-searchbar />
-          <!-- <app-favs /> -->
-        </div>
-        <div>
-          <sidebar-footer />
-        </div>
-      </div>
-    } @else {
-      @switch (sidebarService.currentRouteSig()) {
-        @case ("config") {
-          <div class="flex flex-column gap-3">
-            @for (item of btnConfig; track $index) {
-              <p-button
-                label="{{ 'sidebar.header_' + item.config | translate }}"
-                styleClass="w-full"
-                [icon]="item.icon"
-                [outlined]="true"
-                (click)="sidebarService.currentRouteSig.set(item.config)"
-              />
-            }
+    <div class="mt-1 h-full">
+      @if (sidebarService.currentRouteSig() === "home") {
+        <div class="flex flex-column justify-content-between h-full">
+          <div>
+            <app-searchbar />
+            <!-- <app-favs /> -->
           </div>
-        }
-        @case ("notification") {
-          <app-notifications />
-        }
-        @case ("units") {
-          <app-units />
-        }
-        @case ("themes") {
-          <app-themes />
-        }
-        @case ("icons") {
-          <app-icons />
-        }
-        @case ("lang") {
-          <app-lang />
+          <div>
+            <sidebar-footer />
+          </div>
+        </div>
+      } @else {
+        @switch (sidebarService.currentRouteSig()) {
+          @case ("config") {
+            <div class="flex flex-column gap-3">
+              @for (item of btnConfig; track $index) {
+                <p-button
+                  label="{{ 'sidebar.header_' + item.config | translate }}"
+                  styleClass="w-full"
+                  [icon]="item.icon"
+                  [outlined]="true"
+                  (click)="sidebarService.currentRouteSig.set(item.config)"
+                />
+              }
+            </div>
+          }
+          @case ("notification") {
+            <app-notifications />
+          }
+          @case ("units") {
+            <app-units />
+          }
+          @case ("themes") {
+            <app-themes />
+          }
+          @case ("icons") {
+            <app-icons />
+          }
+          @case ("lang") {
+            <app-lang />
+          }
         }
       }
-    }
+    </div>
   </ng-template>
 </p-sidebar>
