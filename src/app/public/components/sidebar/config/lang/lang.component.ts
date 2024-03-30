@@ -31,7 +31,8 @@ import { LangService } from "../../../../../core/lang/lang.service";
     .active {
       ::ng-deep {
         .p-button {
-          background-color: var(--primary-100);
+          background-color: var(--primary-color);
+          color: var(--primary-color-text);
         }
       }
     }
