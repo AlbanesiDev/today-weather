@@ -26,7 +26,6 @@ import { AuthService } from "../../../../core/services/auth.service";
       } @else {
         <p-button
           label="{{ 'sidebar.login' | translate }}"
-          severity="info"
           styleClass="w-full"
           [outlined]="true"
           (click)="modalService.openModal = true"
