@@ -58,5 +58,13 @@
     "Russian": "러시아어",
     "Ukrainian": "우크라이나어",
     "Chinese": "중국어"
+  },
+  "icon_settings": {
+    "title_icons": "아이콘 유형",
+    "label_outline": "윤곽",
+    "label_fill": "채우기",
+    "title_animations": "애니메이션",
+    "label_animations_on": "애니메이션 켜기",
+    "label_animations_off": "애니메이션 끄기"
   }
 }

@@ -58,5 +58,13 @@
     "Russian": "Russo",
     "Ukrainian": "Ucraino",
     "Chinese": "Cinese"
+  },
+  "icon_settings": {
+    "title_icons": "Tipo di icona",
+    "label_outline": "Contorno",
+    "label_fill": "Riempimento",
+    "title_animations": "Animazioni",
+    "label_animations_on": "Animazioni attivate",
+    "label_animations_off": "Animazioni disattivate"
   }
 }

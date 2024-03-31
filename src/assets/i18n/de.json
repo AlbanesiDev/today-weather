@@ -58,5 +58,13 @@
     "Russian": "Russisch",
     "Ukrainian": "Ukrainisch",
     "Chinese": "Chinesisch"
+  },
+  "icon_settings": {
+    "title_icons": "Icon-Typ",
+    "label_outline": "Umriss",
+    "label_fill": "Ausfüllen",
+    "title_animations": "Animationen",
+    "label_animations_on": "Animationen aktiviert",
+    "label_animations_off": "Animationen deaktiviert"
   }
 }

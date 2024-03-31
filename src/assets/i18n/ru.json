@@ -58,5 +58,13 @@
     "Russian": "Русский",
     "Ukrainian": "Украинский",
     "Chinese": "Китайский"
+  },
+  "icon_settings": {
+    "title_icons": "Тип иконки",
+    "label_outline": "Контур",
+    "label_fill": "Заполнение",
+    "title_animations": "Анимации",
+    "label_animations_on": "Анимации включены",
+    "label_animations_off": "Анимации выключены"
   }
 }

@@ -58,5 +58,13 @@
     "Russian": "俄语",
     "Ukrainian": "乌克兰语",
     "Chinese": "中文"
+  },
+  "icon_settings": {
+    "title_icons": "图标类型",
+    "label_outline": "轮廓",
+    "label_fill": "填充",
+    "title_animations": "动画",
+    "label_animations_on": "开启动画",
+    "label_animations_off": "关闭动画"
   }
 }

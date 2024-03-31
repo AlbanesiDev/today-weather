@@ -58,5 +58,13 @@
     "Russian": "Russian",
     "Ukrainian": "Ukrainian",
     "Chinese": "Chinese"
+  },
+  "icon_settings": {
+    "title_icons": "Icon Type",
+    "label_outline": "Outline",
+    "label_fill": "Fill",
+    "title_animations": "Animations",
+    "label_animations_on": "Animations on",
+    "label_animations_off": "Animations off"
   }
 }

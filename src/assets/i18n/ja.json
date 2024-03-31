@@ -58,5 +58,13 @@
     "Russian": "ロシア語",
     "Ukrainian": "ウクライナ語",
     "Chinese": "中国語"
+  },
+  "icon_settings": {
+    "title_icons": "アイコンの種類",
+    "label_outline": "アウトライン",
+    "label_fill": "塗りつぶし",
+    "title_animations": "アニメーション",
+    "label_animations_on": "アニメーションオン",
+    "label_animations_off": "アニメーションオフ"
   }
 }
