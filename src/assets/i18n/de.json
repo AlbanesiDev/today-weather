@@ -66,5 +66,34 @@
     "title_animations": "Animationen",
     "label_animations_on": "Animationen aktiviert",
     "label_animations_off": "Animationen deaktiviert"
+  },
+  "units_settings": {
+    "format_time_title": "Zeit",
+    "format_time_12": "12 Stunden",
+    "format_time_24": "24 Stunden",
+
+    "format_temperature_title": "Temperatur",
+    "units_temperature_c": "°C | Celsius",
+    "units_temperature_f": "°F | Fahrenheit",
+
+    "format_speed_title": "Geschwindigkeit",
+    "units_speed_mph": "mph | Meilen pro Stunde",
+    "units_speed_kmh": "km/h | Kilometer pro Stunde",
+    "units_speed_ms": "m/s | Meter pro Sekunde",
+    "units_speed_beaufort": "Beaufort",
+    "units_speed_knots": "Knoten",
+
+    "format_pressure_title": "Druck",
+    "units_pressure_mbar": "mBar | Millibar",
+    "units_pressure_inhg": "inHg | Zoll Quecksilber",
+    "units_pressure_psi": "psi | Pfund pro Quadratzoll",
+    "units_pressure_bar": "bar",
+    "units_pressure_mmhg": "mmHg | Millimeter Quecksilber",
+    "units_pressure_kpa": "kPa | Kilo Pascal",
+    "units_pressure_hpa": "hPa | Hektopascal",
+
+    "format_precipitation_title": "Niederschlag",
+    "units_precipitation_mm": "mm | Millimeter",
+    "units_precipitation_in": "in | Zoll"
   }
 }

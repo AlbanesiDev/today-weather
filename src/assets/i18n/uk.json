@@ -66,5 +66,34 @@
     "title_animations": "Анімації",
     "label_animations_on": "Анімації увімкнено",
     "label_animations_off": "Анімації вимкнено"
+  },
+  "units_settings": {
+    "format_time_title": "Час",
+    "format_time_12": "12 Годин",
+    "format_time_24": "24 Години",
+
+    "format_temperature_title": "Температура",
+    "units_temperature_c": "°C | Цельсій",
+    "units_temperature_f": "°F | Фаренгейт",
+
+    "format_speed_title": "Швидкість",
+    "units_speed_mph": "mph | Милі на годину",
+    "units_speed_kmh": "km/h | Кілометри на годину",
+    "units_speed_ms": "m/s | Метри за секунду",
+    "units_speed_beaufort": "Бофорта",
+    "units_speed_knots": "Вузли",
+
+    "format_pressure_title": "Тиск",
+    "units_pressure_mbar": "mBar | Мілібар",
+    "units_pressure_inhg": "inHg | Дюйм ртутного стовпа",
+    "units_pressure_psi": "psi | Фунт на квадратний дюйм",
+    "units_pressure_bar": "Бар",
+    "units_pressure_mmhg": "mmHg | Міліметр ртутного стовпа",
+    "units_pressure_kpa": "kPa | Кілопаскаль",
+    "units_pressure_hpa": "гПа | Гектопаскаль",
+
+    "format_precipitation_title": "Опади",
+    "units_precipitation_mm": "mm | Міліметри",
+    "units_precipitation_in": "in | Дюйми"
   }
 }

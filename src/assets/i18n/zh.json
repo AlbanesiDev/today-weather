@@ -66,5 +66,34 @@
     "title_animations": "动画",
     "label_animations_on": "开启动画",
     "label_animations_off": "关闭动画"
+  },
+  "units_settings": {
+    "format_time_title": "时间",
+    "format_time_12": "12 小时",
+    "format_time_24": "24 小时",
+
+    "format_temperature_title": "温度",
+    "units_temperature_c": "°C | 摄氏",
+    "units_temperature_f": "°F | 华氏",
+
+    "format_speed_title": "速度",
+    "units_speed_mph": "mph | 英里每小时",
+    "units_speed_kmh": "km/h | 公里每小时",
+    "units_speed_ms": "m/s | 米每秒",
+    "units_speed_beaufort": "贝福特",
+    "units_speed_knots": "节",
+
+    "format_pressure_title": "压力",
+    "units_pressure_mbar": "mBar | 毫巴",
+    "units_pressure_inhg": "inHg | 英寸汞柱",
+    "units_pressure_psi": "psi | 磅每平方英寸",
+    "units_pressure_bar": "巴",
+    "units_pressure_mmhg": "mmHg | 毫米汞柱",
+    "units_pressure_kpa": "kPa | 千帕",
+    "units_pressure_hpa": "hPa | 百帕斯卡",
+
+    "format_precipitation_title": "降水",
+    "units_precipitation_mm": "mm | 毫米",
+    "units_precipitation_in": "in | 英寸"
   }
 }

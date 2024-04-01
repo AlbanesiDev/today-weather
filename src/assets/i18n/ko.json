@@ -66,5 +66,34 @@
     "title_animations": "애니메이션",
     "label_animations_on": "애니메이션 켜기",
     "label_animations_off": "애니메이션 끄기"
+  },
+  "units_settings": {
+    "format_time_title": "시간",
+    "format_time_12": "12 시간",
+    "format_time_24": "24 시간",
+
+    "format_temperature_title": "온도",
+    "units_temperature_c": "°C | 섭씨",
+    "units_temperature_f": "°F | 화씨",
+
+    "format_speed_title": "속도",
+    "units_speed_mph": "mph | 시간당 마일",
+    "units_speed_kmh": "km/h | 시간당 킬로미터",
+    "units_speed_ms": "m/s | 초당 미터",
+    "units_speed_beaufort": "보포트",
+    "units_speed_knots": "노트",
+
+    "format_pressure_title": "압력",
+    "units_pressure_mbar": "mBar | 밀리바",
+    "units_pressure_inhg": "inHg | 인치 수은柱",
+    "units_pressure_psi": "psi | 제곱 인치당 파운드",
+    "units_pressure_bar": "바",
+    "units_pressure_mmhg": "mmHg | 밀리미터 수은柱",
+    "units_pressure_kpa": "kPa | 킬로 파스칼",
+    "units_pressure_hpa": "hPa | 헥토파스칼",
+
+    "format_precipitation_title": "강수",
+    "units_precipitation_mm": "mm | 밀리미터",
+    "units_precipitation_in": "in | 인치"
   }
 }

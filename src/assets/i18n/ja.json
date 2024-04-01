@@ -66,5 +66,34 @@
     "title_animations": "アニメーション",
     "label_animations_on": "アニメーションオン",
     "label_animations_off": "アニメーションオフ"
+  },
+  "units_settings": {
+    "format_time_title": "時間",
+    "format_time_12": "12時間",
+    "format_time_24": "24時間",
+
+    "format_temperature_title": "温度",
+    "units_temperature_c": "°C | セ氏",
+    "units_temperature_f": "°F | 華氏",
+
+    "format_speed_title": "速度",
+    "units_speed_mph": "mph | マイル毎時",
+    "units_speed_kmh": "km/h | キロ毎時",
+    "units_speed_ms": "m/s | メートル毎秒",
+    "units_speed_beaufort": "ビューフォート",
+    "units_speed_knots": "ノット",
+
+    "format_pressure_title": "圧力",
+    "units_pressure_mbar": "mBar | ミリバール",
+    "units_pressure_inhg": "inHg | 水銀柱インチ",
+    "units_pressure_psi": "psi | ポンド毎平方インチ",
+    "units_pressure_bar": "バー",
+    "units_pressure_mmhg": "mmHg | 水銀柱ミリメートル",
+    "units_pressure_kpa": "kPa | キロパスカル",
+    "units_pressure_hpa": "hPa | ヘクトパスカル",
+
+    "format_precipitation_title": "降水",
+    "units_precipitation_mm": "mm | ミリメートル",
+    "units_precipitation_in": "in | インチ"
   }
 }

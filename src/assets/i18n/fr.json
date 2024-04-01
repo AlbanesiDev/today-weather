@@ -66,5 +66,34 @@
     "title_animations": "Animations",
     "label_animations_on": "Animations activées",
     "label_animations_off": "Animations désactivées"
+  },
+  "units_settings": {
+    "format_time_title": "Temps",
+    "format_time_12": "12 Heures",
+    "format_time_24": "24 Heures",
+
+    "format_temperature_title": "Température",
+    "units_temperature_c": "°C | Celsius",
+    "units_temperature_f": "°F | Fahrenheit",
+
+    "format_speed_title": "Vitesse",
+    "units_speed_mph": "mph | Miles par heure",
+    "units_speed_kmh": "km/h | Kilomètres par heure",
+    "units_speed_ms": "m/s | Mètres par seconde",
+    "units_speed_beaufort": "Beaufort",
+    "units_speed_knots": "Nœuds",
+
+    "format_pressure_title": "Pression",
+    "units_pressure_mbar": "mBar | Millibar",
+    "units_pressure_inhg": "inHg | Pouce de mercure",
+    "units_pressure_psi": "psi | Livre par pouce carré",
+    "units_pressure_bar": "bar",
+    "units_pressure_mmhg": "mmHg | Millimètre de mercure",
+    "units_pressure_kpa": "kKa | Kilo pascal",
+    "units_pressure_hpa": "hPa | Hectopascal",
+
+    "format_precipitation_title": "Précipitation",
+    "units_precipitation_mm": "mm | Millimètres",
+    "units_precipitation_in": "in | Pouces"
   }
 }

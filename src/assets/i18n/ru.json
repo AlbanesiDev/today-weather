@@ -66,5 +66,34 @@
     "title_animations": "Анимации",
     "label_animations_on": "Анимации включены",
     "label_animations_off": "Анимации выключены"
+  },
+  "units_settings": {
+    "format_time_title": "Время",
+    "format_time_12": "12 Часов",
+    "format_time_24": "24 Часа",
+
+    "format_temperature_title": "Температура",
+    "units_temperature_c": "°C | Цельсий",
+    "units_temperature_f": "°F | Фаренгейт",
+
+    "format_speed_title": "Скорость",
+    "units_speed_mph": "mph | Мили в час",
+    "units_speed_kmh": "km/h | Километры в час",
+    "units_speed_ms": "m/s | Метры в секунду",
+    "units_speed_beaufort": "Бофорт",
+    "units_speed_knots": "Узлы",
+
+    "format_pressure_title": "Давление",
+    "units_pressure_mbar": "mBar | Миллибар",
+    "units_pressure_inhg": "inHg | Дюйм ртутного столба",
+    "units_pressure_psi": "psi | Фунт на квадратный дюйм",
+    "units_pressure_bar": "Бар",
+    "units_pressure_mmhg": "mmHg | Миллиметр ртутного столба",
+    "units_pressure_kpa": "kPa | Килопаскаль",
+    "units_pressure_hpa": "гПа | Гектопаскаль",
+
+    "format_precipitation_title": "Осадки",
+    "units_precipitation_mm": "mm | Миллиметры",
+    "units_precipitation_in": "in | Дюймы"
   }
 }
