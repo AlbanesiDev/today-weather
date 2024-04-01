@@ -1,0 +1,49 @@
+{
+  "count": 1,
+  "data": [
+    {
+      "app_temp": 20.8,
+      "aqi": 37,
+      "city_name": "Raleigh",
+      "clouds": 0,
+      "country_code": "US",
+      "datetime": "2024-03-31:00",
+      "dewpt": 4.3,
+      "dhi": 0,
+      "dni": 0,
+      "elev_angle": -17.47,
+      "ghi": 0,
+      "gust": null,
+      "h_angle": -90,
+      "lat": 35.7796,
+      "lon": -78.6382,
+      "ob_time": "2024-03-31 00:40",
+      "pod": "n",
+      "precip": 0,
+      "pres": 999.3,
+      "rh": 32,
+      "slp": 1012.2,
+      "snow": 0,
+      "solar_rad": 0,
+      "sources": ["1327W", "radar", "satellite"],
+      "state_code": "NC",
+      "station": "1327W",
+      "sunrise": "11:01",
+      "sunset": "23:36",
+      "temp": 21.7,
+      "timezone": "America/New_York",
+      "ts": 1711845600,
+      "uv": 0,
+      "vis": 16,
+      "weather": {
+        "description": "Clear sky",
+        "code": 800,
+        "icon": "c01n"
+      },
+      "wind_cdir": "WSW",
+      "wind_cdir_full": "west-southwest",
+      "wind_dir": 240,
+      "wind_spd": 1.34
+    }
+  ]
+}
