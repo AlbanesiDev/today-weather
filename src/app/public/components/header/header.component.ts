@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import { ChangeDetectionStrategy, Component, signal, inject } from "@angular/core";
 import { ButtonModule } from "primeng/button";
 import { SidebarService } from "../../services/sidebar.service";
+import { UnitsService } from "../../../core/services/units.service";
 
 /**
  * HeaderComponent is a standalone Angular component that displays
@@ -14,7 +15,7 @@ import { SidebarService } from "../../services/sidebar.service";
   template: `
     <header class="flex justify-content-between align-items-center py-3">
       <p-button size="large" [text]="true">
-        {{ timeSig() | date: "HH:mm a" }}
+        {{ timeSig() | date: unitsService.formatTime() }}
       </p-button>
       <p-button icon="pi pi-bars" size="large" [text]="true" (click)="toggleSidebarClick()" />
     </header>
@@ -22,9 +23,17 @@ import { SidebarService } from "../../services/sidebar.service";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  // Dependency injection
+  /**
+   *  Units service for formatTime
+   */
+  public unitsService: UnitsService = inject(UnitsService);
+  /**
+   * Sidebar service for toggle sidebar
+   */
   private sidebarService: SidebarService = inject(SidebarService);
-  // Signal for the current time
+  /**
+   * Signal for the current time
+   */
   public timeSig = signal(new Date());
 
   constructor() {
