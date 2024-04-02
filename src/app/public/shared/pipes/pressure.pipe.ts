@@ -7,7 +7,7 @@ import { TPressure } from "../../../core/interface/units.inteface";
   name: "pressureUnit",
   standalone: true,
 })
-export class PressurePie implements PipeTransform {
+export class PressurePipe implements PipeTransform {
   /**
    * Transforms a pressure value to the specified unit.
    *
