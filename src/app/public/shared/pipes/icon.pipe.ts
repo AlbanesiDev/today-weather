@@ -1,5 +1,5 @@
 import { Pipe, type PipeTransform } from "@angular/core";
-import { TIcons } from "../../../core/interface/icon.interface";
+import { TWeatherIconsFolder } from "../../../core/interface/icon.interface";
 /**
  * A pipe that dynamically generates the path to icon assets
  * based on the specified icon type.
@@ -16,7 +16,7 @@ export class IconPipe implements PipeTransform {
    * @param {TIcons} type - The type of the icon, which determines the folder and style of the icon.
    * @returns {string} - The path to the SVG asset for the icon.
    */
-  transform(icon: string, type: TIcons): string {
+  transform(icon: string, type: TWeatherIconsFolder): string {
     switch (type) {
       case "fill":
         let fill = `/assets/icons/weather-fill/${icon}.svg`;

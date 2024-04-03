@@ -8,7 +8,7 @@ import { ToggleButtonModule } from "primeng/togglebutton";
 import { ButtonModule } from "primeng/button";
 
 import { WeatherIconsService } from "./../../../../../core/services/weather-icons.service";
-import { TWeatherIconsType } from "../../../../../core/interface/weather-type.interface";
+import { TWeatherIconsType } from "../../../../../core/interface/icon.interface";
 
 /**
  * IconsComponent is used to change the style of the icons.
@@ -83,13 +83,19 @@ export class IconsComponent {
    * @param type The type of weather icons.
    */
   public setTypeIcon(type: TWeatherIconsType): void {
-    this.weatherIconsService.iconsType.set(type);
+    if (this.weatherIconsService.iconsAnimations() === 'on') {
+      this.weatherIconsService.iconsType.set(type);
+    } else {
+      this.weatherIconsService.iconsType.set(type);
+    }
+    this.weatherIconsService.getTypeIcons();
   }
 
   /**
    * Toggles weather icons animations (on/off).
    */
   public toggleAnimationsClick(): void {
-    this.weatherIconsService.iconsAnimations.set(this.weatherIconsService.iconsAnimations() === "on" ? "off" : "on");
+    this.weatherIconsService.iconsAnimations.set(this.weatherIconsService.iconsAnimations() === "off" ? "on" : "off");
+    this.weatherIconsService.getTypeIcons();
   }
 }
