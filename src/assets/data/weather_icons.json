@@ -30,9 +30,9 @@
   {
     "code": 211,
     "icon_code": "11",
-    "icon": "thunderstorm-overcast",
-    "icon_day": "thunderstorm-day-overcast",
-    "icon_night": "thunderstorm-night-overcast"
+    "icon": "thunderstorms-overcast",
+    "icon_day": "thunderstorms-day-overcast",
+    "icon_night": "thunderstorms-night-overcast"
   },
   {
     "code": 212,
@@ -58,9 +58,9 @@
   {
     "code": 231,
     "icon_code": "11",
-    "icon": "thunderstorm-overcast",
-    "icon_day": "thunderstorm-day-overcast",
-    "icon_night": "thunderstorm-night-overcast"
+    "icon": "thunderstorms-overcast",
+    "icon_day": "thunderstorms-day-overcast",
+    "icon_night": "thunderstorms-night-overcast"
   },
   {
     "code": 232,
@@ -72,16 +72,12 @@
   {
     "code": 300,
     "icon_code": "09",
-    "icon": "drizzle",
-    "icon_day": "drizzle-day",
-    "icon_night": "drizzle-night"
+    "icon": "drizzle"
   },
   {
     "code": 301,
     "icon_code": "09",
-    "icon": "drizzle",
-    "icon_day": "drizzle-day",
-    "icon_night": "drizzle-night"
+    "icon": "drizzle"
   },
   {
     "code": 302,
@@ -100,9 +96,7 @@
   {
     "code": 311,
     "icon_code": "09",
-    "icon": "drizzle",
-    "icon_day": " drizzle-day",
-    "icon_night": "drizzle-night"
+    "icon": "drizzle"
   },
   {
     "code": 312,
