@@ -1,0 +1,26 @@
+export const environment = {
+  IS_PRODUCTION: false,
+  WEATHER_OWM_KEY: "*******************",
+  WEATHER_BIT_KEY: "*******************",
+  WEATHER_OWM_GEOCODING: "/assets/mocks/weather-owm-geocoding.json",
+  WEATHER_OWM_CURRENT: "/assets/mocks/weather-owm-current.json",
+  WEATHER_OWM_AQI: "/assets/mocks/weather-owm-aqi.json",
+  WEATHER_ICON_LIST: "/assets/data/weather_icons.json",
+  LOCAL_STORAGE: {
+    userNotificationsKey: "userNotifications",
+    userUnitsKey: "userUnits",
+    userThemeKey: "userTheme",
+    userIconPreferences: "userIconsStyle",
+    userFeaturesKey: "userFeatures",
+    userLangKey: "userLang",
+  },
+  FIREBASE_CONFIG: {
+    apiKey: "*******************",
+    authDomain: "*******************",
+    projectId: "*******************",
+    storageBucket: "*******************",
+    messagingSenderId: "*******************",
+    appId: "*******************",
+    measurementId: "*******************",
+  },
+};
