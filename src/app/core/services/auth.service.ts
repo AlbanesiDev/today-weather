@@ -8,7 +8,7 @@ import {
   signOut,
   user,
 } from "@angular/fire/auth";
-import { GoogleAuthProvider, UserCredential, getAuth, updateProfile } from "@firebase/auth";
+import { GoogleAuthProvider, getAuth } from "@firebase/auth";
 import { UserInterface } from "../interface/user.interface";
 import { Observable, from } from "rxjs";
 
@@ -46,9 +46,9 @@ export class AuthService {
    * @param password The password for the user's account.
    * @returns An observable that completes when the registration is finished.
    */
-  public registerWithEmail(username: string, email: string, password: string): Observable<void> {
+  public registerWithEmail(email: string, password: string): Observable<void> {
     const promise = createUserWithEmailAndPassword(this.firebaseAuth, email, password)
-      .then((res) => updateProfile(res.user, { displayName: username }))
+      .then(() => {})
       .catch((error) => {});
     return from(promise);
   }
