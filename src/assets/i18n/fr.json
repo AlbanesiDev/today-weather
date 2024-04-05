@@ -37,10 +37,18 @@
     "title": "S'inscrire",
     "placeholder_email": "E-mail",
     "placeholder_password": "Mot de passe",
+    "promptLabel": "Entrez un mot de passe",
+    "weakLabel": "Faible",
+    "mediumLabel": "Moyen",
+    "strongLabel": "Fort",
+    "hasMinLength": "Minimum 8 caractères.",
+    "hasUppercase": "Au moins une majuscule.",
+    "hasLowercase": "Au moins une minuscule.",
+    "hasNumber": "Au moins un chiffre.",
     "submit_btn": "Créer un compte",
     "google_btn": "Google",
-    "switch_btn": "Connexion",
-    "switch_text": "Vous avez déjà un compte ?"
+    "switch_btn": "Se connecter",
+    "switch_text": "Vous avez déjà un compte?"
   },
   "theme_settings": {
     "mode": "Mode du thème",

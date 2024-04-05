@@ -37,10 +37,18 @@
     "title": "Registrieren",
     "placeholder_email": "E-Mail",
     "placeholder_password": "Passwort",
+    "promptLabel": "Geben Sie ein Passwort ein",
+    "weakLabel": "Schwach",
+    "mediumLabel": "Mittel",
+    "strongLabel": "Stark",
+    "hasMinLength": "Minimum 8 Zeichen.",
+    "hasUppercase": "Mindestens ein Großbuchstabe.",
+    "hasLowercase": "Mindestens ein Kleinbuchstabe.",
+    "hasNumber": "Mindestens eine Zahl.",
     "submit_btn": "Konto erstellen",
     "google_btn": "Google",
-    "switch_btn": "Anmelden",
-    "switch_text": "Haben Sie bereits ein Konto?"
+    "switch_btn": "Einloggen",
+    "switch_text": "Sie haben bereits ein Konto?"
   },
   "theme_settings": {
     "mode": "Themenmodus",

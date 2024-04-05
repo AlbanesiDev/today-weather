@@ -35,12 +35,20 @@
   },
   "register": {
     "title": "注册",
-    "placeholder_email": "",
-    "placeholder_password": "",
-    "submit_btn": "创建帐号",
+    "placeholder_email": "电子邮件",
+    "placeholder_password": "密码",
+    "promptLabel": "输入密码",
+    "weakLabel": "弱",
+    "mediumLabel": "中",
+    "strongLabel": "强",
+    "hasMinLength": "最少8个字符。",
+    "hasUppercase": "至少一个大写字母。",
+    "hasLowercase": "至少一个小写字母。",
+    "hasNumber": "至少一个数字。",
+    "submit_btn": "创建帐户",
     "google_btn": "Google",
     "switch_btn": "登录",
-    "switch_text": "已经有帐号了？"
+    "switch_text": "已经有账户了吗？"
   },
   "theme_settings": {
     "mode": "主题模式",

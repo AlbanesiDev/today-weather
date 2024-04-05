@@ -6,6 +6,7 @@
     "header_units": "Unidades",
     "header_themes": "Temas",
     "header_icons": "Paquete de iconos",
+    "header_features": "Características",
     "header_lang": "Lenguajes",
     "login": "Iniciar sesión",
     "sign_out": "Cerrar sesión",
@@ -37,6 +38,14 @@
     "title": "Registrarse",
     "placeholder_email": "Correo electrónico",
     "placeholder_password": "Contraseña",
+    "promptLabel": "Escriba una contraseña",
+    "weakLabel": "Débil",
+    "mediumLabel": "Regular",
+    "strongLabel":"Fuerte",
+    "hasMinLength": "Mínimo 8 caracteres.",
+    "hasUppercase": "Al menos una mayúscula.",
+    "hasLowercase": "Al menos una minúscula.",
+    "hasNumber": "Al menos un número.",
     "submit_btn": "Crear cuenta",
     "google_btn": "Google",
     "switch_btn": "Iniciar sesión",
@@ -95,5 +104,18 @@
     "format_precipitation_title": "Precipitación",
     "units_precipitation_mm": "mm | Milímetros",
     "units_precipitation_in": "in | Pulgadas"
+  },
+  "weather_current": {
+    "today": "Hoy",
+    "temp_max": "Maxima",
+    "temp_min": "Minima"
+  },
+    "weather_current_details": {
+    "feel_likes": "Sensación termica",
+    "humidity": "Humedad",
+    "uv_index": "Indice uv",
+    "visibility": "Visibilidad",
+    "dew_point": "Punto de rocio",
+    "pressure": "Presion"
   }
 }

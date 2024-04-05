@@ -34,10 +34,18 @@
     "switch_text": "アカウントをお持ちでないですか？"
   },
   "register": {
-    "title": "新規登録",
-    "placeholder_email": "",
-    "placeholder_password": "",
-    "submit_btn": "アカウントを作成",
+    "title": "登録",
+    "placeholder_email": "メールアドレス",
+    "placeholder_password": "パスワード",
+    "promptLabel": "パスワードを入力してください",
+    "weakLabel": "弱い",
+    "mediumLabel": "普通",
+    "strongLabel": "強い",
+    "hasMinLength": "最低8文字。",
+    "hasUppercase": "少なくとも1つの大文字。",
+    "hasLowercase": "少なくとも1つの小文字。",
+    "hasNumber": "少なくとも1つの数字。",
+    "submit_btn": "アカウントを作成する",
     "google_btn": "Google",
     "switch_btn": "ログイン",
     "switch_text": "すでにアカウントをお持ちですか？"
