@@ -170,6 +170,23 @@ export class UnitsComponent {
       ],
     },
     {
+      name: "format_visibility_title",
+      buttons: [
+        {
+          label: "units_visibility_km",
+          state: "km",
+          stateCurrent: () => this.unitsService.visibilityUnit(),
+          action: () => this.unitsService.toggleVisibility(),
+        },
+        {
+          label: "units_visibility_mi",
+          state: "mi",
+          stateCurrent: () => this.unitsService.visibilityUnit(),
+          action: () => this.unitsService.toggleVisibility(),
+        },
+      ],
+    },
+    {
       name: "format_precipitation_title",
       buttons: [
         {

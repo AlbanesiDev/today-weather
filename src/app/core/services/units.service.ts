@@ -1,6 +1,6 @@
 import { Injectable, inject, signal } from "@angular/core";
 import { LocalStorageService } from "./local-storage.service";
-import { TFormatTime, TPrecipitation, TPressure, TSpeed, TTemperature } from "../interface/units.inteface";
+import { TFormatTime, TPrecipitation, TPressure, TSpeed, TTemperature, TVisibility } from "../interface/units.inteface";
 
 /**
  * A service that provides unit preferences functionality.
@@ -22,6 +22,7 @@ export class UnitsService {
   public speedUnit = signal<TSpeed>("kmh");
   public pressureUnit = signal<TPressure>("hpa");
   public precipitationUnit = signal<TPrecipitation>("mm");
+  public visibilityUnit = signal<TVisibility>("km");
   /**
    * An array to hold the preferences with their corresponding keys, signals, and default values.
    * This structure allows for a scalable way to manage multiple user preferences.
@@ -32,6 +33,7 @@ export class UnitsService {
     { key: "userSpeedUnit", signal: this.speedUnit, default: "kmh" },
     { key: "userPressureUnit", signal: this.pressureUnit, default: "hpa" },
     { key: "userPrecipitationUnit", signal: this.precipitationUnit, default: "mm" },
+    { key: "userVisibilityUnit", signal: this.visibilityUnit, default: "km" },
   ];
 
   constructor() {
@@ -93,5 +95,13 @@ export class UnitsService {
   public togglePrecipitation(): void {
     this.precipitationUnit.set(this.precipitationUnit() === "in" ? "mm" : "in");
     this.updatePreference("userPrecipitationUnit", this.precipitationUnit());
+  }
+
+  /**
+   * Toggles the visibility unit between kilometers and milles and updates the preference.
+   */
+  public toggleVisibility(): void {
+    this.visibilityUnit.set(this.visibilityUnit() === "mi" ? "km" : "mi");
+    this.updatePreference("userVisibilityUnit", this.visibilityUnit());
   }
 }

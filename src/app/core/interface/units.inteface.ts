@@ -18,5 +18,7 @@ export type TSpeed = "kmh" | "mph" | "ms" | "beaufort" | "knots";
 
 export type TPressure = "hpa" | "kpa" | "mbar" | "inhg" | "psi" | "bar" | "mmhg";
 
+export type TVisibility = "km"| "mi";
+
 export type TPrecipitation = "mm" | "in";
 
