@@ -28,7 +28,7 @@ import { AuthService } from "../../../../core/services/auth.service";
           label="{{ 'sidebar.login' | translate }}"
           styleClass="w-full"
           [outlined]="true"
-          (click)="modalService.openModal = true"
+          (click)="openLogin()"
         />
       }
       <p-button
@@ -55,4 +55,9 @@ export class SidebarFooterComponent {
   public authService: AuthService = inject(AuthService);
 
   public userAuth: boolean = false;
+
+  openLogin() {
+    this.sidebarService.sidebarVisible = false;
+    this.modalService.openModal = true;
+  }
 }

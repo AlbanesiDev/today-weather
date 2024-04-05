@@ -21,7 +21,7 @@ import { FavsComponent } from "./favs/favs.component";
 
 import { AuthService } from "../../../core/services/auth.service";
 import { SidebarService } from "./../../services/sidebar.service";
-import { ModalService } from "../../services/modal.service";
+import { FeaturesComponent } from "./config/features/features.component";
 
 @Component({
   selector: "app-sidebar",
@@ -42,6 +42,7 @@ import { ModalService } from "../../services/modal.service";
     UnitsComponent,
     ThemesComponent,
     IconsComponent,
+    FeaturesComponent,
     LangComponent,
   ],
   templateUrl: "./sidebar.component.html",
@@ -49,41 +50,32 @@ import { ModalService } from "../../services/modal.service";
 })
 export class SidebarComponent {
   public sidebarService: SidebarService = inject(SidebarService);
-  public modalService: ModalService = inject(ModalService);
   public authService: AuthService = inject(AuthService);
 
   public btnConfig: any[] = [
     {
       icon: "pi pi-bell",
-      label: "Notificaciones",
       config: "notification",
-      disabled: "true",
     },
     {
       icon: "pi pi-compass",
-      label: "Unidades",
       config: "units",
-      disabled: "true",
     },
     {
       icon: "pi pi-moon",
       config: "themes",
-      label: "Tema",
     },
     {
       icon: "pi pi-images",
-      label: "Paquete de iconos",
       config: "icons",
-      disabled: "true",
+    },
+    {
+      icon: "pi pi-th-large",
+      config: "features",
     },
     {
       icon: "pi pi-language",
-      label: "Idioma",
       config: "lang",
     },
   ];
-
-  public showModalClick() {
-    this.modalService.openModal = true;
-  }
 }
