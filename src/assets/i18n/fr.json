@@ -103,5 +103,33 @@
     "format_precipitation_title": "Précipitation",
     "units_precipitation_mm": "mm | Millimètres",
     "units_precipitation_in": "in | Pouces"
+  },
+  "firebase_auth": {
+    "auth/captcha-check-failed": "La vérification reCAPTCHA de Google a échoué.",
+    "auth/credential-already-in-use": "Cette identité est déjà associée à un autre compte.",
+    "auth/requires-recent-login": "Veuillez vous connecter à nouveau car votre dernière session remonte à trop longtemps.",
+    "auth/email-already-in-use": "L'adresse e-mail est déjà utilisée.",
+    "auth/invalid-email": "Adresse e-mail invalide.",
+    "auth/wrong-password": "Mot de passe incorrect.",
+    "auth/account-exists-with-different-credential": "Un compte existe déjà avec cette adresse e-mail avec une identité différente.",
+    "auth/user-not-found": "Utilisateur introuvable.",
+    "auth/user-disabled": "Le compte utilisateur est désactivé.",
+    "auth/weak-password": "Le mot de passe est trop faible.",
+    "auth/too-many-requests": "Trop de tentatives. Veuillez réessayer plus tard.",
+    "auth/popup-blocked": "Popup bloquée par le navigateur.",
+    "auth/popup-closed-by-user": "Popup fermée par l'utilisateur."
+  },
+  "weather_current": {
+    "today": "Aujourd'hui",
+    "temp_max": "Max",
+    "temp_min": "Min"
+  },
+  "weather_current_details": {
+    "feel_likes": "Ressenti",
+    "humidity": "Humidité",
+    "uv_index": "Indice UV",
+    "visibility": "Visibilité",
+    "dew_point": "Point de rosée",
+    "pressure": "Pression"
   }
 }

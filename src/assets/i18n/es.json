@@ -41,7 +41,7 @@
     "promptLabel": "Escriba una contraseña",
     "weakLabel": "Débil",
     "mediumLabel": "Regular",
-    "strongLabel":"Fuerte",
+    "strongLabel": "Fuerte",
     "hasMinLength": "Mínimo 8 caracteres.",
     "hasUppercase": "Al menos una mayúscula.",
     "hasLowercase": "Al menos una minúscula.",
@@ -105,12 +105,24 @@
     "units_precipitation_mm": "mm | Milímetros",
     "units_precipitation_in": "in | Pulgadas"
   },
+  "firebase_auth": {
+    "auth/invalid-email": "Dirección de correo electrónico inválida.",
+    "auth/user-not-found": "Usuario no encontrado.",
+    "auth/wrong-password": "Contraseña incorrecta.",
+    "auth/user-disabled": "La cuenta de usuario está deshabilitada.",
+    "auth/email-already-in-use": "La dirección de correo electrónico ya está en uso.",
+    "auth/captcha-check-failed": "La verificación de Google reCAPTCHA ha fallado.",
+    "auth/requires-recent-login": "Por favor, inicia sesión nuevamente, ya que tu última sesión fue hace demasiado tiempo.",
+    "auth/credential-already-in-use": "Esta credencial ya está asociada con otra cuenta.",
+    "auth/account-exists-with-different-credential": "Ya existe una cuenta con este correo electrónico con una credencial diferente.",
+    "auth/too-many-requests": "Demasiados intentos. Por favor, inténtalo de nuevo más tarde."
+  },
   "weather_current": {
     "today": "Hoy",
     "temp_max": "Maxima",
     "temp_min": "Minima"
   },
-    "weather_current_details": {
+  "weather_current_details": {
     "feel_likes": "Sensación termica",
     "humidity": "Humedad",
     "uv_index": "Indice uv",

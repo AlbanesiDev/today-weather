@@ -103,5 +103,33 @@
     "format_precipitation_title": "降水",
     "units_precipitation_mm": "mm | ミリメートル",
     "units_precipitation_in": "in | インチ"
+  },
+  "firebase_auth": {
+    "auth/captcha-check-failed": "Google reCAPTCHAの確認に失敗しました。",
+    "auth/credential-already-in-use": "この資格情報はすでに別のアカウントに関連付けられています。",
+    "auth/requires-recent-login": "前回のセッションから時間が経ちすぎていますので、もう一度ログインしてください。",
+    "auth/email-already-in-use": "このメールアドレスはすでに使用されています。",
+    "auth/invalid-email": "無効なメールアドレスです。",
+    "auth/wrong-password": "パスワードが間違っています。",
+    "auth/account-exists-with-different-credential": "このメールアドレスで既に別の資格情報を持つアカウントが存在します。",
+    "auth/user-not-found": "ユーザーが見つかりません。",
+    "auth/user-disabled": "ユーザーアカウントが無効になっています。",
+    "auth/weak-password": "パスワードが弱すぎます。",
+    "auth/too-many-requests": "試行回数が多すぎます。後でもう一度お試しください。",
+    "auth/popup-blocked": "ブラウザによってポップアップがブロックされました。",
+    "auth/popup-closed-by-user": "ユーザーによってポップアップが閉じられました。"
+  },
+  "weather_current": {
+    "today": "今日",
+    "temp_max": "最高",
+    "temp_min": "最低"
+  },
+  "weather_current_details": {
+    "feel_likes": "体感温度",
+    "humidity": "湿度",
+    "uv_index": "UV指数",
+    "visibility": "視界",
+    "dew_point": "露点",
+    "pressure": "気圧"
   }
 }

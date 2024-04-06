@@ -103,5 +103,33 @@
     "format_precipitation_title": "강수",
     "units_precipitation_mm": "mm | 밀리미터",
     "units_precipitation_in": "in | 인치"
+  },
+  "firebase_auth": {
+    "auth/captcha-check-failed": "Google reCAPTCHA 확인에 실패했습니다.",
+    "auth/credential-already-in-use": "이 자격 증명은 이미 다른 계정과 연결되어 있습니다.",
+    "auth/requires-recent-login": "마지막 세션 이후 너무 오래되었으므로 다시 로그인하십시오.",
+    "auth/email-already-in-use": "이 이메일 주소는 이미 사용 중입니다.",
+    "auth/invalid-email": "유효하지 않은 이메일 주소입니다.",
+    "auth/wrong-password": "잘못된 비밀번호입니다.",
+    "auth/account-exists-with-different-credential": "이 이메일 주소로 다른 자격 증명을 가진 계정이 이미 있습니다.",
+    "auth/user-not-found": "사용자를 찾을 수 없습니다.",
+    "auth/user-disabled": "사용자 계정이 비활성화되었습니다.",
+    "auth/weak-password": "암호가 너무 약합니다.",
+    "auth/too-many-requests": "너무 많은 시도입니다. 나중에 다시 시도하십시오.",
+    "auth/popup-blocked": "브라우저가 팝업을 차단했습니다.",
+    "auth/popup-closed-by-user": "사용자가 팝업을 닫았습니다."
+  },
+  "weather_current": {
+    "today": "오늘",
+    "temp_max": "최고",
+    "temp_min": "최저"
+  },
+  "weather_current_details": {
+    "feel_likes": "체감 온도",
+    "humidity": "습도",
+    "uv_index": "자외선 지수",
+    "visibility": "가시성",
+    "dew_point": "이슬점",
+    "pressure": "압력"
   }
 }

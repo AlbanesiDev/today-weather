@@ -103,5 +103,33 @@
     "format_precipitation_title": "Niederschlag",
     "units_precipitation_mm": "mm | Millimeter",
     "units_precipitation_in": "in | Zoll"
+  },
+  "firebase_auth": {
+    "auth/captcha-check-failed": "Die Google reCAPTCHA-Überprüfung ist fehlgeschlagen.",
+    "auth/credential-already-in-use": "Dieses Anmeldeverfahren ist bereits mit einem anderen Konto verknüpft.",
+    "auth/requires-recent-login": "Bitte melden Sie sich erneut an, da Ihre letzte Sitzung zu lange zurückliegt.",
+    "auth/email-already-in-use": "Die E-Mail-Adresse wird bereits verwendet.",
+    "auth/invalid-email": "Ungültige E-Mail-Adresse.",
+    "auth/wrong-password": "Falsches Passwort.",
+    "auth/account-exists-with-different-credential": "Ein Konto mit dieser E-Mail-Adresse existiert bereits mit einer anderen Anmeldeinformation.",
+    "auth/user-not-found": "Benutzer nicht gefunden.",
+    "auth/user-disabled": "Benutzerkonto ist deaktiviert.",
+    "auth/weak-password": "Das Passwort ist zu schwach.",
+    "auth/too-many-requests": "Zu viele Versuche. Bitte versuchen Sie es später erneut.",
+    "auth/popup-blocked": "Popup durch den Browser blockiert.",
+    "auth/popup-closed-by-user": "Popup vom Benutzer geschlossen."
+  },
+  "weather_current": {
+    "today": "Heute",
+    "temp_max": "Max",
+    "temp_min": "Min"
+  },
+  "weather_current_details": {
+    "feel_likes": "Gefühlte Temperatur",
+    "humidity": "Luftfeuchtigkeit",
+    "uv_index": "UV-Index",
+    "visibility": "Sichtweite",
+    "dew_point": "Taupunkt",
+    "pressure": "Druck"
   }
 }

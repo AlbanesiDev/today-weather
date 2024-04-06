@@ -103,5 +103,33 @@
     "format_precipitation_title": "Осадки",
     "units_precipitation_mm": "mm | Миллиметры",
     "units_precipitation_in": "in | Дюймы"
+  },
+  "firebase_auth": {
+    "auth/captcha-check-failed": "Проверка Google reCAPTCHA не удалась.",
+    "auth/credential-already-in-use": "Эти учетные данные уже связаны с другой учетной записью.",
+    "auth/requires-recent-login": "Пожалуйста, войдите в систему еще раз, так как ваша последняя сессия была слишком давно.",
+    "auth/email-already-in-use": "Электронная почта уже используется.",
+    "auth/invalid-email": "Неверный адрес электронной почты.",
+    "auth/wrong-password": "Неверный пароль.",
+    "auth/account-exists-with-different-credential": "Учетная запись с этим адресом электронной почты уже существует с другим учетным документом.",
+    "auth/user-not-found": "Пользователь не найден.",
+    "auth/user-disabled": "Учетная запись пользователя отключена.",
+    "auth/weak-password": "Пароль слишком слабый.",
+    "auth/too-many-requests": "Слишком много попыток. Пожалуйста, попробуйте позже.",
+    "auth/popup-blocked": "Всплывающее окно заблокировано браузером.",
+    "auth/popup-closed-by-user": "Всплывающее окно закрыто пользователем."
+  },
+  "weather_current": {
+    "today": "Сегодня",
+    "temp_max": "Максимум",
+    "temp_min": "Минимум"
+  },
+  "weather_current_details": {
+    "feel_likes": "Ощущается как",
+    "humidity": "Влажность",
+    "uv_index": "Индекс УФ",
+    "visibility": "Видимость",
+    "dew_point": "Точка росы",
+    "pressure": "Давление"
   }
 }

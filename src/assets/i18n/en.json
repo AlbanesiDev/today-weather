@@ -104,17 +104,32 @@
     "units_precipitation_mm": "mm | Millimeters",
     "units_precipitation_in": "in | Inches"
   },
+  "firebase_auth": {
+    "auth/captcha-check-failed": "Google reCAPTCHA verification failed.",
+    "auth/credential-already-in-use": "This credential is already associated with another account.",
+    "auth/requires-recent-login": "Please log in again as your last session was too long ago.",
+    "auth/email-already-in-use": "The email address is already in use.",
+    "auth/invalid-email": "Invalid email address.",
+    "auth/wrong-password": "Incorrect password.",
+    "auth/account-exists-with-different-credential": "An account already exists with this email address with a different credential.",
+    "auth/user-not-found": "User not found.",
+    "auth/user-disabled": "User account is disabled.",
+    "auth/weak-password": "The password is too weak.",
+    "auth/too-many-requests": "Too many attempts. Please try again later.",
+    "auth/popup-blocked": "Popup blocked by the browser.",
+    "auth/popup-closed-by-user": "Popup closed by the user."
+  },
   "weather_current": {
     "today": "Today",
     "temp_max": "High",
     "temp_min": "Low"
   },
   "weather_current_details": {
-    "feel_likes": "Feel Likes",
-    "humidity": "Humedad",
-    "uv_index": "Indice uv",
-    "visibility": "Visibilidad",
-    "dew_point": "Punto de rocio",
-    "pressure": "Presion"
+    "feel_likes": "Feels like",
+    "humidity": "Humidity",
+    "uv_index": "UV Index",
+    "visibility": "Visibility",
+    "dew_point": "Dew Point",
+    "pressure": "Pressure"
   }
 }

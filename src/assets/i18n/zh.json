@@ -103,5 +103,33 @@
     "format_precipitation_title": "降水",
     "units_precipitation_mm": "mm | 毫米",
     "units_precipitation_in": "in | 英寸"
+  },
+    "firebase_auth": {
+    "auth/captcha-check-failed": "Google reCAPTCHA 验证失败。",
+    "auth/credential-already-in-use": "此凭据已与另一个帐户关联。",
+    "auth/requires-recent-login": "请重新登录，因为您上次的会话时间过长。",
+    "auth/email-already-in-use": "电子邮件地址已在使用中。",
+    "auth/invalid-email": "无效的电子邮件地址。",
+    "auth/wrong-password": "密码错误。",
+    "auth/account-exists-with-different-credential": "具有此电子邮件地址的帐户已经存在，具有不同的凭据。",
+    "auth/user-not-found": "找不到用户。",
+    "auth/user-disabled": "用户帐户已禁用。",
+    "auth/weak-password": "密码太弱。",
+    "auth/too-many-requests": "尝试次数过多。请稍后再试。",
+    "auth/popup-blocked": "浏览器阻止了弹出窗口。",
+    "auth/popup-closed-by-user": "弹出窗口已被用户关闭。"
+  },
+  "weather_current": {
+    "today": "今天",
+    "temp_max": "最高",
+    "temp_min": "最低"
+  },
+  "weather_current_details": {
+    "feel_likes": "体感温度",
+    "humidity": "湿度",
+    "uv_index": "紫外线指数",
+    "visibility": "能见度",
+    "dew_point": "露点",
+    "pressure": "压力"
   }
 }

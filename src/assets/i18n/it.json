@@ -103,5 +103,33 @@
     "format_precipitation_title": "Precipitazione",
     "units_precipitation_mm": "mm | Millimetri",
     "units_precipitation_in": "in | Pollici"
+  },
+  "firebase_auth": {
+    "auth/captcha-check-failed": "La verifica di Google reCAPTCHA è fallita.",
+    "auth/credential-already-in-use": "Questa credenziale è già associata a un altro account.",
+    "auth/requires-recent-login": "Effettua nuovamente l'accesso poiché la tua ultima sessione è stata troppo tempo fa.",
+    "auth/email-already-in-use": "L'indirizzo email è già in uso.",
+    "auth/invalid-email": "Indirizzo email non valido.",
+    "auth/wrong-password": "Password errata.",
+    "auth/account-exists-with-different-credential": "Esiste già un account con questa email con una credenziale diversa.",
+    "auth/user-not-found": "Utente non trovato.",
+    "auth/user-disabled": "L'account utente è disabilitato.",
+    "auth/weak-password": "La password è troppo debole.",
+    "auth/too-many-requests": "Troppi tentativi. Riprova più tardi.",
+    "auth/popup-blocked": "Popup bloccato dal browser.",
+    "auth/popup-closed-by-user": "Popup chiuso dall'utente."
+  },
+  "weather_current": {
+    "today": "Oggi",
+    "temp_max": "Massima",
+    "temp_min": "Minima"
+  },
+  "weather_current_details": {
+    "feel_likes": "Sensazione termica",
+    "humidity": "Umidità",
+    "uv_index": "Indice UV",
+    "visibility": "Visibilità",
+    "dew_point": "Punto di rugiada",
+    "pressure": "Pressione"
   }
 }

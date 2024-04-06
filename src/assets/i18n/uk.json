@@ -103,5 +103,33 @@
     "format_precipitation_title": "Опади",
     "units_precipitation_mm": "mm | Міліметри",
     "units_precipitation_in": "in | Дюйми"
+  },
+  "firebase_auth": {
+    "auth/captcha-check-failed": "Перевірка Google reCAPTCHA не вдалася.",
+    "auth/credential-already-in-use": "Ці дані вже пов'язані з іншим обліковим записом.",
+    "auth/requires-recent-login": "Будь ласка, увійдіть ще раз, оскільки ваша остання сесія була занадто давно.",
+    "auth/email-already-in-use": "Ця електронна адреса вже використовується.",
+    "auth/invalid-email": "Неправильна електронна адреса.",
+    "auth/wrong-password": "Неправильний пароль.",
+    "auth/account-exists-with-different-credential": "Обліковий запис з цією електронною адресою вже існує з іншим обліковим записом.",
+    "auth/user-not-found": "Користувача не знайдено.",
+    "auth/user-disabled": "Обліковий запис користувача вимкнено.",
+    "auth/weak-password": "Пароль занадто слабкий.",
+    "auth/too-many-requests": "Забагато спроб. Будь ласка, спробуйте пізніше.",
+    "auth/popup-blocked": "Вікно заблоковано браузером.",
+    "auth/popup-closed-by-user": "Вікно закрито користувачем."
+  },
+  "weather_current": {
+    "today": "Сьогодні",
+    "temp_max": "Максимум",
+    "temp_min": "Мінімум"
+  },
+  "weather_current_details": {
+    "feel_likes": "Відчувається як",
+    "humidity": "Вологість",
+    "uv_index": "Індекс УФ",
+    "visibility": "Видимість",
+    "dew_point": "Точка роси",
+    "pressure": "Тиск"
   }
 }
