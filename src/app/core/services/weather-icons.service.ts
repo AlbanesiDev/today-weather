@@ -44,7 +44,7 @@ export class WeatherIconsService {
   /**
    * Stores the current icon type ('fill' or 'outline').
    */
-  public iconsType = signal<TWeatherIconsType>("outline");
+  public iconsType = signal<TWeatherIconsType>("fill");
 
   /**
    * Stores whether the icon is animated ('on') or static ('off').
@@ -54,12 +54,7 @@ export class WeatherIconsService {
   /**
    * Stores the folder path for the current icon type.
    */
-  public iconsFolder = signal<TWeatherIconsFolder>("outline");
-
-  /**
-   * Holds the current date and time, used to determine day or night for icon selection.
-   */
-  private currentDate = new Date();
+  public iconsFolder = signal<TWeatherIconsFolder>("fill");
 
   /**
    * Configuration mapping for icon types and their corresponding folder and animation states.
@@ -101,24 +96,5 @@ export class WeatherIconsService {
     const iconState = this.iconsAnimations() === "on" ? "" : "-static";
     this.iconsFolder.set(`${this.iconsType()}${iconState}`);
     this.localStorageService.setItem(this.iconsKeyStorage, this.iconsFolder());
-  }
-
-  /**
-   * Retrieves the appropriate weather icon URL based on the current time and weather conditions.
-   * @param iconCode - The code representing the current weather condition.
-   * @param iconsList - The list of available icons.
-   * @returns The URL of the weather icon.
-   */ public searchWeatherIcon(iconCode: number, iconsList: any): string {
-    let hour = this.currentDate.getHours();
-    let isNight = hour >= 19 || hour < 6;
-
-    let matchingIcon = iconsList.find((icon: any) => icon.code === iconCode);
-    if (isNight) {
-      return matchingIcon.icon_night;
-    } else if (!isNight) {
-      return matchingIcon.icon_day;
-    } else {
-      return matchingIcon.icon;
-    }
   }
 }

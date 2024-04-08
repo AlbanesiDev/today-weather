@@ -1,26 +1,26 @@
-<div class="flex flex-row justify-content-between border-1 border-primary border-round p-5">
+<div class="flex flex-row justify-content-between border-2 border-primary border-round p-5">
   @if (weatherData$ | async; as weather) {
     <div class="w-50">
       <p class="text-6xl md:text-8xl white-space-nowrap m-0">
-        {{ weather.current.temp | temperatureUnit: this.unitsService.temperatureUnit() }}
+        {{ weather.main.temp | temperatureUnit: this.unitsService.temperatureUnit() }}
       </p>
       <p class="text-lg font-light text-color-secondary">{{ currentDate | date: "EEEE, MMMM d" }}</p>
-      <p class="text-2xl font-semibold">{{ weather.current }}</p>
+      <p class="text-2xl font-semibold">{{ weather.name }}</p>
       <p class="text-lg font-light text-color-secondary">
-        {{ "weather_current.today" | translate }} - {{ weather.current.weather[0].description }}.
+        {{ "weather_current.today" | translate }} - {{ weather.weather[0].description }}.
         <br />
         {{ "weather_current.temp_max" | translate }}
-        {{ weather.daily[0].temp.max | temperatureUnit: this.unitsService.temperatureUnit() }},
+        {{ weather.main.temp_max | temperatureUnit: this.unitsService.temperatureUnit() }},
         {{ "weather_current.temp_min" | translate }}
-        {{ weather.daily[0].temp.min | temperatureUnit: this.unitsService.temperatureUnit() }}.
+        {{ weather.main.temp_min | temperatureUnit: this.unitsService.temperatureUnit() }}.
       </p>
     </div>
     <div class="w-50 flex justify-content-end">
       @if (weatherIcons$ | async; as weatherIcons) {
         <img
           class="w-full"
-          [src]="weatherIconsService.searchWeatherIcon(weather.current.weather[0].id, weatherIcons) | IconDynamic: weatherIconsService.iconsFolder()"
-          [alt]="'icono de ' + weather.current.weather[0].main"
+          [src]="searchWeatherIcon(weather.weather[0].id, weatherIcons) | IconDynamic: weatherIconService.iconsType()"
+          [alt]="'icono de ' + weather.weather[0].main"
         />
       }
     </div>

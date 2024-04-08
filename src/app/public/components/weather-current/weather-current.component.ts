@@ -39,7 +39,7 @@ export class WeatherCurrentComponent {
   /**
    * Injects the WeatherIconsService to retrieve the list of weather icons.
    */
-  public weatherIconsService: WeatherIconsService = inject(WeatherIconsService);
+  public weatherIconService: WeatherIconsService = inject(WeatherIconsService);
 
   /**
    * Injects the UnitsService to manage user preferences for units of measurement.
@@ -48,15 +48,34 @@ export class WeatherCurrentComponent {
   /**
    * An Observable that streams the current weather data fetched from OpenWeatherMap.
    */
-  public weatherData$ = this.weatherService.getWeatherOwmOne();
+  public weatherData$ = this.weatherService.getWeatherOwm();
 
   /**
    * An Observable that streams the list of weather icons.
    */
-  public weatherIcons$ = this.weatherIconsService.getIcons();
+  public weatherIcons$ = this.weatherIconService.getIcons();
 
   /**
-   * Holds the current date.
+   * Holds the current date and time, used to determine day or night for icon selection.
    */
   public currentDate = new Date();
+
+  /**
+   * Retrieves the appropriate weather icon URL based on the current time and weather conditions.
+   * @param iconCode - The code representing the current weather condition.
+   * @param iconsList - The list of available icons.
+   * @returns The URL of the weather icon.
+   */ public searchWeatherIcon(iconCode: number, iconsList: any): string {
+    let hour = this.currentDate.getHours();
+    let isNight = hour >= 19 || hour < 6;
+
+    let matchingIcon = iconsList.find((icon: any) => icon.code === iconCode);
+    if (isNight) {
+      return matchingIcon.icon_night;
+    } else if (!isNight) {
+      return matchingIcon.icon_day;
+    } else {
+      return matchingIcon.icon;
+    }
+  }
 }
