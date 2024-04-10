@@ -129,5 +129,13 @@
     "visibility": "Visibilidad",
     "dew_point": "Punto de rocio",
     "pressure": "Presion"
+  },
+  "weather_aqi": {
+    "CO": "Monóxido de carbono",
+    "SO2": "Dióxido de azufre",
+    "NO2": "Dióxido de nitrógeno",
+    "PM10": "Partículas menores a 10 micrómetros",
+    "PM25": "Partículas menores a 2.5 micrómetros",
+    "O3": "Ozono"
   }
 }

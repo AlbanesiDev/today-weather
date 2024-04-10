@@ -104,7 +104,7 @@
     "units_precipitation_mm": "mm | 毫米",
     "units_precipitation_in": "in | 英寸"
   },
-    "firebase_auth": {
+  "firebase_auth": {
     "auth/captcha-check-failed": "Google reCAPTCHA 验证失败。",
     "auth/credential-already-in-use": "此凭据已与另一个帐户关联。",
     "auth/requires-recent-login": "请重新登录，因为您上次的会话时间过长。",
@@ -131,5 +131,13 @@
     "visibility": "能见度",
     "dew_point": "露点",
     "pressure": "压力"
+  },
+  "weather_aqi": {
+    "CO": "一氧化碳",
+    "SO2": "二氧化硫",
+    "NO2": "二氧化氮",
+    "PM10": "小于10微米的颗粒物",
+    "PM25": "小于2.5微米的颗粒物",
+    "O3": "臭氧"
   }
 }

@@ -131,5 +131,13 @@
     "visibility": "Sichtweite",
     "dew_point": "Taupunkt",
     "pressure": "Druck"
+  },
+  "weather_aqi": {
+    "CO": "Kohlenmonoxid",
+    "SO2": "Schwefeldioxid",
+    "NO2": "Stickstoffdioxid",
+    "PM10": "Partikel kleiner als 10 Mikrometer",
+    "PM25": "Partikel kleiner als 2,5 Mikrometer",
+    "O3": "Ozon"
   }
 }
