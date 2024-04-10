@@ -20,7 +20,7 @@ import { environment } from "../../../environments/environment";
 @Injectable({
   providedIn: "root",
 })
-export class WeatherIconsService {
+export class IconsService {
   /**
    * Injects the LocalStorageService dependency.
    */
@@ -108,7 +108,8 @@ export class WeatherIconsService {
    * @param iconCode - The code representing the current weather condition.
    * @param iconsList - The list of available icons.
    * @returns The URL of the weather icon.
-   */ public searchWeatherIcon(iconCode: number, iconsList: any): string {
+   */
+  public searchWeatherIcon(iconCode: number, iconsList: any): string {
     let hour = this.currentDate.getHours();
     let isNight = hour >= 19 || hour < 6;
 
