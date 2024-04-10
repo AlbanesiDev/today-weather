@@ -1,7 +1,8 @@
 export const environment = {
   IS_PRODUCTION: false,
+  GEOLOCATION: "*******************",
   WEATHER_OWM_KEY: "*******************",
-  WEATHER_BIT_KEY: "*******************",
+  WEATHER_OWM: "/assets/mocks/weather-owm-one.json",
   WEATHER_OWM_GEOCODING: "/assets/mocks/weather-owm-geocoding.json",
   WEATHER_OWM_CURRENT: "/assets/mocks/weather-owm-current.json",
   WEATHER_OWM_AQI: "/assets/mocks/weather-owm-aqi.json",
@@ -13,6 +14,8 @@ export const environment = {
     userIconPreferences: "userIconsStyle",
     userFeaturesKey: "userFeatures",
     userLangKey: "userLang",
+    userGeoKey: "userGeo",
+    userWeatherDataKey: "userWeather",
   },
   FIREBASE_CONFIG: {
     apiKey: "*******************",
