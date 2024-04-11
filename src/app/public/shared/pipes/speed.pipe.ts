@@ -8,53 +8,54 @@ import { TSpeed } from "../../../core/interface/units.inteface";
   standalone: true,
 })
 export class SpeedPipe implements PipeTransform {
+
   /**
    * Transforms a speed value into the specified unit.
-   * @param value The speed value in km/h.
+   * @param value The speed value in m/s.
    * @param unit The unit to convert the speed into.
    * @returns The speed value converted into the specified unit.
    */
   transform(value: number, unit: TSpeed): any {
     switch (unit) {
       case "mph":
-        // Convert km/h to mph
-        const mph = (value * 0.621371).toFixed(2).toString();
+        // Convert m/s to mph
+        const mph = (value * 2.23694).toFixed(2).toString();
         return `${mph} Mph`;
-      case "ms":
-        // Convert km/h to m/s
-        const ms = (value / 3.6).toFixed(2).toString();
-        return `${ms} m/s`;
+      case "kmh":
+        // Convert m/s to km/h
+        const ms = (value * 3.6).toFixed(2).toString();
+        return `${ms} km/h`;
       case "beaufort":
-        // Convert km/h to Beaufort scale
-        return this.kmhToBeaufort(value);
+        // Convert m/s to Beaufort scale
+        return this.msToBeaufort(value);
       case "knots":
-        // Convert km/h to knots
-        const knots = (value / 1.852).toFixed(2).toString();
+        // Convert m/s to knots
+        const knots = (value * 1.94384).toFixed(2).toString();
         return `${knots} Knots`;
       default:
-        // Return the default value in km/h
-        return `${value} Km/h`;
+        // Return the default value in m/s
+        return `${value} m/s`;
     }
   }
 
   /**
-   * Converts km/h to the Beaufort scale.
-   * @param kmh The speed value in km/h.
+   * Converts m/s to the Beaufort scale.
+   * @param ms The speed value in m/s.
    * @returns The corresponding Beaufort scale description.
    */
-  private kmhToBeaufort(kmh: number): string {
-    if (kmh < 2) return "0 (Calm)";
-    if (kmh < 6) return "1 (Light air)";
-    if (kmh < 12) return "2 (Light breeze)";
-    if (kmh < 20) return "3 (Gentle breeze)";
-    if (kmh < 29) return "4 (Moderate breeze)";
-    if (kmh < 39) return "5 (Fresh breeze)";
-    if (kmh < 50) return "6 (Strong breeze)";
-    if (kmh < 62) return "7 (Moderate gale)";
-    if (kmh < 75) return "8 (Fresh gale)";
-    if (kmh < 89) return "9 (Strong gale)";
-    if (kmh < 103) return "10 (Whole gale)";
-    if (kmh < 118) return "11 (Storm)";
-    return "12 (Hurricane)";
+  private msToBeaufort(ms: number): string {
+    if (ms < 2) return "calm";
+    if (ms < 6) return "light_air";
+    if (ms < 12) return "light_breeze";
+    if (ms < 20) return "gentle_breeze";
+    if (ms < 29) return "moderate_breeze";
+    if (ms < 39) return "fresh_breeze";
+    if (ms < 50) return "strong_breeze";
+    if (ms < 62) return "moderate_gale";
+    if (ms < 75) return "fresh_gale";
+    if (ms < 89) return "strong_gale";
+    if (ms < 103) return "whole_gale";
+    if (ms < 118) return "storm";
+    return "hurricane";
   }
 }
