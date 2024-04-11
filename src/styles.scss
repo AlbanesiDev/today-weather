@@ -3,3 +3,7 @@
 
 @import "./styles/base/reset";
 @import "./styles/base/grid";
+
+:root{
+  --swiper-navigation-color: var(--primary-color);
+}
