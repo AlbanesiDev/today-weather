@@ -4,13 +4,13 @@ import { TranslateModule } from "@ngx-translate/core";
 
 import { PrecipitationPipe } from "../../shared/pipes/precipitation.pipe";
 import { TemperaturePipe } from "../../shared/pipes/temperature.pipe";
-import { WeatherService } from "../../../core/services/weather.service";
 import { VisibilityPipe } from "../../shared/pipes/visibility.pipe";
 import { PressurePipe } from "../../shared/pipes/pressure.pipe";
 import { IconPipe } from "../../shared/pipes/icon.pipe";
 
+import { CachedDataService } from "./../../../core/services/cached-data.service";
 import { UnitsService } from "../../../core/services/units.service";
-import { WeatherIconsService } from "../../../core/services/weather-icons.service";
+import { IconsService } from "../../../core/services/icons.service";
 
 @Component({
   selector: "app-weather-current-detail",
@@ -31,22 +31,22 @@ import { WeatherIconsService } from "../../../core/services/weather-icons.servic
 })
 export class WeatherCurrentDetailComponent {
   /**
-   * Service for managing unit conversions.
+   * Injects the CachedDataService to access cached data.
+   */
+  private cachedDataService: CachedDataService = inject(CachedDataService);
+
+  /**
+   * Injects the iconsService to retrieve the list of weather icons.
+   */
+  public iconsService: IconsService = inject(IconsService);
+
+  /**
+   * Injects the UnitsService to manage user preferences for units of measurement.
    */
   public unitsService: UnitsService = inject(UnitsService);
 
   /**
-   * Service for fetching weather data.
+   * An Observable that streams the current weather data.
    */
-  public weatherService: WeatherService = inject(WeatherService);
-
-  /**
-   * Service for managing weather icons.
-   */
-  public weatherIconsService: WeatherIconsService = inject(WeatherIconsService);
-
-  /**
-   * Observable for current weather data.
-   */
-  public currentData$ = this.weatherService.getWeatherOwmOne();
+  public weatherData$ = this.cachedDataService.cachedData();
 }
