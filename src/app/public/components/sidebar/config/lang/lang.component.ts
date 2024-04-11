@@ -62,7 +62,7 @@ export class LangComponent {
       flag_iso: "gb",
     },
     {
-      lang: "France",
+      lang: "French",
       lang_iso: "fr",
       flag_iso: "fr",
     },
