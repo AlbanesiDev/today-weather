@@ -1,0 +1,17 @@
+<div class="flex flex-column justify-content-center border-1 border-primary border-round p-5 gap-3">
+  <h2 class="text-start m-0">{{ "weather_aqi.title" | translate }}</h2>
+  <div></div>
+  <p-divider />
+  <div class="grid justify-content-around">
+    @if (weatherData$ | async; as weather) {
+      @for (item of weather.aqi.list[0].components | keyvalue; track $index) {
+        <div class="col-3">
+          <p class="text-center" [pTooltip]="'weather_aqi.' + item.key | translate" tooltipPosition="bottom">
+            <span class="text-primary font-bold">{{ item.key | aqiPipe }}:</span>
+            {{ item.value }} {{ "weather_aqi." + item.key + "_unit" | translate }}
+          </p>
+        </div>
+      }
+    }
+  </div>
+</div>
