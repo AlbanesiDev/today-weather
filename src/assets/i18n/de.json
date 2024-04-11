@@ -6,6 +6,7 @@
     "header_units": "Einheiten",
     "header_themes": "Themen",
     "header_icons": "Symbolpaket",
+    "header_features": "Eigenschaften",
     "header_lang": "Sprachen",
     "login": "Anmelden",
     "sign_out": "Abmelden",
@@ -57,7 +58,7 @@
   "lang_settings": {
     "Spanish": "Spanisch",
     "English": "Englisch",
-    "France": "Frankreich",
+    "French": "Französisch",
     "German": "Deutsch",
     "Italian": "Italienisch",
     "Japanese": "Japanisch",
@@ -100,6 +101,10 @@
     "units_pressure_kpa": "kPa | Kilo Pascal",
     "units_pressure_hpa": "hPa | Hektopascal",
 
+    "format_visibility_title": "Sichtweite",
+    "units_visibility_km": "Km | Kilometer",
+    "units_visibility_mi": "mi | Meilen",
+
     "format_precipitation_title": "Niederschlag",
     "units_precipitation_mm": "mm | Millimeter",
     "units_precipitation_in": "in | Zoll"
@@ -133,11 +138,21 @@
     "pressure": "Druck"
   },
   "weather_aqi": {
-    "CO": "Kohlenmonoxid",
-    "SO2": "Schwefeldioxid",
-    "NO2": "Stickstoffdioxid",
-    "PM10": "Partikel kleiner als 10 Mikrometer",
-    "PM25": "Partikel kleiner als 2,5 Mikrometer",
-    "O3": "Ozon"
+    "nh3": "Ammoniak",
+    "no": "Stickstoffmonoxid",
+    "co": "Kohlenmonoxid",
+    "so2": "Schwefeldioxid",
+    "no2": "Stickstoffdioxid",
+    "pm10": "Partikel kleiner als 10 Mikrometer",
+    "pm2_5": "Partikel kleiner als 2,5 Mikrometer",
+    "o3": "Ozon",
+    "nh3_unit": "µg/m³",
+    "no_unit": "µg/m³",
+    "co_unit": "µg/m³",
+    "so2_unit": "µg/m³",
+    "no2_unit": "µg/m³",
+    "pm10_unit": "µg/m³",
+    "pm2_5_unit": "µg/m³",
+    "o3_unit": "µg/m³"
   }
 }

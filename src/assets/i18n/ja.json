@@ -6,6 +6,7 @@
     "header_units": "単位",
     "header_themes": "テーマ",
     "header_icons": "アイコンパック",
+    "header_features": "特徴",
     "header_lang": "言語",
     "login": "ログイン",
     "sign_out": "ログアウト",
@@ -57,7 +58,7 @@
   "lang_settings": {
     "Spanish": "スペイン語",
     "English": "英語",
-    "France": "フランス",
+    "French": "フランス語",
     "German": "ドイツ語",
     "Italian": "イタリア語",
     "Japanese": "日本語",
@@ -100,6 +101,10 @@
     "units_pressure_kpa": "kPa | キロパスカル",
     "units_pressure_hpa": "hPa | ヘクトパスカル",
 
+    "format_visibility_title": "視界",
+    "units_visibility_km": "Km | キロメートル",
+    "units_visibility_mi": "mi | マイル",
+
     "format_precipitation_title": "降水",
     "units_precipitation_mm": "mm | ミリメートル",
     "units_precipitation_in": "in | インチ"
@@ -133,11 +138,21 @@
     "pressure": "気圧"
   },
   "weather_aqi": {
-    "CO": "一酸化炭素",
-    "SO2": "二酸化硫黄",
-    "NO2": "二酸化窒素",
-    "PM10": "10ミクロメートル未満の微粒子",
-    "PM25": "2.5ミクロメートル未満の微粒子",
-    "O3": "オゾン"
+    "nh3": "アンモニア",
+    "no": "一酸化窒素",
+    "co": "一酸化炭素",
+    "so2": "二酸化硫黄",
+    "no2": "二酸化窒素",
+    "pm10": "10ミクロメートル未満の微粒子",
+    "pm2_5": "2.5ミクロメートル未満の微粒子",
+    "o3": "オゾン",
+    "nh3_unit": "µg/m³",
+    "no_unit": "µg/m³",
+    "co_unit": "µg/m³",
+    "so2_unit": "µg/m³",
+    "no2_unit": "µg/m³",
+    "pm10_unit": "µg/m³",
+    "pm2_5_unit": "µg/m³",
+    "o3_unit": "µg/m³"
   }
 }

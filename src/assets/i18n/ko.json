@@ -6,6 +6,7 @@
     "header_units": "단위",
     "header_themes": "테마",
     "header_icons": "아이콘 팩",
+    "header_features": "특징",
     "header_lang": "언어",
     "login": "로그인",
     "sign_out": "로그 아웃",
@@ -57,7 +58,7 @@
   "lang_settings": {
     "Spanish": "스페인어",
     "English": "영어",
-    "France": "프랑스",
+    "French": "프랑스어",
     "German": "독일어",
     "Italian": "이탈리아어",
     "Japanese": "일본어",
@@ -100,6 +101,10 @@
     "units_pressure_kpa": "kPa | 킬로 파스칼",
     "units_pressure_hpa": "hPa | 헥토파스칼",
 
+    "format_visibility_title": "가시성",
+    "units_visibility_km": "Km | 킬로미터",
+    "units_visibility_mi": "mi | 마일",
+
     "format_precipitation_title": "강수",
     "units_precipitation_mm": "mm | 밀리미터",
     "units_precipitation_in": "in | 인치"
@@ -133,11 +138,21 @@
     "pressure": "압력"
   },
   "weather_aqi": {
-    "CO": "일산화탄소",
-    "SO2": "이산화황",
-    "NO2": "이산화질소",
-    "PM10": "10 마이크로미터 미만의 미립자",
-    "PM25": "2.5 마이크로미터 미만의 미립자",
-    "O3": "오존"
+    "nh3": "암모니아",
+    "no": "일산화질소",
+    "co": "일산화탄소",
+    "so2": "이산화황",
+    "no2": "이산화질소",
+    "pm10": "10 마이크로미터 미만의 미립자",
+    "pm2_5": "2.5 마이크로미터 미만의 미립자",
+    "o3": "오존",
+    "nh3_unit": "µg/m³",
+    "no_unit": "µg/m³",
+    "co_unit": "µg/m³",
+    "so2_unit": "µg/m³",
+    "no2_unit": "µg/m³",
+    "pm10_unit": "µg/m³",
+    "pm2_5_unit": "µg/m³",
+    "o3_unit": "µg/m³"
   }
 }

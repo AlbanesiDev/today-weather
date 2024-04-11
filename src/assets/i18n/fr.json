@@ -6,6 +6,7 @@
     "header_units": "Unités",
     "header_themes": "Thèmes",
     "header_icons": "Pack d'icônes",
+    "header_features": "Caractéristiques",
     "header_lang": "Langues",
     "login": "Connexion",
     "sign_out": "Déconnexion",
@@ -57,7 +58,7 @@
   "lang_settings": {
     "Spanish": "Espagnol",
     "English": "Anglais",
-    "France": "France",
+    "French": "Français",
     "German": "Allemand",
     "Italian": "Italien",
     "Japanese": "Japonais",
@@ -100,6 +101,10 @@
     "units_pressure_kpa": "kKa | Kilo pascal",
     "units_pressure_hpa": "hPa | Hectopascal",
 
+    "format_visibility_title": "Visibilité",
+    "units_visibility_km": "Km | Kilomètres",
+    "units_visibility_mi": "mi | Milles",
+
     "format_precipitation_title": "Précipitation",
     "units_precipitation_mm": "mm | Millimètres",
     "units_precipitation_in": "in | Pouces"
@@ -133,11 +138,21 @@
     "pressure": "Pression"
   },
   "weather_aqi": {
-    "CO": "Monoxyde de carbone",
-    "SO2": "Dioxyde de soufre",
-    "NO2": "Dioxyde d'azote",
-    "PM10": "Particules de moins de 10 micromètres",
-    "PM25": "Particules de moins de 2,5 micromètres",
-    "O3": "Ozone"
+    "nh3": "Ammoniac",
+    "no": "Monoxyde d'azote",
+    "co": "Monoxyde de carbone",
+    "so2": "Dioxyde de soufre",
+    "no2": "Dioxyde d'azote",
+    "pm10": "Particules de moins de 10 micromètres",
+    "pm2_5": "Particules de moins de 2,5 micromètres",
+    "o3": "Ozone",
+    "nh3_unit": "µg/m³",
+    "no_unit": "µg/m³",
+    "co_unit": "µg/m³",
+    "so2_unit": "µg/m³",
+    "no2_unit": "µg/m³",
+    "pm10_unit": "µg/m³",
+    "pm2_5_unit": "µg/m³",
+    "o3_unit": "µg/m³"
   }
 }

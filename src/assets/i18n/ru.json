@@ -6,6 +6,7 @@
     "header_units": "Единицы",
     "header_themes": "Темы",
     "header_icons": "Пакет иконок",
+    "header_features": "Характеристики",
     "header_lang": "Языки",
     "login": "Войти",
     "sign_out": "выйти из системы",
@@ -57,7 +58,7 @@
   "lang_settings": {
     "Spanish": "Испанский",
     "English": "Английский",
-    "France": "Французский",
+    "French": "Французский",
     "German": "Немецкий",
     "Italian": "Итальянский",
     "Japanese": "Японский",
@@ -100,6 +101,10 @@
     "units_pressure_kpa": "kPa | Килопаскаль",
     "units_pressure_hpa": "гПа | Гектопаскаль",
 
+    "format_visibility_title": "Видимость",
+    "units_visibility_km": "Km | Километры",
+    "units_visibility_mi": "mi | Мили",
+
     "format_precipitation_title": "Осадки",
     "units_precipitation_mm": "mm | Миллиметры",
     "units_precipitation_in": "in | Дюймы"
@@ -133,11 +138,21 @@
     "pressure": "Давление"
   },
   "weather_aqi": {
-    "CO": "Оксид углерода",
-    "SO2": "Диоксид серы",
-    "NO2": "Диоксид азота",
-    "PM10": "Частицы менее 10 микрометров",
-    "PM25": "Частицы менее 2,5 микрометров",
-    "O3": "Озон"
+    "nh3": "Аммиак",
+    "no": "Оксид азота",
+    "co": "Оксид углерода",
+    "so2": "Диоксид серы",
+    "no2": "Диоксид азота",
+    "pm10": "Частицы менее 10 микрометров",
+    "pm2_5": "Частицы менее 2,5 микрометров",
+    "o3": "Озон",
+    "nh3_unit": "мкг/м³",
+    "no_unit": "мкг/м³",
+    "co_unit": "мкг/м³",
+    "so2_unit": "мкг/м³",
+    "no2_unit": "мкг/м³",
+    "pm10_unit": "мкг/м³",
+    "pm2_5_unit": "мкг/м³",
+    "o3_unit": "мкг/м³"
   }
 }

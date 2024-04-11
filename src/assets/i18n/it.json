@@ -6,6 +6,7 @@
     "header_units": "Unità",
     "header_themes": "Temi",
     "header_icons": "Pacchetto icone",
+    "header_features": "Caratteristiche",
     "header_lang": "Lingue",
     "login": "Accedi",
     "sign_out": "Disconnettersi",
@@ -57,7 +58,7 @@
   "lang_settings": {
     "Spanish": "Spagnolo",
     "English": "Inglese",
-    "France": "Francia",
+    "French": "Francese",
     "German": "Tedesco",
     "Italian": "Italiano",
     "Japanese": "Giapponese",
@@ -100,6 +101,10 @@
     "units_pressure_kpa": "kPa | Kilo Pascal",
     "units_pressure_hpa": "hPa | Ettapascal",
 
+    "format_visibility_title": "Visibilità",
+    "units_visibility_km": "Km | Chilometri",
+    "units_visibility_mi": "mi | Miglia",
+
     "format_precipitation_title": "Precipitazione",
     "units_precipitation_mm": "mm | Millimetri",
     "units_precipitation_in": "in | Pollici"
@@ -133,11 +138,21 @@
     "pressure": "Pressione"
   },
   "weather_aqi": {
-    "CO": "Monossido di carbonio",
-    "SO2": "Diossido di zolfo",
-    "NO2": "Diossido di azoto",
-    "PM10": "Particelle inferiori a 10 micrometri",
-    "PM25": "Particelle inferiori a 2,5 micrometri",
-    "O3": "Ozono"
+    "nh3": "Ammoniaca",
+    "no": "Monossido di azoto",
+    "co": "Monossido di carbonio",
+    "so2": "Diossido di zolfo",
+    "no2": "Diossido di azoto",
+    "pm10": "Particelle inferiori a 10 micrometri",
+    "pm2_5": "Particelle inferiori a 2,5 micrometri",
+    "o3": "Ozono",
+    "nh3_unit": "µg/m³",
+    "no_unit": "µg/m³",
+    "co_unit": "µg/m³",
+    "so2_unit": "µg/m³",
+    "no2_unit": "µg/m³",
+    "pm10_unit": "µg/m³",
+    "pm2_5_unit": "µg/m³",
+    "o3_unit": "µg/m³"
   }
 }

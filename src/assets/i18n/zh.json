@@ -6,6 +6,7 @@
     "header_units": "单位",
     "header_themes": "主题",
     "header_icons": "图标包",
+    "header_features": "特征",
     "header_lang": "语言",
     "login": "登录",
     "sign_out": "退出",
@@ -57,7 +58,7 @@
   "lang_settings": {
     "Spanish": "西班牙语",
     "English": "英语",
-    "France": "法国",
+    "French": "法语",
     "German": "德语",
     "Italian": "意大利语",
     "Japanese": "日语",
@@ -100,6 +101,10 @@
     "units_pressure_kpa": "kPa | 千帕",
     "units_pressure_hpa": "hPa | 百帕斯卡",
 
+    "format_visibility_title": "能见度",
+    "units_visibility_km": "Km | 公里",
+    "units_visibility_mi": "mi | 英里",
+
     "format_precipitation_title": "降水",
     "units_precipitation_mm": "mm | 毫米",
     "units_precipitation_in": "in | 英寸"
@@ -133,11 +138,21 @@
     "pressure": "压力"
   },
   "weather_aqi": {
-    "CO": "一氧化碳",
-    "SO2": "二氧化硫",
-    "NO2": "二氧化氮",
-    "PM10": "小于10微米的颗粒物",
-    "PM25": "小于2.5微米的颗粒物",
-    "O3": "臭氧"
+    "nh3": "氨",
+    "no": "一氧化氮",
+    "co": "一氧化碳",
+    "so2": "二氧化硫",
+    "no2": "二氧化氮",
+    "pm10": "小于10微米的颗粒物",
+    "pm2_5": "小于2.5微米的颗粒物",
+    "o3": "臭氧",
+    "nh3_unit": "µg/m³",
+    "no_unit": "µg/m³",
+    "co_unit": "µg/m³",
+    "so2_unit": "µg/m³",
+    "no2_unit": "µg/m³",
+    "pm10_unit": "µg/m³",
+    "pm2_5_unit": "µg/m³",
+    "o3_unit": "µg/m³"
   }
 }

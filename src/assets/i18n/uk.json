@@ -6,6 +6,7 @@
     "header_units": "Одиниці",
     "header_themes": "Теми",
     "header_icons": "Пакет іконок",
+    "header_features": "Особливості",
     "header_lang": "Мови",
     "login": "Увійти",
     "sign_out": "вийти з системи",
@@ -57,7 +58,7 @@
   "lang_settings": {
     "Spanish": "Іспанська",
     "English": "Англійська",
-    "France": "Французька",
+    "French": "Французский",
     "German": "Німецька",
     "Italian": "Італійська",
     "Japanese": "Японська",
@@ -100,6 +101,10 @@
     "units_pressure_kpa": "kPa | Кілопаскаль",
     "units_pressure_hpa": "гПа | Гектопаскаль",
 
+    "format_visibility_title": "Видимість",
+    "units_visibility_km": "Km | Кілометри",
+    "units_visibility_mi": "mi | Милі",
+
     "format_precipitation_title": "Опади",
     "units_precipitation_mm": "mm | Міліметри",
     "units_precipitation_in": "in | Дюйми"
@@ -133,11 +138,21 @@
     "pressure": "Тиск"
   },
   "weather_aqi": {
-    "CO": "Вуглецевий оксид",
-    "SO2": "Діоксид сірки",
-    "NO2": "Діоксид азоту",
-    "PM10": "Частки менше 10 мікрометрів",
-    "PM25": "Частки менше 2,5 мікрометрів",
-    "O3": "Озон"
+    "nh3": "Аміак",
+    "no": "Оксид азоту",
+    "co": "Вуглецевий оксид",
+    "so2": "Діоксид сірки",
+    "no2": "Діоксид азоту",
+    "pm10": "Частки менше 10 мікрометрів",
+    "pm2_5": "Частки менше 2,5 мікрометрів",
+    "o3": "Озон",
+    "nh3_unit": "мкг/м³",
+    "no_unit": "мкг/м³",
+    "co_unit": "мкг/м³",
+    "so2_unit": "мкг/м³",
+    "no2_unit": "мкг/м³",
+    "pm10_unit": "мкг/м³",
+    "pm2_5_unit": "мкг/м³",
+    "o3_unit": "мкг/м³"
   }
 }

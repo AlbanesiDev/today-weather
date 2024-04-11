@@ -58,7 +58,7 @@
   "lang_settings": {
     "Spanish": "Español",
     "English": "Inglés",
-    "France": "Francia",
+    "French": "Francés",
     "German": "Alemán",
     "Italian": "Italiano",
     "Japanese": "Japonés",
@@ -101,6 +101,10 @@
     "units_pressure_kpa": "kPa | Kilo pascal",
     "units_pressure_hpa": "hPa | Hecto pascal",
 
+    "format_visibility_title": "Visibilidad",
+    "units_visibility_km": "Km | Kilómetros",
+    "units_visibility_mi": "mi | Millas",
+
     "format_precipitation_title": "Precipitación",
     "units_precipitation_mm": "mm | Milímetros",
     "units_precipitation_in": "in | Pulgadas"
@@ -131,11 +135,22 @@
     "pressure": "Presion"
   },
   "weather_aqi": {
-    "CO": "Monóxido de carbono",
-    "SO2": "Dióxido de azufre",
-    "NO2": "Dióxido de nitrógeno",
-    "PM10": "Partículas menores a 10 micrómetros",
-    "PM25": "Partículas menores a 2.5 micrómetros",
-    "O3": "Ozono"
+    "title": "Calidad del aire",
+    "nh3": "Amoníaco",
+    "no": "Monóxido de nitrógeno",
+    "co": "Monóxido de carbono",
+    "so2": "Dióxido de azufre",
+    "no2": "Dióxido de nitrógeno",
+    "pm10": "Partículas menores a 10 micrómetros",
+    "pm2_5": "Partículas menores a 2.5 micrómetros",
+    "o3": "Ozono",
+    "nh3_unit": "µg/m³",
+    "no_unit": "µg/m³",
+    "co_unit": "µg/m³",
+    "so2_unit": "µg/m³",
+    "no2_unit": "µg/m³",
+    "pm10_unit": "µg/m³",
+    "pm2_5_unit": "µg/m³",
+    "o3_unit": "µg/m³"
   }
 }
