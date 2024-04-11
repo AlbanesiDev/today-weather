@@ -7,7 +7,7 @@ import { TranslateModule } from "@ngx-translate/core";
 import { ToggleButtonModule } from "primeng/togglebutton";
 import { ButtonModule } from "primeng/button";
 
-import { WeatherIconsService } from "./../../../../../core/services/weather-icons.service";
+import { IconsService } from "../../../../../core/services/icons.service";
 import { TWeatherIconsType } from "../../../../../core/interface/icon.interface";
 
 /**
@@ -26,7 +26,7 @@ import { TWeatherIconsType } from "../../../../../core/interface/icon.interface"
             <p-button
               label="{{ 'icon_settings.label_' + item.label | translate }}"
               [outlined]="true"
-              [class.active]="item.label === weatherIconsService.iconsType()"
+              [class.active]="item.label === IconsService.iconsType()"
               [style]="{ width: '100%' }"
               (click)="setTypeIcon(item.label)"
             >
@@ -38,9 +38,9 @@ import { TWeatherIconsType } from "../../../../../core/interface/icon.interface"
       <div class="mt-6">
         <h3>{{ "icon_settings.title_animations" | translate }}</h3>
         <p-button
-          label="{{ 'icon_settings.label_animations_' + weatherIconsService.iconsAnimations() | translate }}"
+          label="{{ 'icon_settings.label_animations_' + IconsService.iconsAnimations() | translate }}"
           [outlined]="true"
-          [class.active]="weatherIconsService.iconsAnimations() === 'on'"
+          [class.active]="IconsService.iconsAnimations() === 'on'"
           [style]="{ width: '100%' }"
           (click)="toggleAnimationsClick()"
         />
@@ -61,9 +61,9 @@ import { TWeatherIconsType } from "../../../../../core/interface/icon.interface"
 })
 export class IconsComponent {
   /**
-   * Inject the WeatherIconsService.
+   * Inject the IconsService.
    */
-  public weatherIconsService: WeatherIconsService = inject(WeatherIconsService);
+  public IconsService: IconsService = inject(IconsService);
   /**
    * List of weather icons with labels and corresponding icon names.
    */
@@ -83,19 +83,19 @@ export class IconsComponent {
    * @param type The type of weather icons.
    */
   public setTypeIcon(type: TWeatherIconsType): void {
-    if (this.weatherIconsService.iconsAnimations() === 'on') {
-      this.weatherIconsService.iconsType.set(type);
+    if (this.IconsService.iconsAnimations() === 'on') {
+      this.IconsService.iconsType.set(type);
     } else {
-      this.weatherIconsService.iconsType.set(type);
+      this.IconsService.iconsType.set(type);
     }
-    this.weatherIconsService.getTypeIcons();
+    this.IconsService.getTypeIcons();
   }
 
   /**
    * Toggles weather icons animations (on/off).
    */
   public toggleAnimationsClick(): void {
-    this.weatherIconsService.iconsAnimations.set(this.weatherIconsService.iconsAnimations() === "off" ? "on" : "off");
-    this.weatherIconsService.getTypeIcons();
+    this.IconsService.iconsAnimations.set(this.IconsService.iconsAnimations() === "off" ? "on" : "off");
+    this.IconsService.getTypeIcons();
   }
 }
