@@ -138,6 +138,22 @@
     "pressure": "Druck"
   },
   "weather_aqi": {
+    "title": "Luftqualität",
+
+    "message_good": "Gut",
+    "message_moderate": "Mäßig",
+    "message_unhealthy_f_s_g": "Ungesund für empfindliche Gruppen",
+    "message_unhealthy": "Ungesund",
+    "message_very_unhealthy": "Sehr ungesund",
+    "message_hazardous": "Gefährlich",
+
+    "description_good": "Die Luftqualität wird als zufriedenstellend betrachtet und die Luftverschmutzung birgt ein geringes oder kein Risiko.",
+    "description_moderate": "Die Luftqualität ist akzeptabel, aber für einige Schadstoffe könnte es eine moderate Besorgnis um die Gesundheit einer sehr kleinen Gruppe von Personen geben, die außergewöhnlich empfindlich auf Umweltverschmutzung reagieren.",
+    "description_unhealthy_f_s_g": "Mitglieder empfindlicher Gruppen können Gesundheitsprobleme haben. Wahrscheinlich betrifft es nicht die allgemeine Bevölkerung.",
+    "description_unhealthy": "Alle können Gesundheitsprobleme bekommen, und Mitglieder empfindlicher Gruppen können schwerwiegendere Probleme haben.",
+    "description_very_unhealthy": "Gesundheitswarnungen für Notfallsituationen. Es besteht eine höhere Wahrscheinlichkeit, dass die gesamte Bevölkerung betroffen ist.",
+    "description_hazardous": "Gesundheitswarnung: Alle können schwerwiegendere gesundheitliche Probleme haben.",
+
     "nh3": "Ammoniak",
     "no": "Stickstoffmonoxid",
     "co": "Kohlenmonoxid",

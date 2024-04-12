@@ -138,6 +138,22 @@
     "pressure": "Pressure"
   },
   "weather_aqi": {
+    "title": "Air Quality",
+
+    "message_good": "Good",
+    "message_moderate": "Moderate",
+    "message_unhealthy_f_s_g": "Unhealthy for Sensitive Groups",
+    "message_unhealthy": "Unhealthy",
+    "message_very_unhealthy": "Very Unhealthy",
+    "message_hazardous": "Hazardous",
+
+    "description_good": "Air quality is considered satisfactory, and air pollution poses little or no risk.",
+    "description_moderate": "Air quality is acceptable, however, for some pollutants, there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.",
+    "description_unhealthy_f_s_g": "Members of sensitive groups may experience health effects. The general public is not likely to be affected.",
+    "description_unhealthy": "Everyone may begin to experience health effects, and members of sensitive groups may experience more serious effects.",
+    "description_very_unhealthy": "Health alert: everyone may experience more serious health effects.",
+    "description_hazardous": "Health warning of emergency conditions: the entire population is more likely to be affected.",
+
     "nh3": "Ammonia",
     "no": "Nitrogen monoxide",
     "co": "Carbon monoxide",

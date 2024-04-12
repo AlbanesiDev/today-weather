@@ -138,6 +138,22 @@
     "pressure": "Pression"
   },
   "weather_aqi": {
+    "title": "Qualité de l'air",
+
+    "message_good": "Bon",
+    "message_moderate": "Modéré",
+    "message_unhealthy_f_s_g": "Mauvais pour les groupes sensibles",
+    "message_unhealthy": "Mauvais",
+    "message_very_unhealthy": "Très mauvais",
+    "message_hazardous": "Dangereux",
+
+    "description_good": "La qualité de l'air est considérée comme satisfaisante et la pollution atmosphérique ne pose peu ou pas de risque.",
+    "description_moderate": "La qualité de l'air est acceptable, mais pour certains polluants, il peut y avoir une préoccupation modérée pour la santé d'un très petit nombre de personnes exceptionnellement sensibles à la pollution de l'air.",
+    "description_unhealthy_f_s_g": "Les membres de groupes sensibles peuvent ressentir des effets sur la santé. Il est peu probable que cela affecte le grand public.",
+    "description_unhealthy": "Tout le monde peut commencer à ressentir des effets sur la santé, et les membres de groupes sensibles peuvent ressentir des effets plus graves.",
+    "description_very_unhealthy": "Avertissement sanitaire: tout le monde peut ressentir des effets sur la santé plus graves.",
+    "description_hazardous": "Avertissement sanitaire concernant des conditions d'urgence: toute la population est plus susceptible d'être affectée.",
+
     "nh3": "Ammoniac",
     "no": "Monoxyde d'azote",
     "co": "Monoxyde de carbone",
@@ -146,6 +162,7 @@
     "pm10": "Particules de moins de 10 micromètres",
     "pm2_5": "Particules de moins de 2,5 micromètres",
     "o3": "Ozone",
+
     "nh3_unit": "µg/m³",
     "no_unit": "µg/m³",
     "co_unit": "µg/m³",
