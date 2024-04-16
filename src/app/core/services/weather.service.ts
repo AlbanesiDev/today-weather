@@ -5,7 +5,6 @@ import { LangService } from "../lang/lang.service";
 import { GeolocationService } from "./geolocation.service";
 import { IWeatherAqi, IWeatherOne } from "../interface/weather-owm.interface";
 import { environment } from "../../../environments/environment.development";
-import { IconsService } from "./icons.service";
 
 /**
  * Service to retrieve weather data from OpenWeatherMap API.
@@ -23,11 +22,6 @@ export class WeatherService {
    * Service to manage language settings.
    */
   private langService: LangService = inject(LangService);
-
-  /**
-   * Service to retrieve icons.
-   */
-  private iconsService: IconsService = inject(IconsService);
 
   /**
    * Service to manage geolocation.
@@ -62,7 +56,6 @@ export class WeatherService {
     const url = this.isProduction
       ? `${this.weatherOwmOne}lat=${this.geolocationService.lat()}&lon=${this.geolocationService.lon()}&units=metric&lang=${this.langService.currentLangSig()}&appid=${this.weatherOwmKey}`
       : this.weatherOwmOne;
-      console.log('peticion')
     return this.http.get<IWeatherOne>(url);
   }
 
@@ -85,13 +78,11 @@ export class WeatherService {
     return forkJoin({
       weather: this.getWeatherOne(),
       aqi: this.getWeatherAqi(),
-      icons: this.iconsService.getIcons(),
     }).pipe(
       switchMap((results) => {
         const combinedData = {
           ...results.weather,
           aqi: results.aqi,
-          icons: results.icons,
         };
         return of(combinedData);
       }),
