@@ -31,19 +31,42 @@ export class LangService {
    */
   public currentLangSig = signal<string>("");
 
+  constructor() {
+    this.initializeLang();
+  }
+
   /**
    * Initializes the default language for the application.
-   * It checks the local storage for an existing language setting,
-   * and uses it if available. Otherwise, it defaults to English ('en').
+   * First, it checks the local storage for an existing language setting and uses it if available.
+   * If there is no language setting in local storage, it then checks the browser's language.
+   * If a supported language is detected in the browser settings, it is used; otherwise, it defaults to English ('en').
    */
-  public initializeLang() {
+  public initializeLang(): void {
     const langStorage = this.localStorageService.getItem(this.langKeyStorage);
-    if (langStorage !== null) {
-      this.translateService.setDefaultLang(langStorage);
+    const browserLang = this.translateService.getBrowserLang();
+    this.translateService.addLangs([
+      "de",
+      "en",
+      "es",
+      "fr",
+      "it",
+      "ja",
+      "ko",
+      "pt",
+      "ru",
+      "uk",
+      "zh",
+    ]);
+
+    if (langStorage) {
+      this.translateService.use(langStorage);
       this.currentLangSig.set(langStorage);
-    } else {
-      this.translateService.setDefaultLang("en");
-      this.currentLangSig.set("en");
+    } else if (browserLang) {
+      this.translateService.use(
+        browserLang.match(/de|en|es|fr|it|ja|ko|pt|ru|uk|zh/) ? browserLang : "en",
+      );
+      this.currentLangSig.set(browserLang);
+      this.localStorageService.setItem(this.langKeyStorage, browserLang);
     }
   }
 
