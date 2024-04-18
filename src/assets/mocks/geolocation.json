@@ -1,10 +1,11 @@
 {
+  "city": "San Justo",
   "country": "Argentina",
   "countryCode": "AR",
+  "lat": -36.6124,
+  "lon": -58.4546,
+  "offset": -10800,
+  "region": "B",
   "regionName": "Buenos Aires",
-  "city": "********",
-  "lat": -36.604,
-  "lon": -58.382,
-  "timezone": "America/Argentina/Buenos_Aires",
-  "offset": -10800
+  "timezone": "America/Argentina/Buenos_Aires"
 }
