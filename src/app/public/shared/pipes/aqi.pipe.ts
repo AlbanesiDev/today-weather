@@ -17,7 +17,7 @@ export class AqiPipe implements PipeTransform {
       case "co":
         return "CO";
       case "nh3":
-        return "NH";
+        return "NH₃";
       case "no":
         return "NO";
       case "no2":
