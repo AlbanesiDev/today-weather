@@ -1,15 +1,18 @@
-import { Injectable, inject } from "@angular/core";
+import { Injectable, inject, signal } from "@angular/core";
 import { SidebarService } from "./sidebar.service";
-
 @Injectable({
   providedIn: "root",
 })
 export class ModalService {
   private sidebarService = inject(SidebarService);
-  public openModal: boolean = false;
+  public loginModal: boolean = false;
 
-  openLogin(){
-    this.sidebarService.sidebarVisible = false
-    this.openModal = true;
+  public openLogin(): void {
+    this.sidebarService.sidebarVisible = false;
+    this.loginModal = true;
+  }
+
+  public closeLogin(): void {
+    this.loginModal = false;
   }
 }

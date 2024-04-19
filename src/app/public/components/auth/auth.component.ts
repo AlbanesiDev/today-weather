@@ -1,18 +1,29 @@
 import { CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component, OnDestroy, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, OnDestroy, inject, signal } from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
-import { TranslateModule } from "@ngx-translate/core";
+import { FirebaseError } from "@angular/fire/app";
+import { Subscription, firstValueFrom } from "rxjs";
+
+import { TranslateModule, TranslateService } from "@ngx-translate/core";
+
 import { InputTextModule } from "primeng/inputtext";
 import { AutoFocusModule } from "primeng/autofocus";
 import { PasswordModule } from "primeng/password";
 import { DividerModule } from "primeng/divider";
 import { DialogModule } from "primeng/dialog";
 import { ButtonModule } from "primeng/button";
+import { MessageService } from "primeng/api";
+
 import { AuthService } from "../../../core/services/auth.service";
 import { ModalService } from "../../services/modal.service";
-import { IFormAuth, IPasswordRequirement, TCurrentForm } from "../../../core/interface/auth.interface";
-import { passwordValidator } from "../../shared/validator/password-validator.function";
-import { Subscription } from "rxjs";
+
+import {
+  IFormAuth,
+  IPasswordRequirement,
+  IRecoveryFormAuth,
+  TCurrentForm,
+} from "../../../core/interface/auth.interface";
+
 /**
  * Component responsible for authentication features such as login, registration, and password recovery.
  */
@@ -34,36 +45,24 @@ import { Subscription } from "rxjs";
   changeDetection: ChangeDetectionStrategy.Default,
 })
 export class AuthComponent implements OnDestroy {
-  /**
-   * Form builder injection for handling form operations.
-   */
-  public formBuilder: FormBuilder = inject(FormBuilder);
+  private translateService: TranslateService = inject(TranslateService);
+  private messageService: MessageService = inject(MessageService);
+  private formBuilder: FormBuilder = inject(FormBuilder);
+  private authService: AuthService = inject(AuthService);
 
-  /**
-   * Modal service injection for displaying modal.
-   */
   public modalService: ModalService = inject(ModalService);
 
-  /**
-   * Authentication service injection for handling user authentication.
-   */
-  public authService: AuthService = inject(AuthService);
-
-  /**
-   * Represents the current state of the form, defaults to "login".
-   */
-  public currentForm: TCurrentForm = "login";
+  public currentForm = signal<TCurrentForm>("login");
 
   /**
    * Password requirements array containing validation rules.
    */
   public passwordRequirements: IPasswordRequirement[] = [
-    { validator: "hasMinLength", message: "register.minLength" },
-    { validator: "hasUppercase", message: "register.uppercase" },
-    { validator: "hasLowercase", message: "register.lowercase" },
-    { validator: "hasNumber", message: "register.number" },
+    { validator: "hasMinLength", message: "register.error_msg_password_minLength" },
+    { validator: "hasUppercase", message: "register.error_msg_password_uppercase" },
+    { validator: "hasLowercase", message: "register.error_msg_password_lowercase" },
+    { validator: "hasNumber", message: "register.error_msg_password_number" },
   ];
-
   private passwordSubscription?: Subscription;
 
   /**
@@ -75,11 +74,49 @@ export class AuthComponent implements OnDestroy {
     }
   }
 
+  public form: FormGroup<IFormAuth> = this.formBuilder.group({
+    email: this.formBuilder.control("", {
+      validators: [Validators.required, Validators.email],
+      nonNullable: true,
+    }),
+    password: this.formBuilder.control("", {
+      validators: [Validators.required, Validators.minLength(8)], // Custom validator
+      nonNullable: true,
+    }),
+  });
+  public recovery_form: FormGroup<IRecoveryFormAuth> = this.formBuilder.group({
+    email_recovery: this.formBuilder.control("", {
+      validators: [Validators.required, Validators.email],
+      nonNullable: true,
+    }),
+  });
+
+  public changeFormClick(form: TCurrentForm): void {
+    this.currentForm.set(form);
+    this.form.reset();
+    if (form === "register") {
+      this.subscribeToPasswordRegister();
+    }
+  }
+
+  /**
+   * Subscribes to the password field changes for the registration form.
+   */
+  private subscribeToPasswordRegister(): void {
+    this.passwordSubscription = this.form.get("password")!.valueChanges.subscribe((value) => {
+      this.updatePasswordRequirements(value);
+    });
+  }
+
+  public isLoginForm(): boolean {
+    return this.currentForm() === "login" ? true : false;
+  }
+
   /**
    * Updates password requirements based on input value.
    * @param value The input value to check against password requirements.
    */
-  updatePasswordRequirements(value: string): void {
+  private updatePasswordRequirements(value: string): void {
     this.passwordRequirements.forEach((req) => {
       switch (req.validator) {
         case "hasMinLength":
@@ -98,79 +135,86 @@ export class AuthComponent implements OnDestroy {
     });
   }
 
-  /**
-   * Represents the form group for authentication.
-   */
-  public form: FormGroup<IFormAuth> = this.formBuilder.group({
-    email: this.formBuilder.control("", {
-      validators: [Validators.required, Validators.email],
-      nonNullable: true,
-    }),
-    password: this.formBuilder.control("", {
-      validators: [Validators.required, passwordValidator], // Custom validator
-      nonNullable: true,
-    }),
-  });
-
-  /**
-   * Changes the current form.
-   * @param form The form to change to.
-   */
-  public changeFormClick(form: TCurrentForm): void {
-    this.currentForm = form;
-    if (form === "register") {
-      this.subscribeToPasswordRegister();
-    }
-  }
-
-  /**
-   * Checks if the current form is the login form.
-   * @returns True if the current form is 'login', false otherwise.
-   */
-  public isLoginForm(): boolean {
-    const isLogin = this.currentForm === "login" ? true : false;
-    return isLogin;
-  }
-
-  /**
-   * Subscribes to the password field changes for the registration form.
-   */
-  private subscribeToPasswordRegister(): void {
-    this.passwordSubscription = this.form.get("password")!.valueChanges.subscribe((value) => {
-      this.updatePasswordRequirements(value);
+  private successMessage(method: string): void {
+    const translatedSuccessDetail = this.translateService.instant(
+      `firebase_auth.auth/${method}-success`,
+    );
+    this.messageService.add({
+      severity: "success",
+      summary: "Success",
+      detail: translatedSuccessDetail,
     });
   }
 
-  /**
-   * Handles the login action when the user clicks the login button.
-   */
-  public loginWithEmailClick(): void {
+  private errorMessage(err: unknown): void {
+    if (err instanceof FirebaseError) {
+      const translatedErrorSummary = this.translateService.instant("firebase_auth.summary");
+      const translatedErrorDetail = this.translateService.instant("firebase_auth." + err.code);
+      this.messageService.add({
+        severity: "error",
+        summary: translatedErrorSummary,
+        detail: translatedErrorDetail,
+        life: 8000,
+      });
+    }
+  }
+
+  private invalidForm(form: any): void {
+    if (form.invalid) {
+      this.form.markAllAsTouched();
+      this.form.markAsDirty();
+      return;
+    }
+  }
+
+  public async loginWithEmailClick(): Promise<void> {
+    this.invalidForm(this.form);
     const formData = this.form.value;
-    // ToDo: Add validation before sending data.
-    this.authService.loginWithEmail(formData.email!, formData.password!);
+    try {
+      await firstValueFrom(this.authService.loginWithEmail(formData.email!, formData.password!));
+      this.successMessage("login");
+      this.modalService.closeLogin();
+    } catch (err: unknown) {
+      this.errorMessage(err);
+    }
   }
 
-  /**
-   * Handles the registration action when the user clicks the register button.
-   */
-  public registerWithEmailClick(): void {
+  public async registerWithEmailClick(): Promise<void> {
+    this.invalidForm(this.form);
     const formData = this.form.value;
-    // ToDo: Add validation before sending data.
-    this.authService.registerWithEmail(formData.email!, formData.password!);
+    try {
+      await firstValueFrom(this.authService.registerWithEmail(formData.email!, formData.password!));
+      this.modalService.closeLogin();
+      this.successMessage("register");
+      this.authService.userAuth.set(true);
+    } catch (err: unknown) {
+      this.errorMessage(err);
+    }
   }
 
-  /**
-   * Handles the Google login action when the user clicks the Google login button.
-   */
-  public loginWithGoogleClick(): void {
-    this.authService.signInWithGoogle();
+  public async loginWithGoogleClick(): Promise<void> {
+    await this.authService
+      .signInWithGoogle()
+      .then(() => {
+        this.modalService.closeLogin();
+        this.successMessage("google");
+      })
+      .catch((err: unknown) => {
+        this.errorMessage(err);
+      });
   }
 
-  /**
-   * Handles the password recovery action when the user clicks the password recovery button.
-   */
-  public recoveryPasswordClick(): void {
-    // The method has yet to be built into the service.
-    // this.authService.recoveryPassword();
+  public async sendRecoveryEmailClick(): Promise<void> {
+    this.invalidForm(this.recovery_form);
+    const email = this.recovery_form.value.email_recovery;
+    await this.authService
+      .sendPasswordResetEmail(email!)
+      .then(() => {
+        this.successMessage("recovery");
+        this.currentForm.set("recovery_description");
+      })
+      .catch((err) => {
+        this.errorMessage(err);
+      });
   }
 }

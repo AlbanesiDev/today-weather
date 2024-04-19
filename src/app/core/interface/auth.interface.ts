@@ -5,7 +5,11 @@ export interface IFormAuth {
   password: FormControl<string>;
 }
 
-export type TCurrentForm = "login" | "register";
+export interface IRecoveryFormAuth {
+  email_recovery: FormControl<string>;
+}
+
+export type TCurrentForm = "login" | "register" | "recovery" | "recovery_description";
 export interface IPasswordRequirement {
   validator: string;
   message: string;

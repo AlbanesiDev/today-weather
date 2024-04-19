@@ -1,15 +1,14 @@
 import { Injectable, inject, signal } from "@angular/core";
 import {
   Auth,
+  UserCredential,
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
-  signInWithRedirect,
+  signInWithPopup,
   signOut,
-  user,
 } from "@angular/fire/auth";
 import { GoogleAuthProvider, getAuth } from "@firebase/auth";
-import { UserInterface } from "../interface/user.interface";
 import { Observable, from } from "rxjs";
 
 /**
@@ -22,34 +21,21 @@ export class AuthService {
   /**
    * Injects the Firebase Auth object for authentication operations.
    */
-  private firebaseAuth = inject(Auth);
+  private firebaseAuth: Auth = inject(Auth);
 
   /**
-   * An observable signal representing the current user's state.
+   * An signal indicating whether the user is authenticated.
    */
-  currentUserSig = signal<UserInterface | null | undefined>(undefined);
+  public userAuth = signal<boolean>(false);
 
   /**
-   * An observable signal indicating whether the user is authenticated.
-   */
-  userAuthSig = signal<boolean>(false);
-
-  /**
-   * An observable of the user's authentication state.
-   */
-  user$ = user(this.firebaseAuth);
-
-  /**
-   * Registers a new user with an email and password, and updates their profile with a username.
-   * @param username The display name of the user.
+   * Registers a new user with an email and password.
    * @param email The email address of the user.
    * @param password The password for the user's account.
    * @returns An observable that completes when the registration is finished.
    */
-  public registerWithEmail(email: string, password: string): Observable<void> {
-    const promise = createUserWithEmailAndPassword(this.firebaseAuth, email, password)
-      .then(() => {})
-      .catch((error) => {});
+  public registerWithEmail(email: string, password: string): Observable<UserCredential> {
+    const promise = createUserWithEmailAndPassword(this.firebaseAuth, email, password);
     return from(promise);
   }
 
@@ -59,26 +45,24 @@ export class AuthService {
    * @param password The password for the user's account.
    * @returns An observable that completes when the sign-in is finished.
    */
-  public loginWithEmail(email: string, password: string): Observable<void> {
-    const promise = signInWithEmailAndPassword(this.firebaseAuth, email, password)
-      .then((res) => {})
-      .catch((error) => {});
+  public loginWithEmail(email: string, password: string): Observable<UserCredential> {
+    const promise = signInWithEmailAndPassword(this.firebaseAuth, email, password);
     return from(promise);
   }
 
   /**
-   *
-   * @returns An Promise
+   * Sign in the user with Google authentication.
+   * @returns A Promise that resolves with a UserCredential.
    */
-  public async signInWithGoogle(): Promise<void> {
+  public async signInWithGoogle(): Promise<UserCredential | void> {
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
-    return signInWithRedirect(auth, provider)
+    return signInWithPopup(auth, provider)
       .then(() => {
-        // El usuario ha sido redirigido y ha iniciado sesión.
+        this.userAuth.set(false);
       })
-      .catch((error: any) => {
-        return error;
+      .catch((err: unknown) => {
+        this.userAuth.set(false);
       });
   }
 
@@ -88,15 +72,18 @@ export class AuthService {
    */
   public async signOut(): Promise<void> {
     const auth = getAuth();
-    return signOut(auth)
-      .then((res) => {})
-      .catch((error) => {});
+    return signOut(auth).then(() => {
+      console.log("se ha cerrado");
+    });
   }
 
-  public async sendPasswordResetEmail(email: string) {
+  /**
+   * Sends a password reset email to the specified email address.
+   * @param email The email address to send the password reset email to.
+   * @returns A Promise that resolves when the email is successfully sent.
+   */
+  public async sendPasswordResetEmail(email: string): Promise<void> {
     const auth = getAuth();
-    return sendPasswordResetEmail(auth, email)
-      .then((res) => {})
-      .catch((error) => {});
+    return sendPasswordResetEmail(auth, email);
   }
 }
