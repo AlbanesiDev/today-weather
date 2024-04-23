@@ -2,6 +2,7 @@ import { Injectable, inject, signal } from "@angular/core";
 import {
   Auth,
   UserCredential,
+  authState,
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
@@ -27,6 +28,11 @@ export class AuthService {
    * An signal indicating whether the user is authenticated.
    */
   public userAuth = signal<boolean>(false);
+
+  /**
+   *
+   */
+  public authState$ = authState(this.firebaseAuth);
 
   /**
    * Registers a new user with an email and password.
@@ -72,9 +78,7 @@ export class AuthService {
    */
   public async signOut(): Promise<void> {
     const auth = getAuth();
-    return signOut(auth).then(() => {
-      console.log("se ha cerrado");
-    });
+    return signOut(auth)
   }
 
   /**
