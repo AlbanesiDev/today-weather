@@ -1,7 +1,8 @@
-import { CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component, input } from "@angular/core";
+import { AsyncPipe, CommonModule } from "@angular/common";
+import { ChangeDetectionStrategy, Component, inject, input } from "@angular/core";
 import { TranslateModule } from "@ngx-translate/core";
 
+import { SkeletonModule } from "primeng/skeleton";
 import { TooltipModule } from "primeng/tooltip";
 import { DividerModule } from "primeng/divider";
 import { ButtonModule } from "primeng/button";
@@ -9,17 +10,33 @@ import { ButtonModule } from "primeng/button";
 import { AqiPipe } from "../../shared/pipes/aqi.pipe";
 import { TAqi } from "../../../core/interface/aqi.interface";
 
+import { LoaderService } from '../../../core/services/loader.service';
+
 /**
  * The `WeatherAqiComponent` displays air pollution data.
  */
 @Component({
   selector: "app-weather-aqi",
   standalone: true,
-  imports: [CommonModule, TranslateModule, TooltipModule, DividerModule, ButtonModule, AqiPipe],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    SkeletonModule,
+    TooltipModule,
+    DividerModule,
+    ButtonModule,
+    AqiPipe,
+    AsyncPipe
+  ],
   templateUrl: "./weather-aqi.component.html",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WeatherAqiComponent {
+  /**
+   *
+   */
+  public loaderService: LoaderService = inject(LoaderService);
+
   /**
    * Input signal that receives air quality data.
    */

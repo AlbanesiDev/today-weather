@@ -1,5 +1,5 @@
 import { AsyncPipe, CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, input } from "@angular/core";
 import { TranslateModule } from "@ngx-translate/core";
 
 import { PrecipitationPipe } from "../../shared/pipes/precipitation.pipe";
@@ -8,7 +8,9 @@ import { VisibilityPipe } from "../../shared/pipes/visibility.pipe";
 import { PressurePipe } from "../../shared/pipes/pressure.pipe";
 import { IconPipe } from "../../shared/pipes/icon.pipe";
 
-import { CachedDataService } from "./../../../core/services/cached-data.service";
+import { SkeletonModule } from "primeng/skeleton";
+
+import { LoaderService } from "../../../core/services/loader.service";
 import { UnitsService } from "../../../core/services/units.service";
 import { IconsService } from "../../../core/services/icons.service";
 
@@ -18,12 +20,13 @@ import { IconsService } from "../../../core/services/icons.service";
   imports: [
     CommonModule,
     TranslateModule,
-    AsyncPipe,
-    TemperaturePipe,
-    PressurePipe,
-    VisibilityPipe,
     PrecipitationPipe,
+    TemperaturePipe,
+    VisibilityPipe,
+    PressurePipe,
     IconPipe,
+    SkeletonModule,
+    AsyncPipe
   ],
   templateUrl: "./weather-current-detail.component.html",
   styleUrl: "./weather-current-detail.component.scss",
@@ -31,9 +34,9 @@ import { IconsService } from "../../../core/services/icons.service";
 })
 export class WeatherCurrentDetailComponent {
   /**
-   * Injects the CachedDataService to access cached data.
+   * The input data containing weather current information.
    */
-  private cachedDataService: CachedDataService = inject(CachedDataService);
+  public readonly dataInput = input.required<any>();
 
   /**
    * Injects the iconsService to retrieve the list of weather icons.
@@ -46,7 +49,7 @@ export class WeatherCurrentDetailComponent {
   public unitsService: UnitsService = inject(UnitsService);
 
   /**
-   * An Observable that streams the current weather data.
+   * Inject the LoaderService to show or hide the skeleton loader
    */
-  public weatherData$ = this.cachedDataService.cachedData();
+  public loaderService: LoaderService = inject(LoaderService);
 }

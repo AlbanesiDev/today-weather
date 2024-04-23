@@ -1,4 +1,4 @@
-import { CommonModule } from "@angular/common";
+import { AsyncPipe, CommonModule } from "@angular/common";
 import {
   CUSTOM_ELEMENTS_SCHEMA,
   ChangeDetectionStrategy,
@@ -18,9 +18,10 @@ import { PressurePipe } from "../../shared/pipes/pressure.pipe";
 import { SpeedPipe } from "../../shared/pipes/speed.pipe";
 import { IconPipe } from "../../shared/pipes/icon.pipe";
 
-import { LoaderService } from "../../../core/services/spinner-loader.service";
+import { LoaderService } from "../../../core/services/loader.service";
 import { UnitsService } from "../../../core/services/units.service";
 import { IconsService } from "../../../core/services/icons.service";
+import { SkeletonModule } from "primeng/skeleton";
 
 /**
  * `WeatherForecastComponent` is a reusable Angular component that displays weather data
@@ -34,7 +35,7 @@ import { IconsService } from "../../../core/services/icons.service";
     <h2 class="pl-4">{{ "weather_forecast." + forecastType() | translate }}</h2>
     <swiper-container navigation="true" space-between="16" [slidesPerView]="slidesPerView">
       <!-- Skeleton Loader -->
-      @if (loaderService.isLoadSig()) {
+      @if (loaderService.isLoading$ | async) {
         @for (item of [1, 2, 3, 4, 5, 6, 7]; track $index) {
           <swiper-slide
             class=" flex flex-column justify-content-between h-25rem border-1 border-primary border-round py-5 px-4"
@@ -90,6 +91,7 @@ import { IconsService } from "../../../core/services/icons.service";
     CommonModule,
     TranslateModule,
     CarouselModule,
+    SkeletonModule,
     PrecipitationPipe,
     UnixTimestampPipe,
     TemperaturePipe,
@@ -97,6 +99,7 @@ import { IconsService } from "../../../core/services/icons.service";
     PressurePipe,
     SpeedPipe,
     IconPipe,
+    AsyncPipe
   ],
 })
 export class WeatherForecastComponent {

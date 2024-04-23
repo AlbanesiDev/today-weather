@@ -1,41 +1,72 @@
 <h2 class="ml-4">{{ "weather_aqi.title" | translate }}</h2>
+
 <div class="flex flex-column justify-content-center border-1 border-primary border-round p-5 gap-3">
-  <div class="">
+  @if (loaderService.isLoading$ | async) {
     <div class="grid relative">
       <div class="col-2 flex justify-content-center">
-        <span
-          class="text-8xl"
-          [pTooltip]="'weather_aqi.index_description' | translate"
-          tooltipPosition="bottom"
-          [ngClass]="returnTextColor(dataInput().list[0].main.aqi)"
-          >{{ dataInput().list[0].main.aqi }}</span
-        >
+            <p-skeleton styleClass="w-4rem h-6rem my-3"/>
       </div>
       <div class="col-10">
-        <h3>
-          {{ "weather_aqi.message_" + returnSeverity(dataInput().list[0].main.aqi) | translate }}
-        </h3>
-        <p>
-          {{
-            "weather_aqi.description_" + returnSeverity(dataInput().list[0].main.aqi) | translate
-          }}
-        </p>
+        <p-skeleton styleClass="w-5 my-3"></p-skeleton>
+        <p-skeleton styleClass="w-12 my-4"></p-skeleton>
+        <p-skeleton styleClass="w-10 my-4"></p-skeleton>
       </div>
+    </div>
+    <p-divider />
+    <div class="grid justify-content-around">
+        @for (item of ["co", "nh3", "no", "no2", "o3", "pm10", "pm2_5", "so2"]; track $index) {
+          <div class="col-3">
+            <div
+              class="flex my-3 justify-content-center align-items-center"
+              [pTooltip]="'weather_aqi.' + item| translate"
+              tooltipPosition="bottom"
+            >
+              <span class="text-primary font-bold">{{ item | aqiPipe }}:</span>
+
+                <p-skeleton styleClass="w-2rem h-2rem mx-1" />
+
+              {{ "weather_aqi." + item + "_unit" | translate }}
+            </div>
+          </div>
+        }
+    </div>
+  } @else {
+
+
+
+  <div class="grid relative">
+    <div class="col-2 flex justify-content-center">
+      <span
+        class="text-8xl"
+        [pTooltip]="'weather_aqi.index_description' | translate"
+        tooltipPosition="bottom"
+        [ngClass]="returnTextColor(dataInput().list[0].main.aqi)"
+        >{{ dataInput().list[0].main.aqi }}</span
+      >
+    </div>
+    <div class="col-10">
+      <h3>
+        {{ "weather_aqi.message_" + returnSeverity(dataInput().list[0].main.aqi) | translate }}
+      </h3>
+      <p>
+        {{ "weather_aqi.description_" + returnSeverity(dataInput().list[0].main.aqi) | translate }}
+      </p>
     </div>
   </div>
   <p-divider />
   <div class="grid justify-content-around">
-    @for (item of dataInput().list[0].components | keyvalue; track $index) {
-      <div class="col-3">
-        <p
-          class="text-center"
-          [pTooltip]="'weather_aqi.' + item.key | translate"
-          tooltipPosition="bottom"
-        >
-          <span class="text-primary font-bold">{{ item.key | aqiPipe }}:</span>
-          {{ item.value }} {{ "weather_aqi." + item.key + "_unit" | translate }}
-        </p>
-      </div>
-    }
+      @for (item of dataInput().list[0].components | keyvalue; track $index) {
+        <div class="col-3">
+          <p
+            class="text-center"
+            [pTooltip]="'weather_aqi.' + item.key | translate"
+            tooltipPosition="bottom"
+          >
+            <span class="text-primary font-bold">{{ item.key | aqiPipe }}:</span>
+            {{ item.value }} {{ "weather_aqi." + item.key + "_unit" | translate }}
+          </p>
+        </div>
+      }
   </div>
+  }
 </div>

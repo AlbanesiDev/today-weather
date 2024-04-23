@@ -1,16 +1,19 @@
 import { AsyncPipe, CommonModule } from "@angular/common";
-import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, input } from "@angular/core";
 
 import { TranslateModule } from "@ngx-translate/core";
 
-import { WeatherIconsService } from "../../../core/services/weather-icons.service";
-import { WeatherService } from "./../../../core/services/weather.service";
-import { UnitsService } from "../../../core/services/units.service";
+import { SkeletonModule } from "primeng/skeleton";
+
 import { PrecipitationPipe } from "../../shared/pipes/precipitation.pipe";
 import { TemperaturePipe } from "../../shared/pipes/temperature.pipe";
 import { PressurePipe } from "../../shared/pipes/pressure.pipe";
 import { SpeedPipe } from "../../shared/pipes/speed.pipe";
 import { IconPipe } from "../../shared/pipes/icon.pipe";
+
+import { LoaderService } from "../../../core/services/loader.service";
+import { IconsService } from "../../../core/services/icons.service";
+import { UnitsService } from "../../../core/services/units.service";
 /**
  * Component that displays current weather information.
  */
@@ -20,40 +23,35 @@ import { IconPipe } from "../../shared/pipes/icon.pipe";
   imports: [
     CommonModule,
     TranslateModule,
-    AsyncPipe,
-    TemperaturePipe,
-    SpeedPipe,
-    PressurePipe,
+    SkeletonModule,
     PrecipitationPipe,
+    TemperaturePipe,
+    PressurePipe,
+    SpeedPipe,
     IconPipe,
+    AsyncPipe
   ],
   templateUrl: "./weather-current.component.html",
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class WeatherCurrentComponent {
-  /**
-   * Injects the WeatherService to fetch weather data.
-   */
-  private weatherService: WeatherService = inject(WeatherService);
+  public data = input.required<any>();
+  public geoData = input.required<any>();
 
   /**
-   * Injects the WeatherIconsService to retrieve the list of weather icons.
+   * Injects the iconsService to retrieve the list of weather icons.
    */
-  public weatherIconsService: WeatherIconsService = inject(WeatherIconsService);
+  public iconsService: IconsService = inject(IconsService);
 
   /**
    * Injects the UnitsService to manage user preferences for units of measurement.
    */
   public unitsService: UnitsService = inject(UnitsService);
-  /**
-   * An Observable that streams the current weather data fetched from OpenWeatherMap.
-   */
-  public weatherData$ = this.weatherService.getWeatherOwmOne();
 
   /**
-   * An Observable that streams the list of weather icons.
+   * Inject the LoaderService to show or hide the skeleton loader
    */
-  public weatherIcons$ = this.weatherIconsService.getIcons();
+  public loaderService: LoaderService = inject(LoaderService);
 
   /**
    * Holds the current date.

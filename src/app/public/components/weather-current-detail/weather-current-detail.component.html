@@ -1,58 +1,98 @@
-<div class="weather__current-container">
-  @if (weatherData$ | async; as weather) {
+@if (loaderService.isLoading$ | async) {
+  <div class="weather__current-container">
+    @for (item of [1, 2]; track $index) {
+      <div class="flex w-full gap-3">
+        @for (item of [1, 2, 3]; track $index) {
+          <div
+            class="flex flex-column justify-content-between align-items-center border-1 border-primary border-round w-full h-19rem p-5"
+          >
+            <div class="w-8rem">
+              <p-skeleton styleClass="h-8rem" />
+            </div>
+            <div class="w-9">
+              <p-skeleton borderRadius="0" styleClass="h-2rem" />
+            </div>
+            <div class="w-5">
+              <p-skeleton borderRadius="0" />
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+} @else {
+  <div class="weather__current-container">
     <div class="weather__current-row">
       <div>
-        <img [src]="'thermometer' | IconDynamic: iconsService.iconsFolder()" alt="icono de termometro" />
+        <img
+          [src]="'thermometer' | IconDynamic: iconsService.iconsFolder()"
+          [alt]="'icono de ' + ('weather_current_details.feel_likes' | translate)"
+        />
         <h2 class="text-lg font-semi-bold m-0">
           {{ "weather_current_details.feel_likes" | translate }}
         </h2>
         <span class="text-2xl font-light text m-0">
-          {{ weather.current.feels_like | temperatureUnit: unitsService.temperatureUnit() }}
+          {{ dataInput().feels_like | temperatureUnit: unitsService.temperatureUnit() }}
         </span>
       </div>
       <div>
-        <img [src]="'humidity' | IconDynamic: iconsService.iconsFolder()" alt="icono de termometro" />
+        <img
+          [src]="'humidity' | IconDynamic: iconsService.iconsFolder()"
+          [alt]="'icono de ' + ('weather_current_details.humidity' | translate)"
+        />
         <h2 class="text-lg font-semi-bold m-0">
           {{ "weather_current_details.humidity" | translate }}
         </h2>
-        <span class="text-2xl font-light text m-0">{{ weather.current.humidity }}%</span>
+        <span class="text-2xl font-light text m-0">{{ dataInput().humidity }}%</span>
       </div>
       <div>
-        <img [src]="'uv-index' | IconDynamic: iconsService.iconsFolder()" alt="icono de termometro" />
+        <img
+          [src]="'uv-index' | IconDynamic: iconsService.iconsFolder()"
+          [alt]="'icono de ' + ('weather_current_details.uv_index' | translate)"
+        />
         <h2 class="text-lg font-semi-bold m-0">
           {{ "weather_current_details.uv_index" | translate }}
         </h2>
-        <span class="text-2xl font-light text m-0">{{ weather.current.uvi }}</span>
+        <span class="text-2xl font-light text m-0">{{ dataInput().uvi }}</span>
       </div>
     </div>
     <div class="weather__current-row">
       <div>
-        <img [src]="'compass' | IconDynamic: iconsService.iconsFolder()" alt="icono de termometro" />
+        <img
+          [src]="'compass' | IconDynamic: iconsService.iconsFolder()"
+          [alt]="'icono de ' + ('weather_current_details.visibility' | translate)"
+        />
         <h2 class="text-lg font-semi-bold m-0">
           {{ "weather_current_details.visibility" | translate }}
         </h2>
         <span class="text-2xl font-light text m-0">
-          {{ weather.current.visibility | visibilityUnit: unitsService.visibilityUnit() }}
+          {{ dataInput().visibility | visibilityUnit: unitsService.visibilityUnit() }}
         </span>
       </div>
       <div>
-        <img [src]="'umbrella' | IconDynamic: iconsService.iconsFolder()" alt="icono de termometro" />
+        <img
+          [src]="'thermometer-raindrop' | IconDynamic: iconsService.iconsFolder()"
+          [alt]="'icono de ' + ('weather_current_details.dew_point' | translate)"
+        />
         <h2 class="text-lg font-semi-bold m-0">
           {{ "weather_current_details.dew_point" | translate }}
         </h2>
         <span class="text-2xl font-light text m-0">{{
-          weather.current.dew_point | temperatureUnit: unitsService.temperatureUnit()
+          dataInput().dew_point | temperatureUnit: unitsService.temperatureUnit()
         }}</span>
       </div>
       <div>
-        <img [src]="'barometer' | IconDynamic: iconsService.iconsFolder()" alt="icono de termometro" />
+        <img
+          [src]="'barometer' | IconDynamic: iconsService.iconsFolder()"
+          [alt]="'icono de ' + ('weather_current_details.pressure' | translate)"
+        />
         <h2 class="text-lg font-semi-bold m-0">
           {{ "weather_current_details.pressure" | translate }}
         </h2>
         <span class="text-2xl font-light text m-0">
-          {{ weather.current.pressure | pressureUnit: unitsService.pressureUnit() }}
+          {{ dataInput().pressure | pressureUnit: unitsService.pressureUnit() }}
         </span>
       </div>
     </div>
-  }
-</div>
+  </div>
+}
