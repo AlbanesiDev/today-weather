@@ -1,7 +1,7 @@
 import type { HttpErrorResponse, HttpInterceptorFn } from "@angular/common/http";
 import { inject } from "@angular/core";
 import { catchError, finalize, throwError } from "rxjs";
-import { LoaderService } from "../services/spinner-loader.service";
+import { LoaderService } from "../services/loader.service";
 
 export const weatherInterceptor: HttpInterceptorFn = (req, next) => {
   const loaderService: LoaderService = inject(LoaderService);
