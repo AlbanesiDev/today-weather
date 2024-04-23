@@ -1,8 +1,7 @@
 import { Injectable, inject } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable, forkJoin, of, switchMap } from "rxjs";
+import { Observable, delay, forkJoin, of, switchMap } from "rxjs";
 import { LangService } from "../lang/lang.service";
-import { GeolocationService } from "./geolocation.service";
 import { IWeatherAqi, IWeatherOne } from "../interface/weather-owm.interface";
 import { environment } from "../../../environments/environment.development";
 
@@ -24,11 +23,6 @@ export class WeatherService {
   private langService: LangService = inject(LangService);
 
   /**
-   * Service to manage geolocation.
-   */
-  private geolocationService: GeolocationService = inject(GeolocationService);
-
-  /**
    * API key for OpenWeatherMap.
    */
   private readonly weatherOwmKey: string = environment.WEATHER_OWM_KEY;
@@ -41,21 +35,23 @@ export class WeatherService {
   /**
    * URL for the OpenWeatherMap One Call endpoint.
    */
-  private readonly weatherOwmOne: string = environment.WEATHER_OWM;
+  private readonly weatherOwmOne_mock: string = environment.MOCK.WEATHER_OWM_ONE;
+  private readonly weatherOwmOne_endpoint: string = environment.ENDPOINT.WEATHER_OWM_ONE;
 
   /**
    * URL for the OpenWeatherMap AQI endpoint.
    */
-  private readonly weatherOwmAqi: string = environment.WEATHER_OWM_AQI;
+  private readonly weatherOwmAqi_mock: string = environment.MOCK.WEATHER_OWM_AQI;
+  private readonly weatherOwmAqi_endpoint: string = environment.ENDPOINT.WEATHER_OWM_AQI;
 
   /**
    * Retrieves comprehensive weather data in a single request.
    * @returns {Observable<IWeatherOne>} An Observable emitting the weather data.
    */
-  private getWeatherOne(): Observable<IWeatherOne> {
+  private getWeatherOne(lat: number, lon: number): Observable<IWeatherOne> {
     const url = this.isProduction
-      ? `${this.weatherOwmOne}lat=${this.geolocationService.lat()}&lon=${this.geolocationService.lon()}&units=metric&lang=${this.langService.currentLangSig()}&appid=${this.weatherOwmKey}`
-      : this.weatherOwmOne;
+      ? `${this.weatherOwmOne_endpoint}lat=${lat}&lon=${lon}&units=metric&lang=${this.langService.currentLangSig()}&appid=${this.weatherOwmKey}`
+      : this.weatherOwmOne_mock;
     return this.http.get<IWeatherOne>(url);
   }
 
@@ -63,10 +59,10 @@ export class WeatherService {
    * Retrieves air quality index (AQI) data.
    * @returns {Observable<IWeatherAqi>} An Observable emitting the AQI data.
    */
-  private getWeatherAqi(): Observable<IWeatherAqi> {
+  private getWeatherAqi(lat: number, lon: number): Observable<IWeatherAqi> {
     const url = this.isProduction
-      ? `${this.weatherOwmAqi}lat=${this.geolocationService.lon()}&lon=${this.geolocationService.lon()}&appid=${this.weatherOwmKey}`
-      : this.weatherOwmAqi;
+      ? `${this.weatherOwmAqi_endpoint}lat=${lat}&lon=${lon}&appid=${this.weatherOwmKey}`
+      : this.weatherOwmAqi_mock;
     return this.http.get<IWeatherAqi>(url);
   }
 
@@ -74,10 +70,10 @@ export class WeatherService {
    * Combines weather and AQI data into a single object.
    * @returns {Observable<any>} An Observable emitting an object containing both weather data and AQI information.
    */
-  public weatherMergeData(): Observable<any> {
+  public weatherMergeData(lat: number, lon: number): Observable<any> {
     return forkJoin({
-      weather: this.getWeatherOne(),
-      aqi: this.getWeatherAqi(),
+      weather: this.getWeatherOne(lat, lon),
+      aqi: this.getWeatherAqi(lat, lon),
     }).pipe(
       switchMap((results) => {
         const combinedData = {
