@@ -56,6 +56,16 @@
     "switch_btn": "ログイン",
     "switch_text": "既にアカウントをお持ちですか？"
   },
+  "recovery": {
+    "title": "パスワードを回復",
+    "email_description": "パスワードをリセットするためのリンクをお送りするためにメールアドレスを入力してください。",
+    "email_submit": "確認",
+    "email_submit_description": "パスワードをリセットするためのリンクが含まれたメールが送信されました。メールを受信していない場合は、スパムフォルダを確認するか、管理者に連絡してください。",
+    "return": "ログイン画面に戻る"
+  },
+  "recovery_description": {
+    "title": "パスワードを回復"
+  },
   "theme_settings": {
     "mode": "テーマモード",
     "theme": "テーマカラー"
@@ -143,7 +153,7 @@
     "auth/operation-not-allowed": "操作は許可されていません。",
     "auth/timeout": "タイムアウトしました。もう一度やり直してください。",
     "auth/credential-already-in-use": "資格情報はすでに別のユーザーによって使用されています。",
-    "auth/invalid-credential": "管理SDKを認証するために使用される資格情報は、望ましい操作を実行するために使用できません。",
+    "auth/invalid-credential": "電子メールアドレスまたはパスワードが間違っている。",
     "auth/invalid-continue-uri": "継続URIは有効なURL文字列である必要があります。",
     "auth/invalid-creation-time": "作成時刻は有効なUTC日付文字列である必要があります。",
     "auth/internal-error": "認証サーバーがリクエストの処理中に予期しないエラーに遭遇しました。詳細についてはエラーメッセージを確認してください。",
@@ -199,6 +209,10 @@
     "pm10_unit": "µg/m³",
     "pm2_5_unit": "µg/m³",
     "o3_unit": "µg/m³"
+  },
+  "weather_forecast": {
+    "hourly": "毎時",
+    "daily": "毎日"
   },
   "weather_description": {
     "200": "弱い雨のある雷雨。",

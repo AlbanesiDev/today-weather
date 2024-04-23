@@ -56,6 +56,16 @@
     "switch_btn": "Entrar",
     "switch_text": "Já tem uma conta?"
   },
+  "recovery": {
+    "title": "Recuperar senha",
+    "email_description": "Digite seu endereço de e-mail para que possamos enviar um link para redefinir sua senha.",
+    "email_submit": "Confirmar",
+    "email_submit_description": "Um e-mail com um link para redefinir sua senha foi enviado para você. Se você não recebeu nenhum e-mail, verifique sua pasta de spam ou entre em contato com o administrador.",
+    "return": "Voltar para o login"
+  },
+  "recovery_description": {
+    "title": "Recuperar senha"
+  },
   "theme_settings": {
     "mode": "Modo do tema",
     "theme": "Cor do tema"
@@ -143,7 +153,7 @@
     "auth/operation-not-allowed": "Operação não permitida.",
     "auth/timeout": "Tempo esgotado. Tente novamente.",
     "auth/credential-already-in-use": "As credenciais já estão em uso por outro usuário.",
-    "auth/invalid-credential": "As credenciais usadas para autenticar os SDKs de administração não podem ser usadas para executar a ação desejada.",
+    "auth/invalid-credential": "Endereço de correio eletrónico ou palavra-passe incorrectos.",
     "auth/invalid-continue-uri": "O URI de continuação deve ser uma string de URL válida.",
     "auth/invalid-creation-time": "O horário de criação deve ser uma string de data UTC válida.",
     "auth/internal-error": "O servidor de autenticação encontrou um erro inesperado ao processar a solicitação. Verifique a mensagem de erro para obter mais detalhes.",
@@ -199,6 +209,10 @@
     "pm10_unit": "µg/m³",
     "pm2_5_unit": "µg/m³",
     "o3_unit": "µg/m³"
+  },
+  "weather_forecast": {
+    "hourly": "Por hora",
+    "daily": "Diário"
   },
   "weather_description": {
     "200": "Tempestade com chuva leve.",

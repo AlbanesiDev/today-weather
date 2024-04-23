@@ -56,6 +56,16 @@
     "switch_btn": "登录",
     "switch_text": "已经有帐号？"
   },
+  "recovery": {
+    "title": "找回密码",
+    "email_description": "请输入您的电子邮件地址，以便我们发送重置密码的链接。",
+    "email_submit": "确认",
+    "email_submit_description": "我们已向您发送了包含重置密码链接的电子邮件。如果您没有收到任何电子邮件，请检查您的垃圾邮件文件夹或联系管理员。",
+    "return": "返回登录"
+  },
+  "recovery_description": {
+    "title": "找回密码"
+  },
   "theme_settings": {
     "mode": "主题模式",
     "theme": "主题颜色"
@@ -143,7 +153,7 @@
     "auth/operation-not-allowed": "操作不允許。",
     "auth/timeout": "超時。請重試。",
     "auth/credential-already-in-use": "憑據已被其他用戶使用。",
-    "auth/invalid-credential": "用於驗證管理SDK的憑據無法用於執行所需的操作。",
+    "auth/invalid-credential": "电子邮件地址或密码不正确。",
     "auth/invalid-continue-uri": "繼續URI必須是有效的URL字符串。",
     "auth/invalid-creation-time": "創建時間必須是有效的UTC日期字符串。",
     "auth/internal-error": "身份驗證服務器在處理請求時遇到意外錯誤。請查看錯誤消息以獲取更多詳細信息。",
@@ -199,6 +209,10 @@
     "pm10_unit": "µg/m³",
     "pm2_5_unit": "µg/m³",
     "o3_unit": "µg/m³"
+  },
+  "weather_forecast": {
+    "hourly": "每小时",
+    "daily": "每日"
   },
   "weather_description": {
     "200": "雷阵雨伴有小雨。",

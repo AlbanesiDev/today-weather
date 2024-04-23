@@ -56,6 +56,19 @@
     "switch_btn": "Iniciar sesión",
     "switch_text": "¿Ya tienes una cuenta?"
   },
+  "recovery": {
+    "title":"Recuperar contraseña",
+    "email_description": "Introduzca su dirección de correo electrónico para que podamos enviarle un enlace para cambiar su contraseña.",
+    "email_submit": "Confirmar",
+    "email_submit_description": "Se le ha enviado un correo electrónico con un enlace para restablecer su contraseña. Si no ha recibido ningún correo electrónico, compruebe su carpeta de correo no deseado o póngase en contacto con el administrador.",
+    "return": "Volver al login"
+  },
+  "recovery_description": {
+    "title":"Recuperar contraseña"
+  },
+  "sign_out": {
+    "message": "Se ha cerrado la sesión."
+  },
   "theme_settings": {
     "mode": "Modo del tema",
     "theme": "Color del tema"
@@ -144,7 +157,7 @@
     "auth/operation-not-allowed": "La operación no está permitida.",
     "auth/timeout": "Tiempo de espera agotado. Inténtalo de nuevo.",
     "auth/credential-already-in-use": "Las credenciales ya están en uso por otro usuario.",
-    "auth/invalid-credential": "Las credenciales utilizadas para autenticar los SDK de administración no pueden usarse para realizar la acción deseada.",
+    "auth/invalid-credential": "Dirección de correo electrónico o contraseña incorrectas..",
     "auth/invalid-continue-uri": "La URL de continuación debe ser una cadena de URL válida.",
     "auth/invalid-creation-time": "La hora de creación debe ser una cadena de fecha en formato UTC válida.",
     "auth/internal-error": "El servidor de autenticación encontró un error inesperado al procesar la solicitud. Consulta el mensaje de error para obtener más detalles.",

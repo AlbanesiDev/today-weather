@@ -56,6 +56,16 @@
     "switch_btn": "Accedi",
     "switch_text": "Hai già un account?"
   },
+  "recovery": {
+    "title": "Recupera Password",
+    "email_description": "Inserisci il tuo indirizzo email in modo che possiamo inviarti un link per reimpostare la tua password.",
+    "email_submit": "Conferma",
+    "email_submit_description": "Ti è stata inviata un'email con un link per reimpostare la tua password. Se non hai ricevuto nessuna email, controlla la tua cartella spam o contatta l'amministratore.",
+    "return": "Torna al login"
+  },
+  "recovery_description": {
+    "title": "Recupera Password"
+  },
   "theme_settings": {
     "mode": "Modalità del tema",
     "theme": "Colore del tema"
@@ -143,7 +153,7 @@
     "auth/operation-not-allowed": "Operazione non consentita.",
     "auth/timeout": "Timeout scaduto. Riprova.",
     "auth/credential-already-in-use": "Le credenziali sono già in uso da un altro utente.",
-    "auth/invalid-credential": "Le credenziali utilizzate per autenticare gli SDK di amministrazione non possono essere utilizzate per eseguire l'azione desiderata.",
+    "auth/invalid-credential": "Indirizzo e-mail o password errati.",
     "auth/invalid-continue-uri": "L'URL di continuazione deve essere una stringa di URL valida.",
     "auth/invalid-creation-time": "L'ora di creazione deve essere una stringa di data UTC valida.",
     "auth/internal-error": "Il server di autenticazione ha riscontrato un errore imprevisto durante l'elaborazione della richiesta. Controlla il messaggio di errore per ulteriori dettagli.",
@@ -199,6 +209,10 @@
     "pm10_unit": "µg/m³",
     "pm2_5_unit": "µg/m³",
     "o3_unit": "µg/m³"
+  },
+  "weather_forecast": {
+    "hourly": "Ogni ora",
+    "daily": "Giornaliero"
   },
   "weather_description": {
     "200": "Temporale con pioggia leggera.",

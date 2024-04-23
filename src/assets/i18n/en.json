@@ -56,6 +56,16 @@
     "switch_btn": "Log in",
     "switch_text": "Already have an account?"
   },
+  "recovery": {
+    "title": "Recover Password",
+    "email_description": "Enter your email address so we can send you a link to reset your password.",
+    "email_submit": "Submit",
+    "email_submit_description": "An email has been sent to you with a link to reset your password. If you haven't received any email, please check your spam folder or contact the administrator.",
+    "return": "Back to login"
+  },
+  "recovery_description": {
+    "title": "Recover Password"
+  },
   "theme_settings": {
     "mode": "Theme mode",
     "theme": "Theme color"
@@ -143,7 +153,7 @@
     "auth/operation-not-allowed": "Operation not allowed.",
     "auth/timeout": "Timeout occurred. Please try again.",
     "auth/credential-already-in-use": "The credentials are already in use by another user.",
-    "auth/invalid-credential": "The credentials used to authenticate the Admin SDKs cannot be used to perform the desired action.",
+    "auth/invalid-credential": "Incorrect email or password.",
     "auth/invalid-continue-uri": "The continue URL must be a valid URL string.",
     "auth/invalid-creation-time": "Creation time must be a valid UTC date string.",
     "auth/internal-error": "The authentication server encountered an unexpected error while processing the request. Check the error message for more details.",
@@ -199,6 +209,10 @@
     "pm10_unit": "µg/m³",
     "pm2_5_unit": "µg/m³",
     "o3_unit": "µg/m³"
+  },
+  "weather_forecast": {
+    "hourly": "Hourly",
+    "daily": "Daily"
   },
   "beaufort_scale": {
     "calm": "0 Calm",

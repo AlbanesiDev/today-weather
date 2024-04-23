@@ -55,8 +55,17 @@
     "google_btn": "Google",
     "switch_btn": "Anmelden",
     "switch_text": "Haben Sie bereits ein Konto?"
-}
-,
+  },
+  "recovery": {
+    "title": "Passwort wiederherstellen",
+    "email_description": "Geben Sie Ihre E-Mail-Adresse ein, damit wir Ihnen einen Link zum Zurücksetzen Ihres Passworts zusenden können.",
+    "email_submit": "Bestätigen",
+    "email_submit_description": "Eine E-Mail mit einem Link zum Zurücksetzen Ihres Passworts wurde an Sie gesendet. Wenn Sie keine E-Mail erhalten haben, überprüfen Sie bitte Ihren Spam-Ordner oder kontaktieren Sie den Administrator.",
+    "return": "Zurück zur Anmeldung"
+  },
+  "recovery_description": {
+    "title": "Passwort wiederherstellen"
+  },
   "theme_settings": {
     "mode": "Themenmodus",
     "theme": "Themenfarbe"
@@ -145,7 +154,7 @@
     "auth/operation-not-allowed": "Vorgang nicht erlaubt.",
     "auth/timeout": "Zeitüberschreitung. Bitte versuche es erneut.",
     "auth/credential-already-in-use": "Die Anmeldeinformationen werden bereits von einem anderen Benutzer verwendet.",
-    "auth/invalid-credential": "Die Anmeldeinformationen, die zum Authentifizieren der Verwaltungs-SDKs verwendet werden, können nicht für die gewünschte Aktion verwendet werden.",
+    "auth/invalid-credential": "Falsche E-Mail Adresse oder falsches Passwort.",
     "auth/invalid-continue-uri": "Die Weiterleitungs-URL muss eine gültige URL-Zeichenfolge sein.",
     "auth/invalid-creation-time": "Die Erstellungszeit muss eine gültige UTC-Datumszeichenfolge sein.",
     "auth/internal-error": "Der Authentifizierungsserver hat einen unerwarteten Fehler bei der Verarbeitung der Anfrage festgestellt. Überprüfe die Fehlermeldung für weitere Details.",
@@ -201,6 +210,10 @@
     "pm10_unit": "µg/m³",
     "pm2_5_unit": "µg/m³",
     "o3_unit": "µg/m³"
+  },
+  "weather_forecast": {
+    "hourly": "Stündlich",
+    "daily": "Täglich"
   },
   "weather_description": {
     "200": "Gewitter mit leichtem Regen.",

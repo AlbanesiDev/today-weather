@@ -56,6 +56,16 @@
     "switch_btn": "Se connecter",
     "switch_text": "Vous avez déjà un compte ?"
   },
+  "recovery": {
+    "title": "Récupérer le mot de passe",
+    "email_description": "Entrez votre adresse e-mail afin que nous puissions vous envoyer un lien pour réinitialiser votre mot de passe.",
+    "email_submit": "Confirmer",
+    "email_submit_description": "Un e-mail contenant un lien pour réinitialiser votre mot de passe vous a été envoyé. Si vous n'avez reçu aucun e-mail, veuillez vérifier votre dossier de courrier indésirable ou contacter l'administrateur.",
+    "return": "Retour à la connexion"
+  },
+  "recovery_description": {
+    "title": "Récupérer le mot de passe"
+  },
   "theme_settings": {
     "mode": "Mode du thème",
     "theme": "Couleur du thème"
@@ -143,7 +153,7 @@
     "auth/operation-not-allowed": "Opération non autorisée.",
     "auth/timeout": "Délai dépassé. Veuillez réessayer.",
     "auth/credential-already-in-use": "Les identifiants sont déjà utilisés par un autre utilisateur.",
-    "auth/invalid-credential": "Les identifiants utilisés pour authentifier les SDK d'administration ne peuvent pas être utilisés pour effectuer l'action souhaitée.",
+    "auth/invalid-credential": "Adresse électronique ou mot de passe incorrect.",
     "auth/invalid-continue-uri": "L'URL de continuation doit être une chaîne d'URL valide.",
     "auth/invalid-creation-time": "L'heure de création doit être une chaîne de date UTC valide.",
     "auth/internal-error": "Le serveur d'authentification a rencontré une erreur inattendue lors du traitement de la demande. Veuillez consulter le message d'erreur pour plus de détails.",
@@ -199,6 +209,10 @@
     "pm10_unit": "µg/m³",
     "pm2_5_unit": "µg/m³",
     "o3_unit": "µg/m³"
+  },
+  "weather_forecast": {
+    "hourly": "Par heure",
+    "daily": "Quotidien"
   },
   "weather_description": {
     "200": "Orage avec pluie légère.",
