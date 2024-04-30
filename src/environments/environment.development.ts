@@ -1,12 +1,18 @@
 export const environment = {
   IS_PRODUCTION: false,
-  GEOLOCATION: "*******************",
-  WEATHER_OWM_KEY: "*******************",
-  WEATHER_OWM: "/assets/mocks/weather-owm-one.json",
-  WEATHER_OWM_GEOCODING: "/assets/mocks/weather-owm-geocoding.json",
-  WEATHER_OWM_CURRENT: "/assets/mocks/weather-owm-current.json",
-  WEATHER_OWM_AQI: "/assets/mocks/weather-owm-aqi.json",
-  WEATHER_ICON_LIST: "/assets/data/weather_icons.json",
+  WEATHER_OWM_KEY: "******************************",
+  MOCK: {
+    GEOLOCATION: "/assets/mocks/geolocation.json",
+    WEATHER_OWM_ONE: "/assets/mocks/weather-owm-one.json",
+    WEATHER_OWM_GEOCODING: "/assets/mocks/weather-owm-geocoding.json",
+    WEATHER_OWM_AQI: "/assets/mocks/weather-owm-aqi.json",
+  },
+  ENDPOINT: {
+    GEOLOCATION: "https://ipapi.co/json",
+    WEATHER_OWM_ONE: "https://api.openweathermap.org/data/3.0/onecall?",
+    WEATHER_OWM_GEOCODING: "https://api.openweathermap.org/geo/1.0/direct?",
+    WEATHER_OWM_AQI: "https://api.openweathermap.org/data/2.5/air_pollution?",
+  },
   LOCAL_STORAGE: {
     userNotificationsKey: "userNotifications",
     userUnitsKey: "userUnits",
@@ -25,5 +31,6 @@ export const environment = {
     messagingSenderId: "*******************",
     appId: "*******************",
     measurementId: "*******************",
+    db: "*******************"
   },
 };
