@@ -1,3 +1,7 @@
+/**
+ * To do production tests you only have to change "IS_PRODUCTION" to true and
+ * replace the `**************` with your API key.
+ */
 export const environment = {
   IS_PRODUCTION: false,
   WEATHER_OWM_KEY: "******************************",
@@ -18,7 +22,12 @@ export const environment = {
     userUnitsKey: "userUnits",
     userThemeKey: "userTheme",
     userIconPreferences: "userIconsStyle",
-    userFeaturesKey: "userFeatures",
+    userFeaturesKey: [
+      {
+        list: "userFeaturesList",
+        active: "userFeaturesActive",
+      },
+    ],
     userLangKey: "userLang",
     userGeoKey: "userGeo",
     userWeatherDataKey: "userWeather",
@@ -31,6 +40,6 @@ export const environment = {
     messagingSenderId: "*******************",
     appId: "*******************",
     measurementId: "*******************",
-    db: "*******************"
+    db: "*******************",
   },
 };

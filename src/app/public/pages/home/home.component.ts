@@ -50,46 +50,48 @@ import { TranslateModule } from "@ngx-translate/core";
       <app-header />
       <div class="flex flex-column gap-6">
         @if (loaderService.isErrorSig()) {
-          <div
-            class="flex justify-content-center align-items-center border-1 border-primary border-round h-25rem"
-          >
+          <div class="flex justify-content-center align-items-center border-1 border-primary border-round h-25rem">
             <p class="text-4xl text-red-500">
               {{ loaderService.errorMessage() }}
             </p>
           </div>
         } @else {
-          <app-weather-current
-            [data]="weatherDataSig()"
-            [geoData]="geolocationDataSig()"
-            [class]="'flex-order-' + getPosition(0)"
-          />
-          <app-weather-forecast
-            forecastType="daily"
-            [class]="'flex-order-' + getPosition(3)"
-            [dataInput]="weatherDataSig().daily"
-          />
-          <app-weather-forecast
-            forecastType="hourly"
-            [class]="'flex-order-' + getPosition(1)"
-            [dataInput]="weatherDataSig().hourly"
-          />
-          <app-weather-current-detail
-            [dataInput]="weatherDataSig().current"
-            [class]="'flex-order-' + getPosition(2)"
-          />
-          <app-weather-aqi
-            [dataInput]="weatherDataSig().aqi"
-            [class]="'flex-order-' + getPosition(4)"
-          />
+          @if (featuresService.featureListActive[0].current) {
+            <app-weather-current
+              [data]="weatherDataSig()"
+              [geoData]="geolocationDataSig()"
+              [class]="'flex-order-' + getPosition(0)"
+            />
+          }
+          @if (featuresService.featureListActive[0].forecastDaily) {
+            <app-weather-forecast
+              forecastType="daily"
+              [class]="'flex-order-' + getPosition(3)"
+              [dataInput]="weatherDataSig().daily"
+            />
+          }
+          @if (featuresService.featureListActive[0].forecastHourly) {
+            <app-weather-forecast
+              forecastType="hourly"
+              [class]="'flex-order-' + getPosition(1)"
+              [dataInput]="weatherDataSig().hourly"
+            />
+          }
+          @if (featuresService.featureListActive[0].currentDetail) {
+            <app-weather-current-detail
+              [dataInput]="weatherDataSig().current"
+              [class]="'flex-order-' + getPosition(2)"
+            />
+          }
+          @if (featuresService.featureListActive[0].aqi) {
+            <app-weather-aqi [dataInput]="weatherDataSig().aqi" [class]="'flex-order-' + getPosition(4)" />
+          }
         }
       </div>
       <footer class="flex justify-content-center align-items-center my-7 h-3rem">
         <div class="text-xl font-medium">
           {{ "footer.copyright" | translate }} 2024 |
-          <a
-            class="p-0 text-primary no-underline hover:underline"
-            href="https://github.com/AlbanesiDev"
-            target="_blank"
+          <a class="p-0 text-primary no-underline hover:underline" href="https://github.com/AlbanesiDev" target="_blank"
             >AlbanesiDev</a
           >
         </div>
@@ -136,6 +138,6 @@ export class HomeComponent implements OnInit, OnDestroy {
    * @returns The current position of the feature within the feature list.
    */
   public getPosition(id: number): number {
-    return this.featuresService.featureList().findIndex((feature) => feature.id === id);
+    return this.featuresService.featureListOrder().findIndex((feature) => feature.id === id);
   }
 }
