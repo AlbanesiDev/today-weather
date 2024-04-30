@@ -1,13 +1,16 @@
 import { CommonModule } from "@angular/common";
 import { ChangeDetectionStrategy, Component, ViewEncapsulation, inject } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+
 import { TranslateModule } from "@ngx-translate/core";
-import { DragDropModule } from "primeng/dragdrop";
+
 import { MultiSelectModule } from "primeng/multiselect";
 import { OrderListModule } from "primeng/orderlist";
+import { DragDropModule } from "primeng/dragdrop";
 import { PickListModule } from "primeng/picklist";
-import { FeaturesService } from "../../../../../core/services/features.service";
 import { CheckboxModule } from "primeng/checkbox";
-import { FormsModule } from "@angular/forms";
+
+import { FeaturesService } from "../../../../../core/services/features.service";
 
 /**
  * The FeaturesComponent is responsible for displaying and managing the order of features.
@@ -43,35 +46,35 @@ import { FormsModule } from "@angular/forms";
         class="flex flex-column justify-content-start align-items-start gap-3 border-1 border-round surface-border w-full px-3 py-4"
       >
         <p-checkbox
-          inputId="binary"
+          inputId="current"
           [label]="'features_settings.current' | translate"
           [(ngModel)]="featuresService.featureListActive[0].current"
           [binary]="true"
           (ngModelChange)="featuresService.setLocalStorage('active')"
         />
         <p-checkbox
-          inputId="binary"
+          inputId="currentDetail"
           [label]="'features_settings.current_details' | translate"
           [(ngModel)]="featuresService.featureListActive[0].currentDetail"
           [binary]="true"
           (ngModelChange)="featuresService.setLocalStorage('active')"
         />
         <p-checkbox
-          inputId="binary"
+          inputId="forecastDaily"
           [label]="'features_settings.forecast_daily' | translate"
           [(ngModel)]="featuresService.featureListActive[0].forecastDaily"
           [binary]="true"
           (ngModelChange)="featuresService.setLocalStorage('active')"
         />
         <p-checkbox
-          inputId="binary"
+          inputId="forecastHourly"
           [label]="'features_settings.forecast_hourly' | translate"
           [(ngModel)]="featuresService.featureListActive[0].forecastHourly"
           [binary]="true"
           (ngModelChange)="featuresService.setLocalStorage('active')"
         />
         <p-checkbox
-          inputId="binary"
+          inputId="aqi"
           [label]="'features_settings.aqi' | translate"
           [(ngModel)]="featuresService.featureListActive[0].aqi"
           [binary]="true"
