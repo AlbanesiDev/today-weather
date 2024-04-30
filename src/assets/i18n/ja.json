@@ -124,6 +124,14 @@
     "units_precipitation_mm": "mm | ミリメートル",
     "units_precipitation_in": "in | インチ"
   },
+  "features_settings": {
+    "order": "注文",
+    "current": "現在の天気",
+    "forecast_hourly": "時間ごとの予報",
+    "current_details": "天気の詳細",
+    "forecast_daily": "日別予報",
+    "aqi": "空気の質"
+  },
   "firebase_auth": {
     "summary": "エラー",
     "auth/email-already-in-use": "そのメールアドレスはすでに使用されています。",

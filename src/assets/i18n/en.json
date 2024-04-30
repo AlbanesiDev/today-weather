@@ -124,6 +124,14 @@
     "units_precipitation_mm": "mm | Millimeters",
     "units_precipitation_in": "in | Inches"
   },
+  "features_settings": {
+    "order": "Order",
+    "current": "Current Weather",
+    "forecast_hourly": "Hourly Forecast",
+    "current_details": "Weather Details",
+    "forecast_daily": "Daily Forecast",
+    "aqi": "Air Quality Index"
+  },
   "firebase_auth": {
     "summary": "Error",
     "auth/email-already-in-use": "The email address is already in use.",

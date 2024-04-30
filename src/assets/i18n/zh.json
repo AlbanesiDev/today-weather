@@ -124,6 +124,14 @@
     "units_precipitation_mm": "mm | 毫米",
     "units_precipitation_in": "in | 英寸"
   },
+  "features_settings": {
+    "order": "顺序",
+    "current": "当前天气",
+    "forecast_hourly": "逐时预报",
+    "current_details": "天气详情",
+    "forecast_daily": "逐日预报",
+    "aqi": "空气质量"
+  },
   "firebase_auth": {
     "summary": "錯誤",
     "auth/email-already-in-use": "该电子邮件地址已被使用。",

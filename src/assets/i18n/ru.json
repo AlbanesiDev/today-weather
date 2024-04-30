@@ -124,6 +124,14 @@
     "units_precipitation_mm": "mm | Миллиметры",
     "units_precipitation_in": "in | Дюймы"
   },
+  "features_settings": {
+    "order": "Заказ",
+    "current": "Текущая погода",
+    "forecast_hourly": "Почасовой прогноз",
+    "current_details": "Детали погоды",
+    "forecast_daily": "Прогноз на день",
+    "aqi": "Качество воздуха"
+  },
   "firebase_auth": {
     "summary": "Ошибка",
     "auth/email-already-in-use": "Этот адрес электронной почты уже используется.",

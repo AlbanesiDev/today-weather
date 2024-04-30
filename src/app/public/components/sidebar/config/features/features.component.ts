@@ -29,8 +29,7 @@ import { FormsModule } from "@angular/forms";
     <div class="flex flex-column gap-5">
       <p-orderList
         styleClass="border-primary"
-        controlsPosition="right"
-        [header]="'orden' | translate"
+        [header]="'features_settings.order' | translate"
         [value]="featuresService.featureListOrder()"
         [dragdrop]="true"
         [metaKeySelection]="false"

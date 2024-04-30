@@ -124,6 +124,14 @@
     "units_precipitation_mm": "mm | 밀리미터",
     "units_precipitation_in": "in | 인치"
   },
+  "features_settings": {
+    "order": "주문",
+    "current": "현재 날씨",
+    "forecast_hourly": "시간별 날씨 예보",
+    "current_details": "날씨 상세 정보",
+    "forecast_daily": "일일 날씨 예보",
+    "aqi": "대기질 지수"
+  },
   "firebase_auth": {
     "summary": "오류",
     "auth/email-already-in-use": "이 이메일 주소는 이미 사용 중입니다.",

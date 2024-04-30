@@ -124,6 +124,14 @@
     "units_precipitation_mm": "mm | Millimetri",
     "units_precipitation_in": "in | Pollici"
   },
+  "features_settings": {
+    "order": "Ordine",
+    "current": "Meteo attuale",
+    "forecast_hourly": "Previsioni Orarie",
+    "current_details": "Dettagli meteo",
+    "forecast_daily": "Previsioni giornaliere",
+    "aqi": "Qualità dell'aria"
+  },
   "firebase_auth": {
     "summary": "Errore",
     "auth/email-already-in-use": "L'indirizzo email è già in uso.",

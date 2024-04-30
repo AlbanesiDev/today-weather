@@ -57,14 +57,14 @@
     "switch_text": "¿Ya tienes una cuenta?"
   },
   "recovery": {
-    "title":"Recuperar contraseña",
+    "title": "Recuperar contraseña",
     "email_description": "Introduzca su dirección de correo electrónico para que podamos enviarle un enlace para cambiar su contraseña.",
     "email_submit": "Confirmar",
     "email_submit_description": "Se le ha enviado un correo electrónico con un enlace para restablecer su contraseña. Si no ha recibido ningún correo electrónico, compruebe su carpeta de correo no deseado o póngase en contacto con el administrador.",
     "return": "Volver al login"
   },
   "recovery_description": {
-    "title":"Recuperar contraseña"
+    "title": "Recuperar contraseña"
   },
   "sign_out": {
     "message": "Se ha cerrado la sesión."
@@ -127,7 +127,14 @@
     "units_precipitation_mm": "mm | Milímetros",
     "units_precipitation_in": "in | Pulgadas"
   },
-
+  "features_settings": {
+    "order": "Orden",
+    "current": "Clima actual",
+    "forecast_hourly": "Clima por horas",
+    "current_details": "Detalles del clima",
+    "forecast_daily": "Clima por dias",
+    "aqi": "Condicion del aire"
+  },
   "firebase_auth": {
     "summary": "Error",
     "auth/email-already-in-use": "La dirección de correo electrónico ya está en uso.",

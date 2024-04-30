@@ -124,6 +124,14 @@
     "units_precipitation_mm": "mm | Міліметри",
     "units_precipitation_in": "in | Дюйми"
   },
+  "features_settings": {
+    "order": "Замовлення",
+    "current": "Поточна погода",
+    "forecast_hourly": "Прогноз на годину",
+    "current_details": "Деталі погоди",
+    "forecast_daily": "Прогноз на день",
+    "aqi": "Якість повітря"
+  },
   "firebase_auth": {
     "summary": "Помилка",
     "auth/email-already-in-use": "Ця адреса електронної пошти вже використовується.",

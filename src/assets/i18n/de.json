@@ -124,7 +124,14 @@
     "units_precipitation_mm": "mm | Millimeter",
     "units_precipitation_in": "in | Zoll"
   },
-
+  "features_settings": {
+    "order": "Reihenfolge",
+    "current": "Aktuelles Wetter",
+    "forecast_hourly": "Stündliche Wettervorhersage",
+    "current_details": "Wetterdetails",
+    "forecast_daily": "Tägliche Wettervorhersage",
+    "aqi": "Luftqualität"
+  },
   "firebase_auth": {
     "summary": "Fehler",
     "auth/email-already-in-use": "E-Mail-Adresse wird bereits verwendet.",

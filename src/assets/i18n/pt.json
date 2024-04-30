@@ -124,6 +124,14 @@
     "units_precipitation_mm": "mm | Milímetros",
     "units_precipitation_in": "in | Polegadas"
   },
+  "features_settings": {
+    "order": "Ordem",
+    "current": "Clima atual",
+    "forecast_hourly": "Previsão por hora",
+    "current_details": "Detalhes do clima",
+    "forecast_daily": "Previsão diária",
+    "aqi": "Qualidade do ar"
+  },
   "firebase_auth": {
     "summary": "Erro",
     "auth/email-already-in-use": "O endereço de e-mail já está em uso.",
