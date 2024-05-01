@@ -23,6 +23,7 @@ export class FeaturesService {
       currentDetail: true,
       forecastDaily: true,
       sunriseSunset: true,
+      moonPhase: true,
       aqi: true,
     },
   ];
@@ -47,6 +48,10 @@ export class FeaturesService {
     {
       id: 5,
       title: "sunrise_sunset",
+    },
+    {
+      id: 6,
+      title: "moon_phase",
     },
     {
       id: 4,

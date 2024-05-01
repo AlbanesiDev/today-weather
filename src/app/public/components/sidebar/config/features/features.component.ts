@@ -82,9 +82,16 @@ import { ButtonModule } from "primeng/button";
           (ngModelChange)="featuresService.setLocalStorage('active')"
         />
         <p-checkbox
-          inputId="forecastHourly"
+          inputId="sunriseSunset"
           [label]="'features_settings.sunrise_sunset' | translate"
           [(ngModel)]="featuresService.featureListActive[0].sunriseSunset"
+          [binary]="true"
+          (ngModelChange)="featuresService.setLocalStorage('active')"
+        />
+        <p-checkbox
+          inputId="moonPhase"
+          [label]="'features_settings.moon_phase' | translate"
+          [(ngModel)]="featuresService.featureListActive[0].moonPhase"
           [binary]="true"
           (ngModelChange)="featuresService.setLocalStorage('active')"
         />
@@ -129,6 +136,10 @@ export class FeaturesComponent {
     {
       id: 5,
       title: "sunrise_sunset",
+    },
+    {
+      id: 6,
+      title: "moon_phase",
     },
     {
       id: 4,

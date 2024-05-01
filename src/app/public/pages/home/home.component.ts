@@ -8,21 +8,23 @@ import {
   inject,
   signal,
 } from "@angular/core";
-import { HeaderComponent } from "../../components/header/header.component";
-import { SidebarComponent } from "../../components/sidebar/sidebar.component";
-import { WeatherCurrentComponent } from "../../components/weather-current/weather-current.component";
-import { AuthComponent } from "../../components/auth/auth.component";
-import { WeatherCurrentDetailComponent } from "../../components/weather-current-detail/weather-current-detail.component";
-import { FeaturesService } from "./../../../core/services/features.service";
-import { WeatherAqiComponent } from "../../components/weather-aqi/weather-aqi.component";
 import { Subject, takeUntil } from "rxjs";
-import { LoaderService } from "../../../core/services/loader.service";
-import { WeatherForecastComponent } from "../../components/weather-forecast/weather-forecast.component";
-import { GeolocationService } from "../../../core/services/geolocation.service";
-import { initializeApp } from "@angular/fire/app";
-import { InitializeAppService } from "../../../core/services/initialize-app.service";
+
 import { TranslateModule } from "@ngx-translate/core";
+
+import { WeatherCurrentDetailComponent } from "../../components/weather-current-detail/weather-current-detail.component";
+import { WeatherForecastComponent } from "../../components/weather-forecast/weather-forecast.component";
+import { WeatherCurrentComponent } from "../../components/weather-current/weather-current.component";
 import { SunriseSunsetComponent } from "../../components/sunrise-sunset/sunrise-sunset.component";
+import { WeatherAqiComponent } from "../../components/weather-aqi/weather-aqi.component";
+import { MoonPhasesComponent } from "../../components/moon-phases/moon-phases.component";
+import { SidebarComponent } from "../../components/sidebar/sidebar.component";
+import { HeaderComponent } from "../../components/header/header.component";
+import { AuthComponent } from "../../components/auth/auth.component";
+
+import { InitializeAppService } from "../../../core/services/initialize-app.service";
+import { FeaturesService } from "./../../../core/services/features.service";
+import { LoaderService } from "../../../core/services/loader.service";
 
 /**
  * The HomeComponent is responsible for rendering the main home view.
@@ -44,6 +46,7 @@ import { SunriseSunsetComponent } from "../../components/sunrise-sunset/sunrise-
     WeatherAqiComponent,
     WeatherForecastComponent,
     SunriseSunsetComponent,
+    MoonPhasesComponent,
   ],
   template: `
     <app-sidebar />
@@ -87,6 +90,9 @@ import { SunriseSunsetComponent } from "../../components/sunrise-sunset/sunrise-
           }
           @if (featuresService.featureListActive[0].sunriseSunset) {
             <app-sunrise-sunset [data]="weatherDataSig().current" [class]="'flex-order-' + getPosition(5)" />
+          }
+          @if (featuresService.featureListActive[0].moonPhase) {
+            <app-moon-phases [data]="weatherDataSig()" [class]="'flex-order-' + getPosition(6)" />
           }
           @if (featuresService.featureListActive[0].aqi) {
             <app-weather-aqi [dataInput]="weatherDataSig().aqi" [class]="'flex-order-' + getPosition(4)" />
