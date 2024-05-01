@@ -130,6 +130,7 @@
     "forecast_hourly": "Hourly Forecast",
     "current_details": "Weather Details",
     "forecast_daily": "Daily Forecast",
+    "sunrise_sunset": "Sunrise and Sunset",
     "aqi": "Air Quality Index"
   },
   "firebase_auth": {
@@ -293,6 +294,9 @@
     "802": "Scattered clouds: 25-50%.",
     "803": "Broken clouds: 51-84%.",
     "804": "Overcast clouds: 85-100%."
+  },
+  "sunrise_sunset": {
+    "title": "Sunrise and Sunset"
   },
   "footer": {
     "copyright": "Copyright"

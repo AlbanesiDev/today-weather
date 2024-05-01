@@ -130,6 +130,7 @@
     "forecast_hourly": "Prévisions horaires",
     "current_details": "Détails de la météo",
     "forecast_daily": "Prévisions quotidiennes",
+    "sunrise_sunset": "Lever et coucher du soleil",
     "aqi": "Qualité de l'air"
   },
   "firebase_auth": {
@@ -278,6 +279,9 @@
     "802": "Nuages dispersés : 25-50%.",
     "803": "Nuages fragmentés : 51-84%.",
     "804": "Nuages couverts : 85-100%."
+  },
+  "sunrise_sunset": {
+    "title": "Lever et coucher du soleil"
   },
   "footer": {
     "copyright": "Droit d'auteur"

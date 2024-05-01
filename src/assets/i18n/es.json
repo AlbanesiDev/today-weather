@@ -132,8 +132,9 @@
     "current": "Clima actual",
     "forecast_hourly": "Clima por horas",
     "current_details": "Detalles del clima",
-    "forecast_daily": "Clima por dias",
-    "aqi": "Condicion del aire"
+    "forecast_daily": "Clima por días",
+    "sunrise_sunset": "Amanecer y atardecer",
+    "aqi": "Condición del aire"
   },
   "firebase_auth": {
     "summary": "Error",
@@ -311,6 +312,9 @@
     "802": "Nubes dispersas: 25-50%.",
     "803": "Nubes rotas: 51-84%.",
     "804": "Nubes cubiertas: 85-100%."
+  },
+  "sunrise_sunset": {
+    "title": "Amanecer y atardecer"
   },
   "footer": {
     "copyright": "Copyright"

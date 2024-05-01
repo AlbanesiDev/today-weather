@@ -130,6 +130,7 @@
     "forecast_hourly": "Stündliche Wettervorhersage",
     "current_details": "Wetterdetails",
     "forecast_daily": "Tägliche Wettervorhersage",
+    "sunrise_sunset": "Sonnenaufgang und Sonnenuntergang",
     "aqi": "Luftqualität"
   },
   "firebase_auth": {
@@ -278,6 +279,9 @@
     "802": "Vereinzelte Wolken: 25-50%.",
     "803": "Gebrochene Wolken: 51-84%.",
     "804": "Bedeckte Wolken: 85-100%."
+  },
+  "sunrise_sunset": {
+    "title": "Sonnenaufgang und Sonnenuntergang"
   },
   "footer": {
     "copyright": "Urheberrecht"

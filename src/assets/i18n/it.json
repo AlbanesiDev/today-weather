@@ -130,6 +130,7 @@
     "forecast_hourly": "Previsioni Orarie",
     "current_details": "Dettagli meteo",
     "forecast_daily": "Previsioni giornaliere",
+    "sunrise_sunset": "Alba e tramonto",
     "aqi": "Qualità dell'aria"
   },
   "firebase_auth": {
@@ -278,6 +279,9 @@
     "802": "Nuvole sparse: 25-50%.",
     "803": "Nuvole sparse: 51-84%.",
     "804": "Nuvole coperte: 85-100%."
+  },
+  "sunrise_sunset": {
+    "title": "Alba e tramonto"
   },
   "footer": {
     "copyright": "Diritto d'autore"
