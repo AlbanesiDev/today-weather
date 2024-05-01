@@ -22,6 +22,7 @@ export class FeaturesService {
       forecastHourly: true,
       currentDetail: true,
       forecastDaily: true,
+      sunriseSunset: true,
       aqi: true,
     },
   ];
@@ -29,23 +30,27 @@ export class FeaturesService {
   public featureListOrder = signal<Array<{ id: number; title: string }>>([
     {
       id: 0,
-      title: "Current",
+      title: "current",
     },
     {
       id: 1,
-      title: "Forecast Hourly",
+      title: "forecast_hourly",
     },
     {
       id: 2,
-      title: "Current Details",
+      title: "current_details",
     },
     {
       id: 3,
-      title: "Forecast Daily",
+      title: "forecast_daily",
+    },
+    {
+      id: 5,
+      title: "sunrise_sunset",
     },
     {
       id: 4,
-      title: "Aqi",
+      title: "aqi",
     },
   ]);
 

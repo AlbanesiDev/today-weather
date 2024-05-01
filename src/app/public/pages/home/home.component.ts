@@ -22,6 +22,7 @@ import { GeolocationService } from "../../../core/services/geolocation.service";
 import { initializeApp } from "@angular/fire/app";
 import { InitializeAppService } from "../../../core/services/initialize-app.service";
 import { TranslateModule } from "@ngx-translate/core";
+import { SunriseSunsetComponent } from "../../components/sunrise-sunset/sunrise-sunset.component";
 
 /**
  * The HomeComponent is responsible for rendering the main home view.
@@ -42,6 +43,7 @@ import { TranslateModule } from "@ngx-translate/core";
     WeatherCurrentDetailComponent,
     WeatherAqiComponent,
     WeatherForecastComponent,
+    SunriseSunsetComponent,
   ],
   template: `
     <app-sidebar />
@@ -63,13 +65,6 @@ import { TranslateModule } from "@ngx-translate/core";
               [class]="'flex-order-' + getPosition(0)"
             />
           }
-          @if (featuresService.featureListActive[0].forecastDaily) {
-            <app-weather-forecast
-              forecastType="daily"
-              [class]="'flex-order-' + getPosition(3)"
-              [dataInput]="weatherDataSig().daily"
-            />
-          }
           @if (featuresService.featureListActive[0].forecastHourly) {
             <app-weather-forecast
               forecastType="hourly"
@@ -82,6 +77,16 @@ import { TranslateModule } from "@ngx-translate/core";
               [dataInput]="weatherDataSig().current"
               [class]="'flex-order-' + getPosition(2)"
             />
+          }
+          @if (featuresService.featureListActive[0].forecastDaily) {
+            <app-weather-forecast
+              forecastType="daily"
+              [class]="'flex-order-' + getPosition(3)"
+              [dataInput]="weatherDataSig().daily"
+            />
+          }
+          @if (featuresService.featureListActive[0].sunriseSunset) {
+            <app-sunrise-sunset [data]="weatherDataSig().current" [class]="'flex-order-' + getPosition(5)" />
           }
           @if (featuresService.featureListActive[0].aqi) {
             <app-weather-aqi [dataInput]="weatherDataSig().aqi" [class]="'flex-order-' + getPosition(4)" />
