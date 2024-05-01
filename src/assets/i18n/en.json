@@ -131,6 +131,7 @@
     "current_details": "Weather Details",
     "forecast_daily": "Daily Forecast",
     "sunrise_sunset": "Sunrise and Sunset",
+    "moon_phase": "Moon Phases",
     "aqi": "Air Quality Index"
   },
   "firebase_auth": {
@@ -298,6 +299,20 @@
   "sunrise_sunset": {
     "title": "Sunrise and Sunset"
   },
+  "moon_phase": {
+    "title": "Moon Phases",
+    "moon-new": "New Moon",
+    "moon-first-quarter": "First Quarter Moon",
+    "moon-full": "Full Moon",
+    "moon-last-quarter": "Last Quarter Moon",
+    "moon-waxing-crescent": "Waxing Crescent",
+    "moon-waxing-gibbous": "Waxing Gibbous",
+    "moon-waning-gibbous": "Waning Gibbous",
+    "moon-waning-crescent": "Waning Crescent",
+    "moonrise": "Moonrise",
+    "moonset": "Moonset"
+  },
+
   "footer": {
     "copyright": "Copyright"
   }

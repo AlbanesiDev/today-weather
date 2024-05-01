@@ -134,6 +134,7 @@
     "current_details": "Detalles del clima",
     "forecast_daily": "Clima por días",
     "sunrise_sunset": "Amanecer y atardecer",
+    "moon_phase": "Fases lunares",
     "aqi": "Condición del aire"
   },
   "firebase_auth": {
@@ -315,6 +316,19 @@
   },
   "sunrise_sunset": {
     "title": "Amanecer y atardecer"
+  },
+  "moon_phase": {
+    "title": "Fases lunares",
+    "moon-new": "Luna nueva",
+    "moon-first-quarter": "Primer cuarto de luna",
+    "moon-full": "Luna llena",
+    "moon-last-quarter": "Último cuarto de luna",
+    "moon-waxing-crescent": "Creciente menguante",
+    "moon-waxing-gibbous": "Gibosa creciente",
+    "moon-waning-gibbous": "Gibosa menguante",
+    "moon-waning-crescent": "Creciente menguante",
+    "moonrise": "Salida de la luna",
+    "moonset": "Puesta de luna"
   },
   "footer": {
     "copyright": "Copyright"

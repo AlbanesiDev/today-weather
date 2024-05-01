@@ -131,6 +131,7 @@
     "current_details": "Dettagli meteo",
     "forecast_daily": "Previsioni giornaliere",
     "sunrise_sunset": "Alba e tramonto",
+    "moon_phase": "Fasi lunari",
     "aqi": "Qualità dell'aria"
   },
   "firebase_auth": {
@@ -283,6 +284,20 @@
   "sunrise_sunset": {
     "title": "Alba e tramonto"
   },
+  "moon_phase": {
+    "title": "Fasi lunari",
+    "moon-new": "Luna nuova",
+    "moon-first-quarter": "Primo quarto di luna",
+    "moon-full": "Luna piena",
+    "moon-last-quarter": "Ultimo quarto di luna",
+    "moon-waxing-crescent": "Luna crescente",
+    "moon-waxing-gibbous": "Gibbosa crescente",
+    "moon-waning-gibbous": "Gibbosa calante",
+    "moon-waning-crescent": "Luna calante",
+    "moonrise": "Alba lunare",
+    "moonset": "Tramonto lunare"
+  },
+
   "footer": {
     "copyright": "Diritto d'autore"
   }

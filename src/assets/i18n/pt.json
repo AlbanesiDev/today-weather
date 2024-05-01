@@ -131,6 +131,7 @@
     "current_details": "Detalhes do clima",
     "forecast_daily": "Previsão diária",
     "sunrise_sunset": "Nascer e pôr do sol",
+    "moon_phase": "Fases da Lua",
     "aqi": "Qualidade do ar"
   },
   "firebase_auth": {
@@ -282,6 +283,19 @@
   },
   "sunrise_sunset": {
     "title": "Nascer e pôr do sol"
+  },
+  "moon_phase": {
+    "title": "Fases da Lua",
+    "moon-new": "Lua Nova",
+    "moon-first-quarter": "Primeiro Quarto",
+    "moon-full": "Lua Cheia",
+    "moon-last-quarter": "Último Quarto",
+    "moon-waxing-crescent": "Crescente",
+    "moon-waxing-gibbous": "Gibosa Crescente",
+    "moon-waning-gibbous": "Gibosa Minguante",
+    "moon-waning-crescent": "Minguante",
+    "moonrise": "Nascer da Lua",
+    "moonset": "Pôr da Lua"
   },
   "footer": {
     "copyright": "Direitos de autor"

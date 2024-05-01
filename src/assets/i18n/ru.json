@@ -131,6 +131,7 @@
     "current_details": "Детали погоды",
     "forecast_daily": "Прогноз на день",
     "sunrise_sunset": "Восход и закат",
+    "moon_phase": "Фазы Луны",
     "aqi": "Качество воздуха"
   },
   "firebase_auth": {
@@ -282,6 +283,19 @@
   },
   "sunrise_sunset": {
     "title": "Восход и закат"
+  },
+  "moon_phase": {
+    "title": "Фазы Луны",
+    "moon-new": "Новолуние",
+    "moon-first-quarter": "Первая четверть",
+    "moon-full": "Полнолуние",
+    "moon-last-quarter": "Последняя четверть",
+    "moon-waxing-crescent": "Убывающий серп",
+    "moon-waxing-gibbous": "Возрастающий серп",
+    "moon-waning-gibbous": "Убывающий баран",
+    "moon-waning-crescent": "Возрастающий баран",
+    "moonrise": "Восход луны",
+    "moonset": "Заход луны"
   },
   "footer": {
     "copyright": "Авторское право"

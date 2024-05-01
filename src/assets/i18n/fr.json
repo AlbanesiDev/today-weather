@@ -131,6 +131,7 @@
     "current_details": "Détails de la météo",
     "forecast_daily": "Prévisions quotidiennes",
     "sunrise_sunset": "Lever et coucher du soleil",
+    "moon_phase": "Fases lunares",
     "aqi": "Qualité de l'air"
   },
   "firebase_auth": {
@@ -283,6 +284,20 @@
   "sunrise_sunset": {
     "title": "Lever et coucher du soleil"
   },
+  "moon_phase": {
+    "title": "Phases lunaires",
+    "moon-new": "Nouvelle lune",
+    "moon-first-quarter": "Premier quartier de lune",
+    "moon-full": "Pleine lune",
+    "moon-last-quarter": "Dernier quartier de lune",
+    "moon-waxing-crescent": "Croissant de lune croissant",
+    "moon-waxing-gibbous": "Gibbeuse croissante",
+    "moon-waning-gibbous": "Gibbeuse décroissante",
+    "moon-waning-crescent": "Croissant de lune décroissant",
+    "moonrise": "Lever de lune",
+    "moonset": "Coucher de lune"
+  },
+
   "footer": {
     "copyright": "Droit d'auteur"
   }

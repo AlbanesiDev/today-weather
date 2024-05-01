@@ -131,6 +131,7 @@
     "current_details": "天气详情",
     "forecast_daily": "逐日预报",
     "sunrise_sunset": "日出和日落",
+    "moon_phase": "月相",
     "aqi": "空气质量"
   },
   "firebase_auth": {
@@ -282,6 +283,19 @@
   },
   "sunrise_sunset": {
     "title": "日出和日落"
+  },
+  "moon_phase": {
+    "title": "月相",
+    "moon-new": "新月",
+    "moon-first-quarter": "上弦月",
+    "moon-full": "满月",
+    "moon-last-quarter": "下弦月",
+    "moon-waxing-crescent": "上弦月",
+    "moon-waxing-gibbous": "上弦月",
+    "moon-waning-gibbous": "下弦月",
+    "moon-waning-crescent": "下弦月",
+    "moonrise": "月升",
+    "moonset": "月落"
   },
   "footer": {
     "copyright": "版权"

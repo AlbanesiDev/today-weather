@@ -131,6 +131,7 @@
     "current_details": "Wetterdetails",
     "forecast_daily": "Tägliche Wettervorhersage",
     "sunrise_sunset": "Sonnenaufgang und Sonnenuntergang",
+    "moon_phase": "Mondphasen",
     "aqi": "Luftqualität"
   },
   "firebase_auth": {
@@ -282,6 +283,19 @@
   },
   "sunrise_sunset": {
     "title": "Sonnenaufgang und Sonnenuntergang"
+  },
+  "moon_phase": {
+    "title": "Mondphasen",
+    "moon-new": "Neumond",
+    "moon-first-quarter": "Erstes Viertel",
+    "moon-full": "Vollmond",
+    "moon-last-quarter": "Letztes Viertel",
+    "moon-waxing-crescent": "Zunehmender Sichelmond",
+    "moon-waxing-gibbous": "Zunehmender Halbmond",
+    "moon-waning-gibbous": "Abnehmender Halbmond",
+    "moon-waning-crescent": "Abnehmender Sichelmond",
+    "moonrise": "Mondaufgang",
+    "moonset": "Monduntergang"
   },
   "footer": {
     "copyright": "Urheberrecht"

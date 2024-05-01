@@ -131,6 +131,7 @@
     "current_details": "天気の詳細",
     "forecast_daily": "日別予報",
     "sunrise_sunset": "日の出と日没",
+    "moon_phase": "月相",
     "aqi": "空気の質"
   },
   "firebase_auth": {
@@ -283,6 +284,20 @@
   "sunrise_sunset": {
     "title": "日の出と日没"
   },
+  "moon_phase": {
+    "title": "月相",
+    "moon-new": "新月",
+    "moon-first-quarter": "上弦の月",
+    "moon-full": "満月",
+    "moon-last-quarter": "下弦の月",
+    "moon-waxing-crescent": "弦月",
+    "moon-waxing-gibbous": "上弦の月",
+    "moon-waning-gibbous": "下弦の月",
+    "moon-waning-crescent": "弦月",
+    "moonrise": "月の出",
+    "moonset": "月の入り"
+  },
+
   "footer": {
     "copyright": "著作権"
   }

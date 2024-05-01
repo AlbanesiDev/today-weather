@@ -131,6 +131,7 @@
     "current_details": "Деталі погоди",
     "forecast_daily": "Прогноз на день",
     "sunrise_sunset": "Схід і захід сонця",
+    "moon_phase": "Фази Місяця",
     "aqi": "Якість повітря"
   },
   "firebase_auth": {
@@ -282,6 +283,19 @@
   },
   "sunrise_sunset": {
     "title": "Схід і захід сонця"
+  },
+  "moon_phase": {
+    "title": "Фази Місяця",
+    "moon-new": "Новий місяць",
+    "moon-first-quarter": "Перша чверть",
+    "moon-full": "Повний місяць",
+    "moon-last-quarter": "Остання чверть",
+    "moon-waxing-crescent": "Зростаючий соколиний місяць",
+    "moon-waxing-gibbous": "Зростаючий місяць",
+    "moon-waning-gibbous": "Спадний місяць",
+    "moon-waning-crescent": "Спадний соколиний місяць",
+    "moonrise": "Схід місяця",
+    "moonset": "Захід місяця"
   },
   "footer": {
     "copyright": "Авторське право"
