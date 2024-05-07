@@ -20,7 +20,7 @@
       <p class="text-lg font-light text-color-secondary">
         {{ currentDate | date: "EEEE, MMMM d" }}
       </p>
-      <p class="text-2xl font-semibold">{{ geoData().country_name }}, {{ geoData().city }}</p>
+      <h1 class="text-2xl font-semibold">{{ geoData().country_name }}, {{ geoData().city }}</h1>
       <p class="text-lg font-light text-color-secondary">
         {{ "weather_current.today" | translate }} -
         {{ "weather_description." + data().current.weather[0].id | translate }}
