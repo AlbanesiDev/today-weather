@@ -1,18 +1,15 @@
-import { EnvironmentProviders, importProvidersFrom } from "@angular/core";
-//firestore
 import { initializeApp, provideFirebaseApp } from "@angular/fire/app";
-import { getStorage, provideStorage } from "@angular/fire/storage";
-//auth
 import { getAuth, provideAuth } from "@angular/fire/auth";
-// Environments
-import { environment } from "../../../environments/environment";
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { getStorage, provideStorage } from "@angular/fire/storage";
+import { provideFirestore, getFirestore } from "@angular/fire/firestore";
+import { getMessaging, provideMessaging } from "@angular/fire/messaging";
 
-const provideFirebase: EnvironmentProviders = importProvidersFrom(
+import { environment } from "../../../environments/environment";
+
+export const firebaseConfig = [
   provideFirebaseApp(() => initializeApp(environment.FIREBASE_CONFIG)),
   provideAuth(() => getAuth()),
   provideStorage(() => getStorage()),
   provideFirestore(() => getFirestore()),
-);
-
-export { provideFirebase };
+  provideMessaging(() => getMessaging()),
+];
