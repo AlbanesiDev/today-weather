@@ -4,7 +4,7 @@
   </ng-template>
   <ng-template pTemplate="body">
     <div class="pt-1 h-full">
-      @if (sidebarService.currentRouteSig() === "home") {
+      @if (sidebarService.currentRouteSig() === SIDEBAR_DICTIONARY.ROUTES.HOME) {
         <div class="flex flex-column justify-content-between h-full">
           <div>
             <app-searchbar />
@@ -16,7 +16,7 @@
         </div>
       } @else {
         @switch (sidebarService.currentRouteSig()) {
-          @case ("config") {
+          @case (SIDEBAR_DICTIONARY.ROUTES.CONFIG) {
             <div class="flex flex-column gap-3">
               @for (item of btnConfig; track $index) {
                 <p-button
@@ -29,22 +29,22 @@
               }
             </div>
           }
-          @case ("notification") {
+          @case (SIDEBAR_DICTIONARY.ROUTES.NOTIFICATIONS) {
             <app-notifications />
           }
-          @case ("units") {
+          @case (SIDEBAR_DICTIONARY.ROUTES.UNITS) {
             <app-units />
           }
-          @case ("themes") {
+          @case (SIDEBAR_DICTIONARY.ROUTES.THEMES) {
             <app-themes />
           }
-          @case ("icons") {
+          @case (SIDEBAR_DICTIONARY.ROUTES.ICONS) {
             <app-icons />
           }
-          @case ("features") {
+          @case (SIDEBAR_DICTIONARY.ROUTES.FEATURES) {
             <app-features />
           }
-          @case ("lang") {
+          @case (SIDEBAR_DICTIONARY.ROUTES.LANG) {
             <app-lang />
           }
         }

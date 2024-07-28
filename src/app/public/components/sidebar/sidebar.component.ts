@@ -19,9 +19,10 @@ import { IconsComponent } from "./config/icons/icons.component";
 import { LangComponent } from "./config/lang/lang.component";
 import { FavsComponent } from "./favs/favs.component";
 
-import { AuthService } from "../../../core/services/auth.service";
 import { SidebarService } from "./../../services/sidebar.service";
 import { FeaturesComponent } from "./config/features/features.component";
+import { SIDEBAR_DICTIONARY } from "../../../core/utils";
+import { SidebarButtonConfig } from "../../../core/interface/sidebar.interface";
 
 @Component({
   selector: "app-sidebar",
@@ -50,32 +51,33 @@ import { FeaturesComponent } from "./config/features/features.component";
 })
 export class SidebarComponent {
   public sidebarService: SidebarService = inject(SidebarService);
-  public authService: AuthService = inject(AuthService);
 
-  public btnConfig: any[] = [
+  public SIDEBAR_DICTIONARY = SIDEBAR_DICTIONARY;
+
+  public btnConfig: SidebarButtonConfig[] = [
     {
       icon: "pi pi-bell",
-      config: "notification",
+      config: SIDEBAR_DICTIONARY.ROUTES.NOTIFICATIONS,
     },
     {
       icon: "pi pi-compass",
-      config: "units",
+      config: SIDEBAR_DICTIONARY.ROUTES.UNITS,
     },
     {
       icon: "pi pi-moon",
-      config: "themes",
+      config: SIDEBAR_DICTIONARY.ROUTES.THEMES,
     },
     {
       icon: "pi pi-images",
-      config: "icons",
+      config: SIDEBAR_DICTIONARY.ROUTES.ICONS,
     },
     {
       icon: "pi pi-th-large",
-      config: "features",
+      config: SIDEBAR_DICTIONARY.ROUTES.FEATURES,
     },
     {
       icon: "pi pi-language",
-      config: "lang",
+      config: SIDEBAR_DICTIONARY.ROUTES.LANG,
     },
   ];
 }

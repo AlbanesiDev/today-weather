@@ -1,3 +1,5 @@
+import { ICONS_DICTIONARY } from "../utils";
+
 export interface IListIcons {
   code: number;
   icon_code: string;
@@ -13,6 +15,7 @@ export interface IconConfig {
   };
 }
 
-export type TWeatherIconsType = "fill" | "outline";
-export type TWeatherIconsAnimations = "on" | "off";
-export type TWeatherIconsFolder = TWeatherIconsType | "fill-static" | "outline-static";
+export type TWeatherIconsType = (typeof ICONS_DICTIONARY.ICONS_TYPE)[keyof typeof ICONS_DICTIONARY.ICONS_TYPE];
+export type TWeatherIconsAnimations =
+  (typeof ICONS_DICTIONARY.ICONS_ANIMATIONS)[keyof typeof ICONS_DICTIONARY.ICONS_ANIMATIONS];
+export type TWeatherIconsFolder = (typeof ICONS_DICTIONARY.ICONS_FOLDER)[keyof typeof ICONS_DICTIONARY.ICONS_FOLDER];
