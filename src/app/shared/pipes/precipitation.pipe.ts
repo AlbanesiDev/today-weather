@@ -1,5 +1,6 @@
 import { Pipe, type PipeTransform } from "@angular/core";
-import { TPrecipitation } from "../../../core/interface/units.inteface";
+import { TPrecipitation } from "../../core/interface";
+import { UNITS_DICTIONARY } from "../../core/utils";
 /**
  * A pipe that transforms precipitation values into inches.
  */
@@ -8,6 +9,8 @@ import { TPrecipitation } from "../../../core/interface/units.inteface";
   standalone: true,
 })
 export class PrecipitationPipe implements PipeTransform {
+  private readonly MM_TO_INCH = 0.0393701;
+
   /**
    * Transforms a precipitation value to the specified unit.
    *
@@ -15,17 +18,18 @@ export class PrecipitationPipe implements PipeTransform {
    * @param unit The unit of measurement for the precipitation value ('mm' or 'in').
    * @returns A string representation of the value with the unit appended.
    */
-  transform(value: number, unit: TPrecipitation): any {
-    if (value && !isNaN(value)) {
-      if (unit === "mm") {
-        let mm = value.toFixed(1).toString();
-        return `${mm} mm`; // Converts and formats the value to millimeters.
+  transform(value: number, unit: TPrecipitation): string {
+    switch (unit) {
+      case UNITS_DICTIONARY.PRECIPITATION.MM: {
+        return this.formatValue(value, "mm");
       }
-      if (unit === "in") {
-        let inc = (value * 0.0393701).toFixed(1).toString();
-        return `${inc} in`; // Converts and formats the value to inches.
+      case UNITS_DICTIONARY.PRECIPITATION.IN: {
+        return this.formatValue(value * this.MM_TO_INCH, "in");
       }
     }
-    return; // Returns undefined if the value is not a number or is not provided.
+  }
+
+  private formatValue(value: number, unit: string): string {
+    return `${value.toFixed(1)} ${unit}`;
   }
 }

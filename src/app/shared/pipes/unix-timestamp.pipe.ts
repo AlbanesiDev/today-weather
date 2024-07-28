@@ -1,4 +1,4 @@
-import { Pipe,  type PipeTransform } from "@angular/core";
+import { Pipe, type PipeTransform } from "@angular/core";
 /**
  * Transforms a Unix timestamp into a Date object.
  */
@@ -7,6 +7,8 @@ import { Pipe,  type PipeTransform } from "@angular/core";
   standalone: true,
 })
 export class UnixTimestampPipe implements PipeTransform {
+  private readonly MULTIPLIER = 1000;
+
   /**
    * Takes a Unix timestamp and converts it to a Date object.
    *
@@ -14,7 +16,6 @@ export class UnixTimestampPipe implements PipeTransform {
    * @returns The Date object representing the given Unix timestamp.
    */
   transform(unixTimestamp: number): Date {
-    const date = new Date(unixTimestamp * 1000);
-    return date;
+    return new Date(unixTimestamp * this.MULTIPLIER);
   }
 }

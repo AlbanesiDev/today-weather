@@ -1,4 +1,5 @@
 import { Pipe, type PipeTransform } from "@angular/core";
+import { AQI_DICTIONARY } from "../../core/utils";
 /**
  * Pipe that transforms air quality index (AQI) pollutant codes into their respective chemical symbols.
  */
@@ -12,23 +13,23 @@ export class AqiPipe implements PipeTransform {
    * @param value The pollutant code as a string.
    * @returns The chemical symbol for the given pollutant code or the original value if no match is found.
    */
-  transform(value: unknown): string | unknown {
+  transform(value: string): string {
     switch (value) {
-      case "co":
+      case AQI_DICTIONARY.POLLUTANT.CO:
         return "CO";
-      case "nh3":
+      case AQI_DICTIONARY.POLLUTANT.NH3:
         return "NH₃";
-      case "no":
+      case AQI_DICTIONARY.POLLUTANT.NO:
         return "NO";
-      case "no2":
+      case AQI_DICTIONARY.POLLUTANT.NO2:
         return "NO₂";
-      case "o3":
+      case AQI_DICTIONARY.POLLUTANT.O3:
         return "O₃";
-      case "pm10":
+      case AQI_DICTIONARY.POLLUTANT.PM10:
         return "PM 10";
-      case "pm2_5":
+      case AQI_DICTIONARY.POLLUTANT.PM2_5:
         return "PM 2,5";
-      case "so2":
+      case AQI_DICTIONARY.POLLUTANT.SO2:
         return "SO₂";
     }
     return value;

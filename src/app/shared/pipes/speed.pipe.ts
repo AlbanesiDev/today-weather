@@ -1,5 +1,6 @@
 import { Pipe, type PipeTransform } from "@angular/core";
-import { TSpeed } from "../../../core/interface/units.inteface";
+import { TSpeed } from "../../core/interface";
+import { UNITS_DICTIONARY } from "../../core/utils";
 /**
  * A pipe that transforms speed values into different units.
  */
@@ -8,6 +9,9 @@ import { TSpeed } from "../../../core/interface/units.inteface";
   standalone: true,
 })
 export class SpeedPipe implements PipeTransform {
+  private readonly MS_TO_MPH = 2.23694;
+  private readonly MS_TO_KMH = 3.6;
+  private readonly MS_TO_KNOTS = 1.94384;
 
   /**
    * Transforms a speed value into the specified unit.
@@ -15,26 +19,26 @@ export class SpeedPipe implements PipeTransform {
    * @param unit The unit to convert the speed into.
    * @returns The speed value converted into the specified unit.
    */
-  transform(value: number, unit: TSpeed): any {
+  transform(value: number, unit: TSpeed): string {
     switch (unit) {
-      case "mph":
-        // Convert m/s to mph
-        const mph = (value * 2.23694).toFixed(2).toString();
+      case UNITS_DICTIONARY.SPEED.MPH: {
+        const mph = (value * this.MS_TO_MPH).toFixed(2);
         return `${mph} Mph`;
-      case "kmh":
-        // Convert m/s to km/h
-        const ms = (value * 3.6).toFixed(2).toString();
-        return `${ms} km/h`;
-      case "beaufort":
-        // Convert m/s to Beaufort scale
+      }
+      case UNITS_DICTIONARY.SPEED.KMH: {
+        const kmh = (value * this.MS_TO_KMH).toFixed(2);
+        return `${kmh} km/h`;
+      }
+      case UNITS_DICTIONARY.SPEED.BEAUFORT: {
         return this.msToBeaufort(value);
-      case "knots":
-        // Convert m/s to knots
-        const knots = (value * 1.94384).toFixed(2).toString();
+      }
+      case UNITS_DICTIONARY.SPEED.KNOTS: {
+        const knots = (value * this.MS_TO_KNOTS).toFixed(2);
         return `${knots} Knots`;
-      default:
-        // Return the default value in m/s
+      }
+      default: {
         return `${value} m/s`;
+      }
     }
   }
 
