@@ -1,39 +1,85 @@
-import { Component, OnDestroy, OnInit, inject } from "@angular/core";
+import { Component, DestroyRef, OnInit, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterOutlet } from "@angular/router";
 
 import { MessageService } from "primeng/api";
 import { ToastModule } from "primeng/toast";
 
-import { NotificationsService } from "./core/services/notifications.service";
-import { ThemesService } from "./core/themes/themes.service";
-import { IconsService } from "./core/services/icons.service";
-import { LangService } from "./core/lang/lang.service";
-
 import { register } from "swiper/element/bundle";
-import { Subject, takeUntil, tap } from "rxjs";
-import { AuthService } from "./core/services/auth.service";
-import { CloudStoreService } from "./core/services/cloud-store.service";
+import {
+  CloudStoreService,
+  WeatherService,
+  LoaderService,
+  AuthService,
+  SetConfigService,
+  IconsService,
+  NotificationsService,
+} from "./core/services";
+import { LayoutComponent } from "./layout/layout/layout.component";
+import { LangService } from "./core/lang/lang.service";
+import { ThemesService } from "./core/themes/themes.service";
+import { SwPush } from "@angular/service-worker";
+import { Store } from "@ngrx/store";
+import * as WeatherActions from "./core/state/weather.actions";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
+
 register();
 
 /**
- * @description
  * @author Joaquin Albanesi
- * @license
+ * @license MIT
  */
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ToastModule],
-  template: `<p-toast /><router-outlet /> `,
+  imports: [CommonModule, RouterOutlet, ToastModule, LayoutComponent],
+  template: `
+    <app-layout>
+      <p-toast />
+      <router-outlet />
+    </app-layout>
+  `,
   providers: [MessageService],
 })
-export class AppComponent {
-  private notificationsService: NotificationsService = inject(NotificationsService);
-  private themesService: ThemesService = inject(ThemesService);
-  private iconsService: IconsService = inject(IconsService);
-  private langService: LangService = inject(LangService);
-  private authService: AuthService = inject(AuthService);
-  private cloudStoreService: CloudStoreService = inject(CloudStoreService);
-  private messageService: MessageService = inject(MessageService);
+export class AppComponent implements OnInit {
+  private notificationsService = inject(NotificationsService);
+  private cloudStoreService = inject(CloudStoreService);
+  private messageService = inject(MessageService);
+  private weatherService = inject(WeatherService);
+  private loaderService = inject(LoaderService);
+  private themesService = inject(ThemesService);
+  private iconsService = inject(IconsService);
+  private langService = inject(LangService);
+  private authService = inject(AuthService);
+  private setConfigService = inject(SetConfigService);
+  private swPush = inject(SwPush);
+  private destroyRef = inject(DestroyRef);
+  private store = inject(Store);
+
+  public errorMessage: undefined;
+
+  constructor() {
+    this.store.dispatch(WeatherActions.getCurrentLocation());
+  }
+
+  ngOnInit(): void {
+    const user = this.authService.user$;
+    if (user) {
+      user.subscribe((data) => {
+        if (data) {
+          this.cloudStoreService.getUser(data.uid).subscribe((res) => {
+            this.authService.userDataSig.set(res);
+            // this.setConfigService.setConfig(res)
+          });
+        }
+      });
+      this.authService.userAuth.set(true);
+    } else {
+      this.authService.userAuth.set(false);
+    }
+
+    this.swPush.messages.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((message) => {
+      console.log(message);
+    });
+  }
 }
