@@ -12,9 +12,9 @@ export const storeConfig = [
     {
       weather: weatherReducer,
     },
-    // {
-    //   metaReducers,
-    // } as StoreConfig<IAppState>,
+    {
+      metaReducers,
+    } as StoreConfig<IAppState>,
   ),
   provideStoreDevtools({
     maxAge: 25,
