@@ -20,8 +20,10 @@ import {
   SunriseSunsetComponent,
   MoonPhasesComponent,
 } from "../../features";
-import { IAqi, IGeolocation, IWeatherOne } from "../../core/interface";
+import { IAqi, ICurrentCountry, IWeatherOne } from "../../core/interface";
 import * as WeatherSelectors from "../../core/state/weather.selectors";
+import * as WeatherActions from "../../core/state/weather.actions";
+import { take } from "rxjs";
 
 /**
  * The HomeComponent is responsible for rendering the main home view.
@@ -121,15 +123,41 @@ export class HomeComponent implements OnInit {
   public readonly store = inject(Store);
 
   public readonly weatherDataSig = signal<IWeatherOne>({} as IWeatherOne);
-  public readonly locationSig = signal<IGeolocation>({} as IGeolocation);
+  public readonly locationSig = signal<ICurrentCountry>({} as ICurrentCountry);
   public readonly aqiDataSig = signal<IAqi>({} as IAqi);
   public readonly loadingSig = signal<boolean>(false);
 
   ngOnInit(): void {
-    this.subscribeToSelector(WeatherSelectors.selectLoadingWeather, (res) =>
+    this.store
+      .select(WeatherSelectors.selectUserLocation)
+      .pipe(takeUntilDestroyed(this.destroyRef), take(1))
+      .subscribe((position) => {
+        if (position) {
+          // eslint-disable-next-line @ngrx/avoid-dispatching-multiple-actions-sequentially
+          this.store.dispatch(
+            WeatherActions.selectedLocation({
+              location: {
+                latitude: position.latitude,
+                longitude: position.longitude,
+                name: position.country_name,
+                state: position.city,
+                country: position.country_code_iso3,
+              },
+            }),
+          );
+          // eslint-disable-next-line @ngrx/avoid-dispatching-multiple-actions-sequentially
+          this.store.dispatch(
+            WeatherActions.getWeather({
+              location: { latitude: position.latitude, longitude: position.longitude },
+            }),
+          );
+        }
+      });
+
+    this.subscribeToSelector(WeatherSelectors.selectLoadingWeatherData, (res) =>
       this.loadingSig.set(res),
     );
-    this.subscribeToSelector(WeatherSelectors.selectCurrentLocation, (res) =>
+    this.subscribeToSelector(WeatherSelectors.selectCurrentCountry, (res) =>
       this.locationSig.set(res),
     );
     this.subscribeToSelector(WeatherSelectors.selectWeatherData, (res) => {
