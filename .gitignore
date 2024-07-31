@@ -49,3 +49,7 @@ src/environments/environment.ts
 .firebase
 .firebaserc
 firebase.json
+src/assets/mocks/user-data.json
+
+.nx/cache
+.nx/workspace-data
